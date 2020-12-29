@@ -1,7 +1,7 @@
 <template>
   <v-menu v-model="menuOpen" offset-y>
     <template v-slot:activator="{ on }">
-      <v-btn id="locale-btn" elevation="0" color="background" v-on="on">
+      <v-btn id="locale-btn" elevation="0" color="transparent" v-on="on">
         <span v-text="currentLocale.toUpperCase()"></span>
         <v-icon right :class="{ flipped: menuOpen }">mdi-chevron-down</v-icon>
       </v-btn>
