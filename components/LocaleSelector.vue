@@ -1,12 +1,12 @@
 <template>
-  <v-menu offset-y>
+  <v-menu v-model="menuOpen" offset-y>
     <template v-slot:activator="{ on }">
-      <v-btn elevation="0" color="background" v-on="on">
-        {{ currentLocale.toUpperCase() }}
-        <v-icon right>mdi-chevron-down</v-icon>
+      <v-btn id="locale-btn" elevation="0" color="background" v-on="on">
+        <span v-text="currentLocale.toUpperCase()"></span>
+        <v-icon right :class="{ flipped: menuOpen }">mdi-chevron-down</v-icon>
       </v-btn>
     </template>
-    <v-list>
+    <v-list class="py-0">
       <v-list-item
         v-for="locale in availableLocales"
         :key="locale"
@@ -20,9 +20,13 @@
 
 <script lang="ts">
 import Vue from 'vue'
-
 export default Vue.extend({
   name: 'LanguageSelector',
+  data() {
+    return {
+      menuOpen: false
+    }
+  },
   computed: {
     availableLocales(): string[] {
       return this.$i18n.availableLocales
@@ -38,3 +42,9 @@ export default Vue.extend({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+.flipped {
+  transform: rotate(-180deg);
+}
+</style>
