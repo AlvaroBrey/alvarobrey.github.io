@@ -27,17 +27,26 @@ export default {
   build: {},
   // module configs
   vuetify: {
-    customVariables: ['~/assets/variables.scss'],
-    theme: {
-      dark: false
-    }
+    customVariables: ['~/assets/vuetify-variables.scss'],
+    optionsPath: '~/vuetify.options.ts'
   },
   i18n: {
-    locales: ['en', 'es'],
+    baseUrl: 'https://alvarobrey.com',
+    seo: true,
+    locales: [
+      { code: 'en', iso: 'en-US' },
+      {
+        code: 'es',
+        iso: 'es-ES'
+      }
+    ],
     defaultLocale: 'en',
     vueI18n: {
       fallbackLocale: 'en',
       messages
+    },
+    detectBrowserLanguage: {
+      onlyOnRoot: true
     }
   }
 }
