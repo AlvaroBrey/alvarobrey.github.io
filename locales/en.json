@@ -9,6 +9,43 @@
     "me": "About me"
   },
   "page": {
+    "cv": {
+      "introduction": "Here's the most relevant parts of my professional career as a timeline. If you're looking for a more traditional CV, {0} for the PDF version.",
+      "introductionLinkHere": "please click here",
+      "items": {
+        "AIMasters": {
+          "title": "Masters in Artificial Intelligence Research"
+        },
+        "ITDegree": {
+          "title": "Degree in Computer Science"
+        },
+        "citius": {
+          "title": "Researcher / Software Developer"
+        },
+        "everis": {
+          "title": "Programmer"
+        },
+        "imagames": {
+          "title": "Frontend Developer / DevOps Engineer"
+        },
+        "machineLearning": {
+          "title": "Machine Learning"
+        },
+        "scalaFP": {
+          "title": "Functional Programming in Scala"
+        }
+      },
+      "orgs": {
+        "everis": "everis Spain",
+        "usc": "University of Santiago de Compostela",
+        "coursera": "Coursera",
+        "citius": "CiTIUS",
+        "uimp": "Menéndez Pelayo International University",
+        "imagames": "Imagames Gamification Services"
+      },
+      "present": "Present",
+      "title": "My CV"
+    },
     "index": {
       "greeting": "Hi! I'm Álvaro.",
       "interests": "I am passionate about <b>automatization</b> and <b>clean code</b>. As a consequence, I am very interested in strongly automated development processes (CI/CD), code reviews, and other ways to improve code quality.",

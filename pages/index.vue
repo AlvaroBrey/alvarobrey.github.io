@@ -2,8 +2,8 @@
   <!-- eslint-disable vue/no-v-html -->
   <v-row justify="center" align="center">
     <v-col cols="12" xs="12" sm="10" lg="8">
-      <p
-        class="text-h2 text-center mb-12 primary--text"
+      <h2
+        class="text-h2 text-center my-12 primary--text"
         v-html="$t('page.index.greeting')"
       />
       <div class="px-3">
@@ -29,15 +29,13 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { Page, pages } from '~/utils/pages'
+import { isHomeRoute, Page, pages } from '~/utils/pages'
 
 export default Vue.extend({
   computed: {
-    filteredPages(): Page[] {
+    filteredPages(): readonly Page[] {
       // don't show link to home in home
-      return pages.filter(
-        (page) => !this.$nuxt.$route.name?.startsWith(page.routeName + '_')
-      )
+      return pages.filter((page) => !isHomeRoute(page.routeName))
     }
   }
 })

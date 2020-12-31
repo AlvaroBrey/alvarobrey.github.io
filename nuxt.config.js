@@ -22,7 +22,7 @@ export default {
   css: [],
   plugins: [],
   components: true,
-  buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify'],
+  buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify', '@nuxtjs/moment'],
   modules: ['nuxt-i18n'],
   build: {},
   // module configs
@@ -48,5 +48,8 @@ export default {
     detectBrowserLanguage: {
       onlyOnRoot: true
     }
+  },
+  moment: {
+    locales: ['es']
   }
 }

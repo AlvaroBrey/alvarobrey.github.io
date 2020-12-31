@@ -21,3 +21,7 @@ export const pages: readonly Page[] = Object.freeze([
     routeName: 'about'
   }
 ])
+
+export function isHomeRoute(routeName: string | null | undefined) {
+  return routeName?.startsWith('index')
+}
