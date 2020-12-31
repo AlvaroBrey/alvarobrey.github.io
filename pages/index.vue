@@ -6,7 +6,7 @@
         class="text-h2 text-center mb-12 primary--text"
         v-html="$t('page.index.greeting')"
       />
-      <div class="text-body-1 px-3">
+      <div class="px-3">
         <p v-html="$t('page.index.introduction')" />
         <p v-html="$t('page.index.interests')" />
       </div>
