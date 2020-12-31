@@ -2,8 +2,8 @@ import { ThemeOptions, VuetifyThemeVariant } from 'vuetify/types/services/theme'
 import { GlobalVuetifyPreset } from 'vuetify/types/services/presets'
 
 const lightTheme: Partial<VuetifyThemeVariant> = {
-  primary: '#9A8C98',
-  secondary: '#4A4E69',
+  primary: '#4A4E69',
+  secondary: '#9A8C98',
   accent: '#C9ADA7',
   background: '#F2E9E4'
 }

@@ -1,5 +1,18 @@
 {
   "global": {
     "wip": "Work in progress"
+  },
+  "nav": {
+    "about": "About this page",
+    "cv": "My CV",
+    "home": "Home",
+    "me": "About me"
+  },
+  "page": {
+    "index": {
+      "greeting": "Hi! I'm Álvaro.",
+      "interests": "I am passionate about <b>automatization</b> and <b>clean code</b>. As a consequence, I am very interested in strongly automated development processes (CI/CD), code reviews, and other ways to improve code quality.",
+      "introduction": "I am a <b>software engineer</b> from Santiago de Compostela, Spain. I mainly do <b>DevOps</b> and <b>VueJS</b> frontend, but I have experience and training in other areas and technologies."
+    }
   }
 }
