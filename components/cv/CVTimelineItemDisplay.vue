@@ -18,7 +18,7 @@
 
 <script lang="ts">
 import Vue, { PropOptions } from 'vue'
-import { CVTimelineItem } from '~/utils/CVData'
+import { CVTimelineItem } from '~/model/CVModel'
 
 export default Vue.extend({
   name: 'CVTimelineItem',

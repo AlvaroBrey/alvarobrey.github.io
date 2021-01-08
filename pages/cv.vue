@@ -27,8 +27,9 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { CVTimelineItem, CVTimelineItems } from '~/utils/CVData'
+import { CVTimelineItems } from '~/data/CVData'
 import CVTimelineItemDisplay from '~/components/cv/CVTimelineItemDisplay.vue'
+import { CVTimelineItem } from '~/model/CVModel'
 // TODO update and upload CV
 
 function sortTimelineItems(a: CVTimelineItem, b: CVTimelineItem): number {
