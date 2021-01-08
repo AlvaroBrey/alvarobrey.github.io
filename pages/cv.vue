@@ -14,6 +14,15 @@
           v-text="$t('page.cv.introductionLinkHere')"
         />
       </i18n>
+      <v-row class="px-3" no-gutters>
+        <CVItemsFilter v-model="itemFilter" />
+        <v-spacer />
+        <v-switch
+          v-model="reverseOrder"
+          :label="$t('page.cv.oldestFirst')"
+          class="mt-0"
+        />
+      </v-row>
       <v-timeline :dense="$nuxt.$vuetify.breakpoint.smAndDown">
         <CVTimelineItemDisplay
           v-for="item in sortedItems"
@@ -29,31 +38,37 @@
 import Vue from 'vue'
 import { CVTimelineItems } from '~/data/CVData'
 import CVTimelineItemDisplay from '~/components/cv/CVTimelineItemDisplay.vue'
-import { CVTimelineItem } from '~/model/CVModel'
+import { CVItemType, CVTimelineItem } from '~/model/CVModel'
+import { Optional } from '~/types/utilityTypes'
+import CVItemsFilter from '~/components/cv/CVItemsFilter.vue'
 // TODO update and upload CV
 
 function sortTimelineItems(a: CVTimelineItem, b: CVTimelineItem): number {
   if (a.endDate === undefined) {
-    return 1
-  }
-  if (b.endDate === undefined) {
     return -1
   }
-  return a.endDate.unix() - b.endDate.unix()
+  if (b.endDate === undefined) {
+    return 1
+  }
+  return b.endDate.unix() - a.endDate.unix()
 }
 
 export default Vue.extend({
-  components: { CVTimelineItemDisplay },
+  components: { CVItemsFilter, CVTimelineItemDisplay },
   data() {
     return {
-      reverseOrder: false
+      reverseOrder: false,
+      itemFilter: undefined as Optional<CVItemType>
     }
   },
   computed: {
     sortedItems(): CVTimelineItem[] {
-      const items = CVTimelineItems.sort(sortTimelineItems)
+      let items = CVTimelineItems.sort(sortTimelineItems)
+      if (this.itemFilter) {
+        items = items.filter((item) => item.type === this.itemFilter)
+      }
       if (this.reverseOrder) {
-        return items.reverse()
+        items = items.reverse()
       }
       return items
     }

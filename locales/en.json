@@ -1,5 +1,8 @@
 {
   "global": {
+    "filter": {
+      "all": "All"
+    },
     "wip": "Work in progress"
   },
   "nav": {
@@ -10,6 +13,11 @@
   },
   "page": {
     "cv": {
+      "filter": {
+        "course": "Courses",
+        "work": "Work",
+        "education": "Education"
+      },
       "introduction": "Here's the most relevant parts of my professional career as a timeline. If you're looking for a more traditional CV, {0} for the PDF version.",
       "introductionLinkHere": "please click here",
       "items": {
@@ -35,6 +43,7 @@
           "title": "Functional Programming in Scala"
         }
       },
+      "oldestFirst": "Oldest first",
       "orgs": {
         "everis": "everis Spain",
         "usc": "University of Santiago de Compostela",

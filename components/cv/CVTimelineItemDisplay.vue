@@ -1,5 +1,5 @@
 <template>
-  <v-timeline-item>
+  <v-timeline-item :color="color">
     <v-card>
       <v-card-title
         class="cv-card-title"
@@ -10,15 +10,18 @@
       />
     </v-card>
     <template slot="opposite">
-      <span v-if="item.startDate">{{ formatDate(item.startDate) }} - </span>
-      <span>{{ formatDate(item.endDate) }}</span>
+      <span v-if="item.startDate">{{ formattedStartDate }} - </span>
+      <span>{{ formattedEndDate }}</span>
     </template>
   </v-timeline-item>
 </template>
 
 <script lang="ts">
 import Vue, { PropOptions } from 'vue'
+import moment from 'moment'
 import { CVTimelineItem } from '~/model/CVModel'
+import { Optional } from '~/types/utilityTypes'
+import { CV_DATE_FORMAT, CVItemTypeColors } from '~/model/ui/CVUIModel'
 
 export default Vue.extend({
   name: 'CVTimelineItem',
@@ -28,12 +31,23 @@ export default Vue.extend({
       type: Object
     } as PropOptions<CVTimelineItem>
   },
+  computed: {
+    color(): string {
+      return CVItemTypeColors[this.item.type]
+    },
+    formattedEndDate(): Optional<string> {
+      return this.formatDate(this.item.endDate)
+    },
+    formattedStartDate(): Optional<string> {
+      return this.formatDate(this.item.startDate)
+    }
+  },
   methods: {
-    formatDate(date: moment.Moment | undefined) {
+    formatDate(date: Optional<moment.Moment>) {
       if (date === undefined) {
         return this.$t('page.cv.present')
       }
-      return date.format('YYYY/MM')
+      return date.format(CV_DATE_FORMAT)
     }
   }
 })
