@@ -39,3 +39,9 @@ export class CVTimelineItemWithStartDate extends CVTimelineItem {
     this.startDate = startDate
   }
 }
+
+export function isWithStartDate(
+  item: CVTimelineItem
+): item is CVTimelineItemWithStartDate {
+  return (item as CVTimelineItemWithStartDate).startDate !== undefined
+}
