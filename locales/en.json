@@ -22,35 +22,43 @@
       "introductionLinkHere": "please click here",
       "items": {
         "AIMasters": {
-          "title": "Masters in Artificial Intelligence Research"
+          "title": "Masters in Artificial Intelligence Research",
+          "shortDescription": "Education in machine learning, artificial intelligence, statistics and data analysis, and introduction to scientific research."
         },
         "ITDegree": {
-          "title": "Degree in Computer Science"
+          "title": "Degree in Computer Science",
+          "shortDescription": "Advanced education related to computer science, included but not limited to: software programming and design, systems engineering and systems administration."
         },
         "citius": {
-          "title": "Researcher / Software Developer"
+          "title": "Researcher / Software Developer",
+          "shortDescription": "Full stack development with a strong focus on Android. Research in medication adherence and mHealth. Main project: <a href=\"https://citius.usc.es/calendula\">Calendula</a>."
         },
         "everis": {
-          "title": "Programmer"
+          "title": "Programmer",
+          "shortDescription": "Internship as a software developer. Mainly Java EE (Spring) with some tasks in Android."
         },
         "imagames": {
-          "title": "Frontend Developer / DevOps Engineer"
+          "title": "Frontend Developer / DevOps Engineer",
+          "shortDescription": "DevOps and VueJS frontend, with some occasional tasks in Scala backend and Android applications."
         },
         "machineLearning": {
-          "title": "Machine Learning"
+          "title": "Machine Learning",
+          "shortDescription": "Machine Learning  course imparted by prof. Andrew Ng of Stanford University on Coursera. Both theoretical and practical assignments on neural networks, SVMs and other fundamental Machine Learning algorithms and related skills."
         },
         "scalaFP": {
-          "title": "Functional Programming in Scala"
+          "title": "Functional Programming in Scala",
+          "shortDescription": "Introductory course to Scala and higher level functional programming concepts."
         }
       },
       "oldestFirst": "Oldest first",
       "orgs": {
-        "everis": "everis Spain",
-        "usc": "University of Santiago de Compostela",
-        "coursera": "Coursera",
         "citius": "CiTIUS",
+        "epfl": "EPFL on Coursera",
+        "everis": "everis Spain",
+        "imagames": "Imagames Gamification Services",
+        "stanford": "Stanford University on Coursera",
         "uimp": "Menéndez Pelayo International University",
-        "imagames": "Imagames Gamification Services"
+        "usc": "University of Santiago de Compostela"
       },
       "present": "Present",
       "title": "My CV"

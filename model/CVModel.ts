@@ -1,25 +1,35 @@
 import moment from 'moment'
 
 export enum CVItemType {
-  WORK = 'work',
+  COURSE = 'course',
   EDUCATION = 'education',
-  COURSE = 'course'
+  WORK = 'work'
+}
+
+export enum CVOrg {
+  CITIUS = 'citius',
+  EPFL = 'epfl',
+  EVERIS = 'everis',
+  IMAGAMES = 'imagames',
+  STANFORD = 'stanford',
+  UIMP = 'uimp',
+  USC = 'usc'
 }
 
 export class CVTimelineItem {
-  translationKey: string
-  organizationTranslationKey: string
+  key: string
+  org: CVOrg
   endDate: moment.Moment | undefined
   type: CVItemType
 
   constructor(
     translationKey: string,
-    organizationTranslationKey: string,
+    org: CVOrg,
     endDate: moment.Moment | undefined,
     type: CVItemType
   ) {
-    this.translationKey = translationKey
-    this.organizationTranslationKey = organizationTranslationKey
+    this.key = translationKey
+    this.org = org
     this.endDate = endDate
     this.type = type
   }
@@ -30,12 +40,12 @@ export class CVTimelineItemWithStartDate extends CVTimelineItem {
 
   constructor(
     translationKey: string,
-    organizationTranslationKey: string,
+    org: CVOrg,
     endDate: moment.Moment | undefined,
     startDate: moment.Moment,
     type: CVItemType
   ) {
-    super(translationKey, organizationTranslationKey, endDate, type)
+    super(translationKey, org, endDate, type)
     this.startDate = startDate
   }
 }

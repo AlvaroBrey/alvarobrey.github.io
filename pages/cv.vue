@@ -20,14 +20,15 @@
         <v-switch
           v-model="reverseOrder"
           :label="$t('page.cv.oldestFirst')"
-          class="mt-0"
+          class="mt-0 hidden-sm-and-down"
         />
       </v-row>
-      <v-timeline :dense="$nuxt.$vuetify.breakpoint.smAndDown">
+      <v-timeline :dense="$nuxt.$vuetify.breakpoint.mdAndDown">
         <CVTimelineItemDisplay
-          v-for="item in sortedItems"
-          :key="item.translationKey"
+          v-for="(item, index) in sortedItems"
+          :key="item.key"
           :item="item"
+          :is-left="index % 2 === 1"
         />
       </v-timeline>
     </v-col>
