@@ -41,7 +41,7 @@
 <script lang="ts">
 import Vue, { PropOptions } from 'vue'
 import moment from 'moment'
-import { CVTimelineItem, isWithStartDate } from '~/model/CVModel'
+import { CVTimelineItem } from '~/model/CVModel'
 import { Optional } from '~/types/utilityTypes'
 import { CV_DATE_FORMAT, CVItemTypeColors } from '~/model/ui/CVUIModel'
 
@@ -65,7 +65,7 @@ export default Vue.extend({
       return this.formatDate(this.item.endDate)
     },
     formattedStartDate(): Optional<string> {
-      if (isWithStartDate(this.item)) {
+      if (this.item.startDate) {
         return this.formatDate(this.item.startDate)
       }
       return undefined

@@ -40,16 +40,13 @@ import Vue from 'vue'
 import moment from 'moment'
 import { CVTimelineItems } from '~/data/CVData'
 import CVTimelineItemDisplay from '~/components/cv/CVTimelineItemDisplay.vue'
-import { CVItemType, CVTimelineItem, isWithStartDate } from '~/model/CVModel'
+import { CVItemType, CVTimelineItem } from '~/model/CVModel'
 import { Optional } from '~/types/utilityTypes'
 import CVItemsFilter from '~/components/cv/CVItemsFilter.vue'
 // TODO update and upload CV
 
 function getCompareDate(item: CVTimelineItem): Optional<moment.Moment> {
-  if (isWithStartDate(item)) {
-    return item.startDate
-  }
-  return item.endDate
+  return item.startDate ?? item.endDate
 }
 
 function sortTimelineItems(a: CVTimelineItem, b: CVTimelineItem): number {

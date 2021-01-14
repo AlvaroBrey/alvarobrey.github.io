@@ -1,4 +1,5 @@
 import moment from 'moment'
+import { Optional } from '~/types/utilityTypes'
 
 export enum CVItemType {
   COURSE = 'course',
@@ -16,42 +17,12 @@ export enum CVOrg {
   USC = 'usc'
 }
 
-export class CVTimelineItem {
+export enum CVSkills {}
+
+export interface CVTimelineItem {
   key: string
   org: CVOrg
-  endDate: moment.Moment | undefined
+  startDate: Optional<moment.Moment>
+  endDate: Optional<moment.Moment>
   type: CVItemType
-
-  constructor(
-    translationKey: string,
-    org: CVOrg,
-    endDate: moment.Moment | undefined,
-    type: CVItemType
-  ) {
-    this.key = translationKey
-    this.org = org
-    this.endDate = endDate
-    this.type = type
-  }
-}
-
-export class CVTimelineItemWithStartDate extends CVTimelineItem {
-  startDate: moment.Moment
-
-  constructor(
-    translationKey: string,
-    org: CVOrg,
-    endDate: moment.Moment | undefined,
-    startDate: moment.Moment,
-    type: CVItemType
-  ) {
-    super(translationKey, org, endDate, type)
-    this.startDate = startDate
-  }
-}
-
-export function isWithStartDate(
-  item: CVTimelineItem
-): item is CVTimelineItemWithStartDate {
-  return (item as CVTimelineItemWithStartDate).startDate !== undefined
 }
