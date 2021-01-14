@@ -77,8 +77,7 @@ export default Vue.extend({
       return 80
     },
     imgPath(): string {
-      // todo load via webpack from assets
-      return `/img/orgs/${this.item.org}.png`
+      return require(`~/assets/img/orgs/${this.item.org}.png`)
     },
     isMobile(): boolean {
       return this.$nuxt.$vuetify.breakpoint.xsOnly
