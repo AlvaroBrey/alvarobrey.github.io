@@ -23,9 +23,14 @@
               <span>{{ dateText }}</span>
             </span>
           </v-card-subtitle>
-          <v-card-text
-            v-html="$t(`page.cv.items.${item.key}.shortDescription`)"
-          />
+          <v-card-text>
+            <p v-html="$t(`page.cv.items.${item.key}.shortDescription`)" />
+            <CvSkillsAndTechDisplay
+              v-if="item.skills || item.tech"
+              :skills="item.skills"
+              :tech="item.tech"
+            />
+          </v-card-text>
         </div>
         <v-avatar tile :size="imgSize" class="ma-3 hidden-xs-only">
           <v-img contain :src="imgPath" />
@@ -44,9 +49,11 @@ import moment from 'moment'
 import { CVTimelineItem } from '~/model/CVModel'
 import { Optional } from '~/types/utilityTypes'
 import { CV_DATE_FORMAT, CVItemTypeColors } from '~/model/ui/CVUIModel'
+import CvSkillsAndTechDisplay from '~/components/cv/CvSkillsAndTechDisplay.vue'
 
 export default Vue.extend({
   name: 'CVTimelineItem',
+  components: { CvSkillsAndTechDisplay },
   props: {
     item: {
       required: true,

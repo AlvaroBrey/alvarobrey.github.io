@@ -35,7 +35,7 @@
         },
         "everis": {
           "title": "Programmer",
-          "shortDescription": "Internship as a software developer. Mainly Java EE (Spring) with some tasks in Android."
+          "shortDescription": "Internship as a software developer. Java webpage (Spring) and some tasks in Android."
         },
         "imagames": {
           "title": "Frontend Developer / DevOps Engineer",
@@ -52,7 +52,7 @@
       },
       "oldestFirst": "Oldest first",
       "orgs": {
-        "citius": "CiTIUS",
+        "citius": "CiTIUS - University of Santiago de Compostela",
         "epfl": "EPFL on Coursera",
         "everis": "everis Spain",
         "imagames": "Imagames Gamification Services",
@@ -61,7 +61,19 @@
         "usc": "University of Santiago de Compostela"
       },
       "present": "Present",
-      "title": "My CV"
+      "skillsTitle": "Key skills",
+      "techTitle": "Key technologies",
+      "title": "My CV",
+      "skills": {
+        "infrastructure": "Infrastructure management",
+        "frontend": "Front end development",
+        "scripting_automation": "Scripting and automation",
+        "scripting": "Scripting",
+        "mobile": "Mobile programming",
+        "research": "Research",
+        "ml": "Machine learning",
+        "data_analysis": "Data analysis"
+      }
     },
     "index": {
       "greeting": "Hi! I'm Álvaro.",

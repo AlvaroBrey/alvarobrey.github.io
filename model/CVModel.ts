@@ -17,12 +17,12 @@ export enum CVOrg {
   USC = 'usc'
 }
 
-export enum CVSkills {}
-
 export interface CVTimelineItem {
   key: string
   org: CVOrg
   startDate: Optional<moment.Moment>
   endDate: Optional<moment.Moment>
   type: CVItemType
+  skills?: string[]
+  tech?: string[]
 }

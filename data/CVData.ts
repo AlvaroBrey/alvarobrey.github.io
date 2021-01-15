@@ -36,14 +36,22 @@ export const workCVItems: CVTimelineItem[] = [
     org: CVOrg.CITIUS,
     startDate: parseDate('2016/10'),
     endDate: parseDate('2018/04'),
-    type: CVItemType.WORK
+    type: CVItemType.WORK,
+    skills: ['mobile', 'scripting', 'research'],
+    tech: ['Android + Kotlin', 'Python, NodeJS']
   },
   {
     key: 'imagames',
     org: CVOrg.IMAGAMES,
     startDate: parseDate('2018/12'),
     endDate: undefined,
-    type: CVItemType.WORK
+    type: CVItemType.WORK,
+    skills: ['infrastructure', 'frontend', 'scripting'],
+    tech: [
+      'Docker + Compose + Kubernetes',
+      'VueJs + Typescript',
+      'Ansible + Python'
+    ]
   }
 ]
 
