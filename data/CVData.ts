@@ -11,33 +11,29 @@ export const educationCVItems: CVTimelineItem[] = [
     key: 'ITDegree',
     org: CVOrg.USC,
     startDate: parseDate('2012/09'),
-    endDate: parseDate('2016/09'),
-    type: CVItemType.EDUCATION
+    endDate: parseDate('2016/09')
   },
   {
     key: 'AIMasters',
     org: CVOrg.UIMP,
     startDate: parseDate('2017/09'),
-    endDate: parseDate('2019/07'),
-    type: CVItemType.EDUCATION
+    endDate: parseDate('2019/07')
   }
-]
+].map((it) => Object.assign(it, { type: CVItemType.EDUCATION }))
 
 export const workCVItems: CVTimelineItem[] = [
   {
     key: 'everis',
     org: CVOrg.EVERIS,
     startDate: parseDate('2015/06'),
-    endDate: parseDate('2015/09'),
-    type: CVItemType.WORK
+    endDate: parseDate('2015/09')
   },
   {
     key: 'citius',
     org: CVOrg.CITIUS,
     startDate: parseDate('2016/10'),
     endDate: parseDate('2018/04'),
-    type: CVItemType.WORK,
-    skills: ['mobile', 'scripting', 'research'],
+    skills: ['mobile', 'scripting', 'research', 'openSource'],
     tech: ['Android + Kotlin', 'Python, NodeJS']
   },
   {
@@ -45,7 +41,6 @@ export const workCVItems: CVTimelineItem[] = [
     org: CVOrg.IMAGAMES,
     startDate: parseDate('2018/12'),
     endDate: undefined,
-    type: CVItemType.WORK,
     skills: ['infrastructure', 'frontend', 'scripting'],
     tech: [
       'Docker + Compose + Kubernetes',
@@ -53,27 +48,38 @@ export const workCVItems: CVTimelineItem[] = [
       'Ansible + Python'
     ]
   }
-]
+].map((it) => Object.assign(it, { type: CVItemType.WORK }))
 
 export const courseCVItems: CVTimelineItem[] = [
   {
     key: 'machineLearning',
     org: CVOrg.STANFORD,
     startDate: undefined,
-    endDate: parseDate('2017/04'),
-    type: CVItemType.COURSE
+    endDate: parseDate('2017/04')
   },
   {
     key: 'scalaFP',
     org: CVOrg.EPFL,
     startDate: undefined,
-    endDate: parseDate('2019/06'),
-    type: CVItemType.COURSE
+    endDate: parseDate('2019/06')
+  }
+].map((it) => Object.assign(it, { type: CVItemType.COURSE }))
+
+export const hobbyItems: CVTimelineItem[] = [
+  {
+    key: 'androidRoms',
+    org: undefined,
+    startDate: parseDate('2015/06'),
+    endDate: parseDate('2017/08'),
+    type: CVItemType.HOBBY,
+    skills: ['openSource', 'mobile', 'scripting'],
+    tech: ['Android', 'Java, C', 'Bash, Python']
   }
 ]
 
 export const CVTimelineItems: CVTimelineItem[] = [
   ...educationCVItems,
   ...workCVItems,
-  ...courseCVItems
+  ...courseCVItems,
+  ...hobbyItems
 ]

@@ -4,7 +4,8 @@ import { Optional } from '~/types/utilityTypes'
 export enum CVItemType {
   COURSE = 'course',
   EDUCATION = 'education',
-  WORK = 'work'
+  WORK = 'work',
+  HOBBY = 'hobby'
 }
 
 export enum CVOrg {
@@ -19,7 +20,7 @@ export enum CVOrg {
 
 export interface CVTimelineItem {
   key: string
-  org: CVOrg
+  org: Optional<CVOrg>
   startDate: Optional<moment.Moment>
   endDate: Optional<moment.Moment>
   type: CVItemType

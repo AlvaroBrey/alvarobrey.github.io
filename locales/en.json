@@ -16,7 +16,8 @@
       "filter": {
         "course": "Courses",
         "work": "Work",
-        "education": "Education"
+        "education": "Education",
+        "hobby": "Hobby"
       },
       "introduction": "Here's the most relevant parts of my professional career as a timeline. If you're looking for a more traditional CV, {0} for the PDF version.",
       "introductionLinkHere": "please click here",
@@ -48,6 +49,10 @@
         "scalaFP": {
           "title": "Functional Programming in Scala",
           "shortDescription": "Introductory course to Scala and higher level functional programming concepts."
+        },
+        "androidRoms": {
+          "title": "Android ROM developer",
+          "shortDescription": "Development of CyanogenMOD (later LineageOS) ROMs for Android devices. Open-source development including regular releases. Work in applications, kernels and system configuration."
         }
       },
       "oldestFirst": "Oldest first",
@@ -72,7 +77,8 @@
         "mobile": "Mobile programming",
         "research": "Research",
         "ml": "Machine learning",
-        "data_analysis": "Data analysis"
+        "data_analysis": "Data analysis",
+        "openSource": "Open source development"
       }
     },
     "index": {

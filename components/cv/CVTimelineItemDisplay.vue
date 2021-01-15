@@ -1,7 +1,7 @@
 <template>
   <v-timeline-item :color="color" :large="isMobile" :fill-dot="isMobile">
     <template v-slot:icon>
-      <v-avatar class="pa-2 hidden-sm-and-up" color="white">
+      <v-avatar v-if="hasOrg" class="pa-2 hidden-sm-and-up" color="white">
         <v-img contain :src="imgPath" />
       </v-avatar>
     </template>
@@ -17,7 +17,7 @@
             v-text="$t(`page.cv.items.${item.key}.title`)"
           />
           <v-card-subtitle>
-            <span>{{ $t(`page.cv.orgs.${item.org}`) }}</span>
+            <span v-if="hasOrg">{{ $t(`page.cv.orgs.${item.org}`) }}</span>
             <span class="hidden-lg-and-up">
               <span class="mx-1">|</span>
               <span>{{ dateText }}</span>
@@ -32,7 +32,12 @@
             />
           </v-card-text>
         </div>
-        <v-avatar tile :size="imgSize" class="ma-3 hidden-xs-only">
+        <v-avatar
+          v-if="hasOrg"
+          tile
+          :size="imgSize"
+          class="ma-3 hidden-xs-only"
+        >
           <v-img contain :src="imgPath" />
         </v-avatar>
       </div>
@@ -83,8 +88,11 @@ export default Vue.extend({
       }
       return 80
     },
-    imgPath(): string {
-      return require(`~/assets/img/orgs/${this.item.org}.png`)
+    imgPath(): Optional<string> {
+      if (this.hasOrg) {
+        return require(`~/assets/img/orgs/${this.item.org}.png`)
+      }
+      return undefined
     },
     isMobile(): boolean {
       return this.$nuxt.$vuetify.breakpoint.xsOnly
@@ -94,6 +102,9 @@ export default Vue.extend({
         return `${this.formattedStartDate} - ${this.formattedEndDate}`
       }
       return this.formattedEndDate
+    },
+    hasOrg(): boolean {
+      return this.item.org !== undefined
     }
   },
   methods: {
