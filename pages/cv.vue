@@ -8,7 +8,7 @@
       />
       <i18n path="page.cv.introduction" tag="p" class="px-3">
         <a
-          href="/downloads/AlvaroBreyVilas_CV_en.pdf"
+          href="/files/AlvaroBreyVilas-cv-web.pdf"
           download
           target="_blank"
           v-text="$t('page.cv.introductionLinkHere')"
