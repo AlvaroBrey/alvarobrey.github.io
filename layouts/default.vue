@@ -3,6 +3,9 @@
     <Header />
     <v-main class="text-body-1">
       <v-container>
+        <v-alert type="warning">
+          {{ $t('global.wip') }}
+        </v-alert>
         <nuxt />
       </v-container>
     </v-main>
