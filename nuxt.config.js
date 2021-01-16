@@ -22,7 +22,12 @@ export default {
   css: [],
   plugins: [],
   components: true,
-  buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify', '@nuxtjs/moment'],
+  buildModules: [
+    '@nuxt/typescript-build',
+    '@nuxtjs/vuetify',
+    '@nuxtjs/moment',
+    'nuxt-compress'
+  ],
   modules: ['nuxt-i18n'],
   build: {},
   // module configs
