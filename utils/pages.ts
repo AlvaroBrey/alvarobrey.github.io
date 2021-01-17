@@ -3,6 +3,7 @@ export interface Page {
   routeName: string
 }
 
+// todo make name optional to avoid repeating it all the time
 export const pages: readonly Page[] = Object.freeze([
   {
     translationKey: 'home',
@@ -15,6 +16,10 @@ export const pages: readonly Page[] = Object.freeze([
   {
     translationKey: 'cv',
     routeName: 'cv'
+  },
+  {
+    translationKey: 'contact',
+    routeName: 'contact'
   },
   {
     translationKey: 'about',
