@@ -11,6 +11,11 @@ import Vue from 'vue'
 import BasicPage from '~/components/BasicPage.vue'
 
 export default Vue.extend({
-  components: { BasicPage }
+  components: { BasicPage },
+  head() {
+    return {
+      title: this.$tc('nav.about')
+    }
+  }
 })
 </script>

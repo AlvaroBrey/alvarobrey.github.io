@@ -55,6 +55,11 @@ export default Vue.extend({
     return {
       items
     }
+  },
+  head() {
+    return {
+      title: this.$tc('nav.contact')
+    }
   }
 })
 </script>

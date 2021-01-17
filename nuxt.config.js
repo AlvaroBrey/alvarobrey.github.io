@@ -4,14 +4,14 @@ const BASE_URL = 'https://alvarobrey.com'
 export default {
   target: 'static',
   head: {
-    titleTemplate: '%s - alvarobrey.com',
+    titleTemplate: '%s - Álvaro Brey',
     title: 'alvarobrey.com',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
       { hid: 'description', name: 'description', content: '' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
   },
   typescript: {
     typeCheck: {

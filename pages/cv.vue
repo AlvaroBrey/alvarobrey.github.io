@@ -73,6 +73,11 @@ export default Vue.extend({
       }
       return items
     }
+  },
+  head() {
+    return {
+      title: this.$tc('nav.cv')
+    }
   }
 })
 </script>

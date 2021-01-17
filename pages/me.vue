@@ -54,6 +54,11 @@ import InfoBar from '~/components/InfoBar.vue'
 import BasicPage from '~/components/BasicPage.vue'
 
 export default Vue.extend({
-  components: { BasicPage, InfoBar }
+  components: { BasicPage, InfoBar },
+  head() {
+    return {
+      title: this.$tc('nav.me')
+    }
+  }
 })
 </script>

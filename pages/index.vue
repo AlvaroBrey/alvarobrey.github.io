@@ -40,6 +40,11 @@ export default Vue.extend({
       // don't show link to home in home
       return pages.filter((page) => !isHomeRoute(page.routeName))
     }
+  },
+  head() {
+    return {
+      title: this.$tc('nav.home')
+    }
   }
 })
 </script>
