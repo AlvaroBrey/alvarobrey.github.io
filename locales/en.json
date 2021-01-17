@@ -13,6 +13,16 @@
     "contact": "Contact"
   },
   "page": {
+    "contact": {
+      "intro": "You can find me at these places:",
+      "title": "Contact",
+      "item": {
+        "linkedIn": "LinkedIn",
+        "gitHub": "GitHub",
+        "twitter": "Twitter",
+        "mail": "Email"
+      }
+    },
     "cv": {
       "filter": {
         "course": "Courses",
