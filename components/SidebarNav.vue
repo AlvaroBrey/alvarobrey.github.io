@@ -46,7 +46,7 @@ export default Vue.extend({
         this.$emit('input', value)
       }
     },
-    items(): Page[] {
+    items(): readonly Page[] {
       return pages
     }
   }
