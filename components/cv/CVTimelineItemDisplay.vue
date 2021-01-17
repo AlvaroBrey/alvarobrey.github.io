@@ -5,7 +5,7 @@
         <v-img contain :src="imgPath" />
       </v-avatar>
     </template>
-    <v-card elevation="0">
+    <v-card elevation="1">
       <!-- eslint-disable vue/no-v-html -->
       <div
         class="d-flex flex-no-wrap justify-space-between flex-xs-row"
