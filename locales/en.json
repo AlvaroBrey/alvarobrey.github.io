@@ -13,6 +13,11 @@
     "contact": "Contact"
   },
   "page": {
+    "about": {
+      "title": "About this page",
+      "paragraph1": "This page was made using <a href=\"https://nuxtjs.org/\">NuxtJS</a>, TypeScript and <a href=\"https://vuetifyjs.com/en/\">Vuetify</a>.",
+      "paragraph2": "You can check out the source code <a href=\"https://github.com/alvarobrey/alvarobrey.github.io\">at GitHub</a>, where it is published under the GNU GPLv3 License. The page is automatically built as a full static site with <a href=\"https://github.com/alvarobrey/alvarobrey.github.io/actions\">GitHub Actions</a> and hosted in GitHub Pages."
+    },
     "contact": {
       "intro": "You can find me at these places:",
       "title": "Contact",
