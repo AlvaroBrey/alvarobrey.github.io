@@ -21,8 +21,9 @@
         color="primary"
         nuxt
         :to="localePath({ name: page.routeName })"
-        v-text="$t(`nav.${page.translationKey}`)"
-      />
+      >
+        {{ $t(`nav.${page.translationKey}`) }}
+      </v-btn>
     </div>
   </BasicPage>
 </template>
