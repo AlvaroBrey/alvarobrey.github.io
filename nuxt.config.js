@@ -1,5 +1,6 @@
 import { messages } from './locales'
 
+const BASE_URL = 'https://alvarobrey.com'
 export default {
   target: 'static',
   head: {
@@ -23,7 +24,7 @@ export default {
   plugins: [],
   components: true,
   buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify', '@nuxtjs/moment'],
-  modules: ['nuxt-i18n'],
+  modules: ['nuxt-i18n', '@nuxtjs/sitemap'],
   build: {},
   // module configs
   vuetify: {
@@ -31,7 +32,7 @@ export default {
     optionsPath: '~/vuetify.options.ts'
   },
   i18n: {
-    baseUrl: 'https://alvarobrey.com',
+    baseUrl: BASE_URL,
     seo: true,
     locales: [
       { code: 'en', iso: 'en-US' },
@@ -51,5 +52,9 @@ export default {
   },
   moment: {
     locales: ['es']
+  },
+  sitemap: {
+    hostname: BASE_URL,
+    i18n: true
   }
 }
