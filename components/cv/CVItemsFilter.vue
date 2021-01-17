@@ -1,5 +1,5 @@
 <template>
-  <v-chip-group v-model="selection" mandatory>
+  <v-chip-group v-model="selection" column mandatory>
     <v-chip filter>
       {{ $t('global.filter.all') }}
     </v-chip>

@@ -36,7 +36,6 @@ import CVTimelineItemDisplay from '~/components/cv/CVTimelineItemDisplay.vue'
 import { CVItemType, CVTimelineItem } from '~/model/CVModel'
 import { Optional } from '~/types/utilityTypes'
 import CVItemsFilter from '~/components/cv/CVItemsFilter.vue'
-// TODO update and upload CV
 
 function getCompareDate(item: CVTimelineItem): Optional<moment.Moment> {
   return item.startDate ?? item.endDate
