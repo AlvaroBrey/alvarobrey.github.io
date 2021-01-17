@@ -5,7 +5,7 @@ const lightTheme: Partial<VuetifyThemeVariant> = {
   primary: '#4A4E69',
   secondary: '#9A8C98',
   accent: '#C9ADA7',
-  background: '#F2E9E4'
+  background: '#fcf9f8'
 }
 
 // TODO tweak dark theme and enable switching in app
