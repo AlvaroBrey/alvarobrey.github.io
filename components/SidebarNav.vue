@@ -1,5 +1,13 @@
 <template>
   <v-navigation-drawer v-model="isOpen" app temporary>
+    <v-list-item>
+      <v-list-item-content>
+        <v-list-item-title class="title primary--text">
+          Álvaro Brey
+        </v-list-item-title>
+      </v-list-item-content>
+    </v-list-item>
+    <v-divider />
     <v-list dense nav>
       <v-list-item
         v-for="item in items"
