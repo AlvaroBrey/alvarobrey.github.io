@@ -6,7 +6,7 @@
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
-    "generate": "nuxt-ts generate",
+    "generate": "rimraf .nuxt dist && nuxt-ts generate",
     "lint:js": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
     "lint": "yarn lint:js",
     "serve": "http-server ./dist",
@@ -45,6 +45,7 @@
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
     "push-dir": "^0.4.1",
+    "rimraf": "^3.0.2",
     "sass": "^1.26.5",
     "sass-loader": "^7.0.2"
   }
