@@ -13,7 +13,7 @@
             <v-icon size="120" :color="hover ? 'primary' : ''">
               {{ icon }}
             </v-icon>
-            <p class="text-subtitle-1">
+            <p class="text-subtitle-1" :class="{ 'text--primary': hover }">
               {{ $t(`page.contact.item.${translationKey}`) }}
             </p>
           </a>
@@ -56,5 +56,7 @@ a {
   &::-moz-focus-inner {
     border: 0;
   }
+  text-decoration: inherit;
+  color: inherit;
 }
 </style>
