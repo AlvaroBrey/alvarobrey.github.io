@@ -62,9 +62,7 @@ export default {
     hostname: BASE_URL,
     i18n: true
   },
-  publicRuntimeConfig: {
-    googleAnalytics: {
-      id: process.env.GOOGLE_ANALYTICS_ID
-    }
+  googleAnalytics: {
+    id: process.env.GOOGLE_ANALYTICS_ID
   }
 }
