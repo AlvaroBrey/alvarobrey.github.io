@@ -7,7 +7,10 @@
     <p class="body-1" v-html="$t('page.me.paragraph4')" />
     <v-row justify="center" align="start">
       <v-col cols="12" xs="12" md="6">
-        <p class="overline mb-0 primary--text" v-text="$t('page.me.whatIDo')" />
+        <p
+          class="text-overline mb-0 primary--text"
+          v-text="$t('page.me.whatIDo')"
+        />
         <ul>
           <li>VueJS, Typescript, NuxtJS</li>
           <li>Docker, Kubernetes</li>
@@ -21,7 +24,7 @@
       </v-col>
       <v-col cols="12" xs="12" md="6">
         <p
-          class="overline mb-0 primary--text"
+          class="text-overline mb-0 primary--text"
           v-text="$t('page.me.whatILike')"
         />
         <ul>
