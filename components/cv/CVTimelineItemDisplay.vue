@@ -43,7 +43,7 @@
       </div>
     </v-card>
     <template slot="opposite">
-      <span class="text-body">{{ dateText }}</span>
+      <span class="text-overline">{{ dateText }}</span>
     </template>
   </v-timeline-item>
 </template>
