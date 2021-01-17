@@ -2,7 +2,7 @@
   <BasicPage :title="title">
     <p class="text-subtitle-2 mb-8">{{ description }}</p>
     <v-row align="center" justify="center">
-      <v-btn v-row color="primary" :to="localeRoute({ name: 'home' })" nuxt>
+      <v-btn color="primary" :to="localePath({ name: 'home' })" nuxt>
         {{ $t('nav.home') }}
       </v-btn>
     </v-row>
