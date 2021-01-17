@@ -39,21 +39,23 @@
           </ul>
         </v-col>
       </v-row>
-      <v-alert type="info" color="primary lighten-2" class="mt-4">
+      <InfoBar class="mt-4">
         <i18n path="page.me.lookingForContact" tag="span">
           <nuxt-link
             :to="localePath({ name: 'contact' })"
-            class="accent--text"
             v-text="$t('page.me.contactPage')"
           />
         </i18n>
-      </v-alert>
+      </InfoBar>
     </v-col>
   </v-row>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
+import InfoBar from '~/components/InfoBar.vue'
 
-export default Vue.extend({})
+export default Vue.extend({
+  components: { InfoBar }
+})
 </script>

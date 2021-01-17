@@ -5,17 +5,16 @@
       <v-row justify="center">
         <v-col cols="12" xs="12" sm="10" lg="8">
           <h4 class="text-h4 primary--text" v-html="$t('page.cv.title')" />
-          <v-alert type="info" color="primary lighten-2" class="mt-2">
+          <InfoBar class="mt-2">
             <i18n path="page.cv.introduction" tag="span">
               <a
-                class="accent--text"
                 href="/files/AlvaroBreyVilas-cv.pdf"
                 download
                 target="_blank"
                 v-text="$t('page.cv.introductionLinkHere')"
               />
             </i18n>
-          </v-alert>
+          </InfoBar>
         </v-col>
       </v-row>
       <v-row class="px-3" no-gutters>
@@ -47,6 +46,7 @@ import CVTimelineItemDisplay from '~/components/cv/CVTimelineItemDisplay.vue'
 import { CVItemType, CVTimelineItem } from '~/model/CVModel'
 import { Optional } from '~/types/utilityTypes'
 import CVItemsFilter from '~/components/cv/CVItemsFilter.vue'
+import InfoBar from '~/components/InfoBar.vue'
 // TODO update and upload CV
 
 function getCompareDate(item: CVTimelineItem): Optional<moment.Moment> {
@@ -66,7 +66,7 @@ function sortTimelineItems(a: CVTimelineItem, b: CVTimelineItem): number {
 }
 
 export default Vue.extend({
-  components: { CVItemsFilter, CVTimelineItemDisplay },
+  components: { InfoBar, CVItemsFilter, CVTimelineItemDisplay },
   data() {
     return {
       reverseOrder: false,
