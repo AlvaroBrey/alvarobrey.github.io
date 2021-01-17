@@ -2,30 +2,20 @@
   <!-- eslint-disable vue/no-v-html -->
   <v-row justify="center" align="center">
     <v-col cols="12">
-      <v-row justify="center">
-        <v-col cols="12" xs="12" sm="10" lg="8">
-          <h4 class="text-h4 primary--text" v-html="$t('page.cv.title')" />
-          <InfoBar class="mt-2">
-            <i18n path="page.cv.introduction" tag="span">
-              <a
-                href="/files/AlvaroBreyVilas-cv.pdf"
-                download
-                target="_blank"
-                v-text="$t('page.cv.introductionLinkHere')"
-              />
-            </i18n>
-          </InfoBar>
-        </v-col>
-      </v-row>
-      <v-row class="px-3" no-gutters>
-        <CVItemsFilter v-model="itemFilter" />
+      <v-row no-gutters align="center" justify="center">
+        <h4 class="text-h4 primary--text" v-html="$t('page.cv.title')" />
         <v-spacer />
-        <v-switch
-          v-model="reverseOrder"
-          :label="$t('page.cv.oldestFirst')"
-          class="mt-0 hidden-sm-and-down"
-        />
+        <v-btn
+          color="primary"
+          href="/files/AlvaroBreyVilas-cv.pdf"
+          download
+          target="_blank"
+        >
+          <v-icon left>mdi-file-pdf</v-icon>
+          <span>PDF version</span>
+        </v-btn>
       </v-row>
+      <CVItemsFilter v-model="itemFilter" />
       <v-timeline :dense="$nuxt.$vuetify.breakpoint.mdAndDown">
         <CVTimelineItemDisplay
           v-for="(item, index) in sortedItems"
@@ -46,7 +36,6 @@ import CVTimelineItemDisplay from '~/components/cv/CVTimelineItemDisplay.vue'
 import { CVItemType, CVTimelineItem } from '~/model/CVModel'
 import { Optional } from '~/types/utilityTypes'
 import CVItemsFilter from '~/components/cv/CVItemsFilter.vue'
-import InfoBar from '~/components/InfoBar.vue'
 // TODO update and upload CV
 
 function getCompareDate(item: CVTimelineItem): Optional<moment.Moment> {
@@ -66,7 +55,7 @@ function sortTimelineItems(a: CVTimelineItem, b: CVTimelineItem): number {
 }
 
 export default Vue.extend({
-  components: { InfoBar, CVItemsFilter, CVTimelineItemDisplay },
+  components: { CVItemsFilter, CVTimelineItemDisplay },
   data() {
     return {
       reverseOrder: false,
