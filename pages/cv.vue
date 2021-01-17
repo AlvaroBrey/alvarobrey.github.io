@@ -2,18 +2,22 @@
   <!-- eslint-disable vue/no-v-html -->
   <v-row justify="center" align="center">
     <v-col cols="12">
-      <h4
-        class="text-h4 mb-8 primary--text px-3"
-        v-html="$t('page.cv.title')"
-      />
-      <i18n path="page.cv.introduction" tag="p" class="px-3">
-        <a
-          href="/files/AlvaroBreyVilas-cv.pdf"
-          download
-          target="_blank"
-          v-text="$t('page.cv.introductionLinkHere')"
-        />
-      </i18n>
+      <v-row justify="center">
+        <v-col cols="12" xs="12" sm="10" lg="8">
+          <h4 class="text-h4 primary--text" v-html="$t('page.cv.title')" />
+          <v-alert type="info" color="primary lighten-2" class="mt-2">
+            <i18n path="page.cv.introduction" tag="span">
+              <a
+                class="accent--text"
+                href="/files/AlvaroBreyVilas-cv.pdf"
+                download
+                target="_blank"
+                v-text="$t('page.cv.introductionLinkHere')"
+              />
+            </i18n>
+          </v-alert>
+        </v-col>
+      </v-row>
       <v-row class="px-3" no-gutters>
         <CVItemsFilter v-model="itemFilter" />
         <v-spacer />

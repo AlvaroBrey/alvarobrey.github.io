@@ -39,7 +39,7 @@
           </ul>
         </v-col>
       </v-row>
-      <v-alert type="info" color="primary lighten-1" class="mt-4">
+      <v-alert type="info" color="primary lighten-2" class="mt-4">
         <i18n path="page.me.lookingForContact" tag="span">
           <nuxt-link
             :to="localePath({ name: 'contact' })"

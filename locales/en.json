@@ -20,8 +20,8 @@
         "education": "Education",
         "hobby": "Hobby"
       },
-      "introduction": "Here's the most relevant parts of my professional career as a timeline. If you're looking for a more traditional CV, {0} for the PDF version.",
-      "introductionLinkHere": "please click here",
+      "introduction": "Looking for a more traditional CV? {0} for the PDF version.",
+      "introductionLinkHere": "Click here",
       "items": {
         "AIMasters": {
           "title": "Masters in Artificial Intelligence Research",
