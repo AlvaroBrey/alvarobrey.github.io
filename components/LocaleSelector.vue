@@ -44,6 +44,11 @@ export default Vue.extend({
 </script>
 
 <style lang="scss" scoped>
+#locale-btn {
+  position: absolute;
+  right: 1rem;
+  top: 1rem;
+}
 .flipped {
   transform: rotate(-180deg);
 }
