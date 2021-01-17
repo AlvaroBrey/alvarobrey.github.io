@@ -1,11 +1,5 @@
-<template functional>
-  <v-alert
-    type="info"
-    color="primary lighten-2"
-    class="info-bar"
-    :class="data.staticClass || ''"
-    v-bind="data.attrs"
-  >
+<template>
+  <v-alert type="info" color="primary lighten-2" class="info-bar">
     <slot />
   </v-alert>
 </template>
