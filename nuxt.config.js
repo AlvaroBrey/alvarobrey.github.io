@@ -23,7 +23,12 @@ export default {
   css: [],
   plugins: [],
   components: true,
-  buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify', '@nuxtjs/moment'],
+  buildModules: [
+    '@nuxt/typescript-build',
+    '@nuxtjs/vuetify',
+    '@nuxtjs/moment',
+    '@nuxtjs/google-analytics'
+  ],
   modules: ['nuxt-i18n', '@nuxtjs/sitemap'],
   build: {},
   // module configs
@@ -56,5 +61,10 @@ export default {
   sitemap: {
     hostname: BASE_URL,
     i18n: true
+  },
+  publicRuntimeConfig: {
+    googleAnalytics: {
+      id: process.env.GOOGLE_ANALYTICS_ID
+    }
   }
 }

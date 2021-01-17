@@ -30,6 +30,8 @@ jobs:
 
       - run: yarn install --frozen-lockfile
       - run: yarn generate
+        env:
+          GOOGLE_ANALYTICS_ID: ${{ secrets.GOOGLE_ANALYTICS_ID }}
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
