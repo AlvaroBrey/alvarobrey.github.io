@@ -1,12 +1,14 @@
 <template>
-  <v-app-bar app flat color="background">
-    <v-app-bar-nav-icon
-      v-if="shouldShowNav && isMobile"
-      @click="$emit('toggle-sidebar', true)"
-    />
-    <HeaderNav v-if="shouldShowNav && !isMobile" />
-    <v-spacer />
-  </v-app-bar>
+  <div>
+    <v-app-bar v-if="shouldShowNav" app flat color="background">
+      <v-app-bar-nav-icon
+        v-if="isMobile"
+        @click="$emit('toggle-sidebar', true)"
+      />
+      <HeaderNav v-else />
+      <v-spacer />
+    </v-app-bar>
+  </div>
 </template>
 
 <script lang="ts">
