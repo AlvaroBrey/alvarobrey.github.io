@@ -1,4 +1,14 @@
 {
+  "error": {
+    "404": {
+      "title": "Lost?",
+      "description": "404 not found"
+    },
+    "other": {
+      "title": "Error",
+      "description": "An unexpected error has ocurred"
+    }
+  },
   "global": {
     "filter": {
       "all": "All"

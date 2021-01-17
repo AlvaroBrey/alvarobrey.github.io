@@ -1,4 +1,7 @@
 {
+  "error": {
+    "404": "error.404"
+  },
   "global": {
     "wip": "Página en construcción! Pisa con cuidado."
   }

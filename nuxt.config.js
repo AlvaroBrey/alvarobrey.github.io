@@ -31,6 +31,9 @@ export default {
   buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify', '@nuxtjs/moment'],
   modules: ['nuxt-i18n', '@nuxtjs/sitemap'],
   build: {},
+  generate: {
+    fallback: '/404.html'
+  },
   // module configs
   vuetify: {
     customVariables: ['~/assets/vuetify-variables.scss'],
