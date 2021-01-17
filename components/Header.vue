@@ -6,19 +6,17 @@
     />
     <HeaderNav v-if="shouldShowNav && !isMobile" />
     <v-spacer />
-    <LocaleSelector />
   </v-app-bar>
 </template>
 
 <script lang="ts">
 import Vue from 'vue'
-import LocaleSelector from '~/components/LocaleSelector.vue'
 import HeaderNav from '~/components/HeaderNav.vue'
 import { isHomeRoute } from '~/utils/pages'
 
 export default Vue.extend({
   name: 'Header',
-  components: { HeaderNav, LocaleSelector },
+  components: { HeaderNav },
   computed: {
     shouldShowNav(): boolean {
       return !isHomeRoute(this.$nuxt.$route.name)

@@ -42,13 +42,7 @@ export default {
   i18n: {
     baseUrl: BASE_URL,
     seo: true,
-    locales: [
-      { code: 'en', iso: 'en-US' },
-      {
-        code: 'es',
-        iso: 'es-ES'
-      }
-    ],
+    locales: [{ code: 'en', iso: 'en-US' }],
     defaultLocale: 'en',
     vueI18n: {
       fallbackLocale: 'en',
