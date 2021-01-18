@@ -16,9 +16,9 @@
           <li>Docker, Kubernetes</li>
           <li>Git</li>
           <li>Kotlin</li>
-          <li>Android</li>
           <li>Python, shell</li>
           <li>Ansible</li>
+          <li>Android</li>
           <li>Linux</li>
         </ul>
       </v-col>
