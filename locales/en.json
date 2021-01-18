@@ -1,4 +1,7 @@
 {
+  "aria": {
+    "darkMode": "Toggle dark mode"
+  },
   "error": {
     "404": {
       "title": "Lost?",
