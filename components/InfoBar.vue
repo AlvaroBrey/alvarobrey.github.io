@@ -1,5 +1,5 @@
 <template>
-  <v-alert type="info" color="primary lighten-2" class="info-bar">
+  <v-alert type="info" color="primary" class="info-bar background--text">
     <slot />
   </v-alert>
 </template>

@@ -13,7 +13,7 @@
       >
         <div>
           <v-card-title
-            class="cv-card-title"
+            class="cv-card-title primary--text"
             v-text="$t(`page.cv.items.${item.key}.title`)"
           />
           <v-card-subtitle>
