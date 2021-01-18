@@ -7,7 +7,7 @@
         <v-spacer />
         <v-btn
           color="primary"
-          href="/files/AlvaroBreyVilas-cv.pdf"
+          href="/files/AlvaroBreyVilas-cv-20210118.pdf"
           download
           target="_blank"
         >
