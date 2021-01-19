@@ -25,7 +25,7 @@ export default {
       }
     }
   },
-  css: [],
+  css: ['~/assets/styles/global'],
   plugins: [],
   components: true,
   buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify', '@nuxtjs/moment'],
@@ -36,7 +36,8 @@ export default {
   },
   // module configs
   vuetify: {
-    customVariables: ['~/assets/vuetify-variables.scss'],
+    treeShake: true,
+    customVariables: ['~/assets/styles/vuetify-variables.scss'],
     optionsPath: '~/vuetify.options.ts'
   },
   i18n: {

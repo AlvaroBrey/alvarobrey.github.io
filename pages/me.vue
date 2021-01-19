@@ -62,3 +62,12 @@ export default Vue.extend({
   }
 })
 </script>
+
+<style lang="scss">
+// easter egg
+a.simon {
+  color: inherit !important;
+  text-decoration: inherit !important;
+  cursor: inherit !important;
+}
+</style>

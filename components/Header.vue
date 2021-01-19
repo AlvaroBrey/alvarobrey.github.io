@@ -1,6 +1,6 @@
 <template>
   <div>
-    <v-app-bar v-if="shouldShowNav" :flat="!isMobile" app color="background">
+    <v-app-bar v-if="shouldShowNav" :flat="!isMobile" app>
       <v-app-bar-nav-icon
         v-if="isMobile"
         @click="$emit('toggle-sidebar', true)"

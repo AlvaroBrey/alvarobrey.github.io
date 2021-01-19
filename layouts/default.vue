@@ -11,9 +11,6 @@
   </v-app>
 </template>
 
-<style lang="scss">
-@import 'assets/global.scss';
-</style>
 <script>
 import SidebarNav from '../components/SidebarNav'
 import DarkModeSwitcher from '../components/DarkModeSwitcher'

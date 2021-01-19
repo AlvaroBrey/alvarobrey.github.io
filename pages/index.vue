@@ -17,7 +17,7 @@
       <v-btn
         v-for="page in filteredPages"
         :key="page.routeName"
-        class="ma-2 background--text"
+        class="ma-2 secondary--text"
         color="primary"
         nuxt
         :to="localePath({ name: page.routeName })"

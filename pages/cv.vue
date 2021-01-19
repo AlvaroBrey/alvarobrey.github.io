@@ -6,7 +6,7 @@
         <h4 class="text-h4 primary--text" v-html="$t('page.cv.title')" />
         <v-spacer />
         <v-btn
-          class="background--text"
+          class="secondary--text"
           color="primary"
           href="/files/AlvaroBreyVilas-cv-20210118.pdf"
           download
