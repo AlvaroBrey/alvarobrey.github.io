@@ -1,4 +1,3 @@
-import moment from 'moment'
 import { Optional } from '~/types/utilityTypes'
 
 export enum CVItemType {
@@ -21,8 +20,8 @@ export enum CVOrg {
 export interface CVTimelineItem {
   key: string
   org: Optional<CVOrg>
-  startDate: Optional<moment.Moment>
-  endDate: Optional<moment.Moment>
+  startDate: Optional<Date>
+  endDate: Optional<Date>
   type: CVItemType
   skills?: string[]
   tech?: string[]

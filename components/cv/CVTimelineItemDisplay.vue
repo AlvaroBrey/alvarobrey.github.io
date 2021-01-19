@@ -50,7 +50,7 @@
 
 <script lang="ts">
 import Vue, { PropOptions } from 'vue'
-import moment from 'moment'
+import { format } from 'date-fns'
 import { CVTimelineItem } from '~/model/CVModel'
 import { Optional } from '~/types/utilityTypes'
 import { CV_DATE_FORMAT, CVItemTypeColors } from '~/model/ui/CVUIModel'
@@ -108,11 +108,11 @@ export default Vue.extend({
     }
   },
   methods: {
-    formatDate(date: Optional<moment.Moment>): string {
+    formatDate(date: Optional<Date>): string {
       if (date === undefined) {
         return this.$tc('page.cv.present')
       }
-      return date.format(CV_DATE_FORMAT)
+      return format(date, CV_DATE_FORMAT)
     }
   }
 })

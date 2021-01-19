@@ -31,14 +31,14 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import moment from 'moment'
+import { compareDesc } from 'date-fns'
 import { CVTimelineItems } from '~/data/CVData'
 import CVTimelineItemDisplay from '~/components/cv/CVTimelineItemDisplay.vue'
 import { CVItemType, CVTimelineItem } from '~/model/CVModel'
 import { Optional } from '~/types/utilityTypes'
 import CVItemsFilter from '~/components/cv/CVItemsFilter.vue'
 
-function getCompareDate(item: CVTimelineItem): Optional<moment.Moment> {
+function getCompareDate(item: CVTimelineItem): Optional<Date> {
   return item.startDate ?? item.endDate
 }
 
@@ -51,7 +51,7 @@ function sortTimelineItems(a: CVTimelineItem, b: CVTimelineItem): number {
   if (bDate === undefined) {
     return 1
   }
-  return bDate.unix() - aDate.unix()
+  return compareDesc(aDate, bDate)
 }
 
 export default Vue.extend({

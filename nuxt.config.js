@@ -28,7 +28,7 @@ export default {
   css: ['~/assets/styles/global'],
   plugins: [],
   components: true,
-  buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify', '@nuxtjs/moment'],
+  buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify'],
   modules: ['nuxt-i18n', '@nuxtjs/sitemap'],
   build: {
     extractCSS: true
@@ -54,9 +54,6 @@ export default {
     detectBrowserLanguage: {
       onlyOnRoot: true
     }
-  },
-  moment: {
-    locales: ['es']
   },
   sitemap: {
     hostname: BASE_URL,

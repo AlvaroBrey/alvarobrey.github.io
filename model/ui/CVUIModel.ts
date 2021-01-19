@@ -7,4 +7,4 @@ export const CVItemTypeColors: Record<CVItemType, string> = {
   [CVItemType.HOBBY]: 'blue lighten-2'
 }
 
-export const CV_DATE_FORMAT = 'YYYY/MM'
+export const CV_DATE_FORMAT = 'yyyy/MM'

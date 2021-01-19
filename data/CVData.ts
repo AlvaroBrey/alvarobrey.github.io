@@ -1,9 +1,9 @@
-import moment from 'moment'
+import { parse } from 'date-fns'
 import { CVItemType, CVOrg, CVTimelineItem } from '~/model/CVModel'
+import { CV_DATE_FORMAT } from '~/model/ui/CVUIModel'
 
-const dateFormat = 'YYYY/MM'
-function parseDate(date: string): moment.Moment {
-  return moment(date, dateFormat)
+function parseDate(date: string): Date {
+  return parse(date, CV_DATE_FORMAT, new Date())
 }
 
 export const educationCVItems: CVTimelineItem[] = [
