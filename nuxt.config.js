@@ -30,7 +30,9 @@ export default {
   components: true,
   buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify', '@nuxtjs/moment'],
   modules: ['nuxt-i18n', '@nuxtjs/sitemap'],
-  build: {},
+  build: {
+    extractCSS: true
+  },
   generate: {
     fallback: '/404.html'
   },
