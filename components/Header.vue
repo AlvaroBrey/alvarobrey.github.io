@@ -1,12 +1,15 @@
 <template>
   <div>
-    <v-app-bar v-if="shouldShowNav" :flat="!isMobile" app>
-      <v-app-bar-nav-icon
-        v-if="isMobile"
-        @click="$emit('toggle-sidebar', true)"
-      />
-      <HeaderNav v-else />
+    <v-app-bar :flat="!isMobile" app class="main-app-bar">
+      <template v-if="shouldShowNav">
+        <v-app-bar-nav-icon
+          v-if="isMobile"
+          @click="$emit('toggle-sidebar', true)"
+        />
+        <HeaderNav v-else />
+      </template>
       <v-spacer />
+      <DarkModeSwitcher />
     </v-app-bar>
   </div>
 </template>
@@ -15,10 +18,11 @@
 import Vue from 'vue'
 import HeaderNav from '~/components/HeaderNav.vue'
 import { isHomeRoute } from '~/utils/pages'
+import DarkModeSwitcher from '~/components/DarkModeSwitcher.vue'
 
 export default Vue.extend({
   name: 'Header',
-  components: { HeaderNav },
+  components: { DarkModeSwitcher, HeaderNav },
   computed: {
     shouldShowNav(): boolean {
       return !isHomeRoute(this.$nuxt.$route.name)
@@ -29,3 +33,9 @@ export default Vue.extend({
   }
 })
 </script>
+
+<style lang="scss" scoped>
+.main-app-bar {
+  position: relative;
+}
+</style>

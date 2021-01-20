@@ -1,6 +1,5 @@
 <template>
   <v-app class="app">
-    <DarkModeSwitcher />
     <Header @toggle-sidebar="toggleSidebar" />
     <SidebarNav v-model="sidebarOpen" />
     <v-main class="text-body-1">
@@ -13,11 +12,10 @@
 
 <script>
 import SidebarNav from '../components/SidebarNav'
-import DarkModeSwitcher from '../components/DarkModeSwitcher'
 import { getDefaultDarkValue } from '../utils/darkTheme.js'
 import Header from '~/components/Header'
 export default {
-  components: { DarkModeSwitcher, SidebarNav, Header },
+  components: { SidebarNav, Header },
   data() {
     return {
       sidebarOpen: false

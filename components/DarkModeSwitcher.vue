@@ -45,7 +45,7 @@ export default Vue.extend({
 
 <style lang="scss">
 .dark-mode-switcher {
-  position: fixed;
+  position: absolute;
   top: 1rem;
   right: 1rem;
   z-index: 50;

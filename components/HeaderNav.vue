@@ -1,5 +1,5 @@
 <template>
-  <v-tabs centered optional>
+  <v-tabs optional centered>
     <v-tab
       v-for="page in pages"
       :key="page.routeName"
