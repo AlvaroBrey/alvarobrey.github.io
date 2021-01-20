@@ -25,7 +25,7 @@ export default {
       }
     }
   },
-  css: ['~/assets/styles/global'],
+  css: ['~/assets/styles/global', '~/assets/styles/fonts'],
   plugins: [],
   components: true,
   buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify'],
@@ -41,9 +41,7 @@ export default {
     treeShake: true,
     customVariables: ['~/assets/styles/vuetify-variables.scss'],
     optionsPath: '~/vuetify.options.ts',
-    defaultAssets: {
-      icons: false
-    }
+    defaultAssets: false
   },
   i18n: {
     baseUrl: BASE_URL,
