@@ -30,6 +30,19 @@ export default {
   components: true,
   buildModules: ['@nuxt/typescript-build', '@nuxtjs/vuetify'],
   modules: ['nuxt-i18n', '@nuxtjs/sitemap'],
+  render: {
+    bundleRenderer: {
+      shouldPreload: (file, type) => {
+        if (type === 'script' || type === 'style') {
+          return true
+        }
+        if (type === 'font') {
+          // only preload the regular woff2 fonts
+          return /(regular|[357]00)\..*\.woff2$/.test(file)
+        }
+      }
+    }
+  },
   build: {
     extractCSS: true
   },
