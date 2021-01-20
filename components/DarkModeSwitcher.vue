@@ -2,8 +2,8 @@
   <v-switch
     v-model="isDark"
     :aria-label="$t('aria.darkMode')"
-    prepend-icon="mdi-white-balance-sunny"
-    append-icon="mdi-moon-waning-crescent"
+    :prepend-icon="icons.mdiWhiteBalanceSunny"
+    :append-icon="icons.mdiMoonWaningCrescent"
     color="primary"
     class="dark-mode-switcher ma-0"
   />
@@ -11,10 +11,19 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { mdiMoonWaningCrescent, mdiWhiteBalanceSunny } from '@mdi/js'
 import { storeDarkValue } from '~/utils/darkTheme.js'
 
 export default Vue.extend({
   name: 'DarkModeSwitcher',
+  data() {
+    return {
+      icons: {
+        mdiWhiteBalanceSunny,
+        mdiMoonWaningCrescent
+      }
+    }
+  },
   computed: {
     isDark: {
       get(): boolean {

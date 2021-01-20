@@ -17,6 +17,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { mdiEmail, mdiGithub, mdiLinkedin, mdiTwitter } from '@mdi/js'
 import BasicPage from '~/components/BasicPage.vue'
 import ContactItemDisplay from '~/components/contact/ContactItemDisplay.vue'
 
@@ -29,22 +30,22 @@ interface ContactItem {
 const items: ContactItem[] = [
   {
     key: 'linkedIn',
-    icon: 'mdi-linkedin',
+    icon: mdiLinkedin,
     link: 'https://linkedin.com/in/alvarobrey'
   },
   {
     key: 'gitHub',
-    icon: 'mdi-github',
+    icon: mdiGithub,
     link: 'https://github.com/alvarobrey'
   },
   {
     key: 'twitter',
-    icon: 'mdi-twitter',
+    icon: mdiTwitter,
     link: 'https://twitter.com/AlvaroBrey_'
   },
   {
     key: 'mail',
-    icon: 'mdi-email',
+    icon: mdiEmail,
     link: 'mailto:alvaro.brv@gmail.com'
   }
 ]

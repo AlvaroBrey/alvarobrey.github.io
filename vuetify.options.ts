@@ -26,6 +26,9 @@ const themeOptions: ThemeOptions = {
 }
 
 const vuetifyOptions: GlobalVuetifyPreset = {
+  icons: {
+    iconfont: 'mdiSvg'
+  },
   theme: themeOptions
 }
 // noinspection JSUnusedGlobalSymbols

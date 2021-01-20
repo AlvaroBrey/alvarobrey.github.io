@@ -3,7 +3,9 @@
     <template v-slot:activator="{ on }">
       <v-btn id="locale-btn" elevation="0" color="transparent" v-on="on">
         <span v-text="currentLocale.toUpperCase()"></span>
-        <v-icon right :class="{ flipped: menuOpen }">mdi-chevron-down</v-icon>
+        <v-icon right :class="{ flipped: menuOpen }">
+          {{ icons.mdiChevronDown }}
+        </v-icon>
       </v-btn>
     </template>
     <v-list class="py-0">
@@ -20,11 +22,15 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { mdiChevronDown } from '@mdi/js'
 export default Vue.extend({
   name: 'LanguageSelector',
   data() {
     return {
-      menuOpen: false
+      menuOpen: false,
+      icons: {
+        mdiChevronDown
+      }
     }
   },
   computed: {

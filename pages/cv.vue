@@ -12,7 +12,7 @@
           download
           target="_blank"
         >
-          <v-icon left>mdi-file-pdf</v-icon>
+          <v-icon left>{{ icons.mdiFilePdf }}</v-icon>
           <span>PDF version</span>
         </v-btn>
       </v-row>
@@ -32,6 +32,7 @@
 <script lang="ts">
 import Vue from 'vue'
 import { compareDesc } from 'date-fns'
+import { mdiFilePdf } from '@mdi/js'
 import { CVTimelineItems } from '~/data/CVData'
 import CVTimelineItemDisplay from '~/components/cv/CVTimelineItemDisplay.vue'
 import { CVItemType, CVTimelineItem } from '~/model/CVModel'
@@ -59,7 +60,10 @@ export default Vue.extend({
   data() {
     return {
       reverseOrder: false,
-      itemFilter: undefined as Optional<CVItemType>
+      itemFilter: undefined as Optional<CVItemType>,
+      icons: {
+        mdiFilePdf
+      }
     }
   },
   computed: {
