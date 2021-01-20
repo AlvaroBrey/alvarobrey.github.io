@@ -40,7 +40,10 @@ export default {
   vuetify: {
     treeShake: true,
     customVariables: ['~/assets/styles/vuetify-variables.scss'],
-    optionsPath: '~/vuetify.options.ts'
+    optionsPath: '~/vuetify.options.ts',
+    defaultAssets: {
+      icons: false
+    }
   },
   i18n: {
     baseUrl: BASE_URL,
