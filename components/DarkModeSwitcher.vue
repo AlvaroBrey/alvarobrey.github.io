@@ -1,11 +1,12 @@
 <template>
   <v-switch
+    hide-details
     v-model="isDark"
     :aria-label="$t('aria.darkMode')"
     :prepend-icon="icons.mdiWhiteBalanceSunny"
     :append-icon="icons.mdiMoonWaningCrescent"
     color="primary"
-    class="dark-mode-switcher ma-0"
+    class="ma-0"
   />
 </template>
 
@@ -42,12 +43,3 @@ export default Vue.extend({
   }
 })
 </script>
-
-<style lang="scss">
-.dark-mode-switcher {
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  z-index: 50;
-}
-</style>

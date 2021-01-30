@@ -9,7 +9,10 @@
         <HeaderNav v-else />
       </template>
       <v-spacer />
-      <DarkModeSwitcher />
+      <div class="right-controls d-flex align-center">
+        <DarkModeSwitcher />
+        <LocaleSelector />
+      </div>
     </v-app-bar>
   </div>
 </template>
@@ -19,10 +22,11 @@ import Vue from 'vue'
 import HeaderNav from '~/components/HeaderNav.vue'
 import { isHomeRoute } from '~/utils/pages'
 import DarkModeSwitcher from '~/components/DarkModeSwitcher.vue'
+import LocaleSelector from '~/components/LocaleSelector.vue'
 
 export default Vue.extend({
   name: 'Header',
-  components: { DarkModeSwitcher, HeaderNav },
+  components: { DarkModeSwitcher, HeaderNav, LocaleSelector },
   computed: {
     shouldShowNav(): boolean {
       return !isHomeRoute(this.$nuxt.$route.name)
@@ -37,5 +41,11 @@ export default Vue.extend({
 <style lang="scss" scoped>
 .main-app-bar {
   position: relative;
+}
+.right-controls {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  z-index: 50;
 }
 </style>
