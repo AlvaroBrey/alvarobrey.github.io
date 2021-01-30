@@ -14,6 +14,16 @@ export default {
         name: 'description',
         content:
           'Álvaro Brey is a Software Engineer and DevOps from Santiago de Compostela, Spain'
+      },
+      {
+        hid: 'og:image',
+        property: 'og:image',
+        content: BASE_URL + '/og_image.png'
+      },
+      {
+        hid: 'twitter:image',
+        property: 'twitter:image',
+        content: BASE_URL + '/og_image.png'
       }
     ],
     link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
