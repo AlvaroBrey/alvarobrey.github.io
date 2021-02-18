@@ -1,2 +1,4 @@
 User-Agent: *
+Disallow:
 Allow: /
+Sitemap: https://alvarobrey.com/sitemap.xml
