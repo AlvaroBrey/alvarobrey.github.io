@@ -26,7 +26,14 @@ export default {
         content: BASE_URL + '/og_image.png'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }]
+    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
+    script: [
+      {
+        src: 'https://static.cloudflareinsights.com/beacon.min.js',
+        'data-cf-beacon': '{"token": "dd5c5a36f4344624bd3ed5c1870c06c1"}',
+        defer: true
+      }
+    ]
   },
   typescript: {
     typeCheck: {
