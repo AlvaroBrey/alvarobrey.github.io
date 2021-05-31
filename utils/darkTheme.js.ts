@@ -12,7 +12,7 @@ export function getDefaultDarkValue(): boolean {
       return true
     }
   }
-  return false
+  return true
 }
 export function storeDarkValue(value: boolean) {
   if (process.browser) {

@@ -15,7 +15,7 @@ const darkTheme: Partial<VuetifyThemeVariant> = {
 }
 
 const themeOptions: ThemeOptions = {
-  dark: false,
+  dark: true,
   options: {
     customProperties: true
   },
