@@ -24,7 +24,7 @@
             </span>
           </v-card-subtitle>
           <v-card-text>
-            <p v-html="$t(`page.cv.items.${item.key}.shortDescription`)" />
+            <p v-if="description" v-html="description" />
             <CvSkillsAndTechDisplay
               v-if="item.skills || item.tech"
               :skills="item.skills"
@@ -105,6 +105,9 @@ export default Vue.extend({
     },
     hasOrg(): boolean {
       return this.item.org !== undefined
+    },
+    description(): string {
+      return this.$tc(`page.cv.items.${this.item.key}.shortDescription`)
     }
   },
   methods: {

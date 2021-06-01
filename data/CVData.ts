@@ -40,13 +40,21 @@ export const workCVItems: CVTimelineItem[] = [
     key: 'imagames',
     org: CVOrg.IMAGAMES,
     startDate: parseDate('2018/12'),
-    endDate: undefined,
+    endDate: parseDate('2021/03'),
     skills: ['infrastructure', 'frontend', 'scripting'],
     tech: [
       'Docker + Compose + Kubernetes',
       'VueJs + Typescript',
       'Ansible + Python'
     ]
+  },
+  {
+    key: 'parrable',
+    org: CVOrg.PARRABLE,
+    startDate: parseDate('2020/04'),
+    endDate: undefined,
+    skills: ['infrastructure', 'scripting'],
+    tech: ['SaltStack', 'Terraform', 'Google Cloud', 'Python + bash', 'Docker']
   }
 ].map((it) => Object.assign(it, { type: CVItemType.WORK }))
 

@@ -82,6 +82,10 @@
         "androidRoms": {
           "title": "Desarrollador de ROMs Android",
           "shortDescription": "Desarrollo de ROMs CyanogenMOD (más tarde LineageOS) para dispositivos Android. Desarrollo open-source incluyendo releases frecuentes. Trabajo en aplicaciones, sistema y kernel."
+        },
+        "parrable": {
+          "title": "Ingeniero DevOps",
+          "shortDescription": "Ingeniero DevOps en Parrable, sistema SaaS de identificación para partners en el mercado de publicidad online. Trabajo en automatización y optimización de procesos de desarrollo y despliegue."
         }
       },
       "oldestFirst": "Más antiguos primero",

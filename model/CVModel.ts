@@ -12,6 +12,7 @@ export enum CVOrg {
   EPFL = 'epfl',
   EVERIS = 'everis',
   IMAGAMES = 'imagames',
+  PARRABLE = 'parrable',
   STANFORD = 'stanford',
   UIMP = 'uimp',
   USC = 'usc'

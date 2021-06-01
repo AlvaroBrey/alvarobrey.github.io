@@ -82,6 +82,10 @@
         "androidRoms": {
           "title": "Android ROM developer",
           "shortDescription": "Development of CyanogenMOD (later LineageOS) ROMs for Android devices. Open-source development including regular releases. Work in applications, kernels and system configuration."
+        },
+        "parrable": {
+          "title": "DevOps Engineer",
+          "shortDescription": "DevOps Engineer at Parrable, a SaaS ID system for partners in the online ad market. Work on automation and streamlining of development and deployment processes."
         }
       },
       "oldestFirst": "Oldest first",
@@ -90,6 +94,7 @@
         "epfl": "EPFL on Coursera",
         "everis": "everis Spain",
         "imagames": "Imagames Gamification Services",
+        "parrable": "Parrable",
         "stanford": "Stanford University on Coursera",
         "uimp": "Menéndez Pelayo International University",
         "usc": "University of Santiago de Compostela"
