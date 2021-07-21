@@ -8,7 +8,7 @@
         <v-btn
           class="secondary--text"
           color="primary"
-          href="/files/AlvaroBreyVilas-cv-20210601.pdf"
+          href="/files/AlvaroBreyVilas-cv-20210721.pdf"
           download
           target="_blank"
         >
