@@ -86,6 +86,10 @@
         "parrable": {
           "title": "Ingeniero DevOps",
           "shortDescription": "Ingeniero DevOps en Parrable, sistema SaaS de identificación para partners en el mercado de publicidad online. Trabajo en automatización y optimización de procesos de desarrollo y despliegue."
+        },
+        "nextcloud": {
+          "title": "Desarrollador Android",
+          "shortDescription": "Ingeniero Android en Nextcloud (Nextcloud GmbH). Desarrollo open-source de la aplicación oficial de gestión y sincronización de archivos de Nextcloud."
         }
       },
       "oldestFirst": "Más antiguos primero",

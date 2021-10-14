@@ -52,9 +52,17 @@ export const workCVItems: CVTimelineItem[] = [
     key: 'parrable',
     org: CVOrg.PARRABLE,
     startDate: parseDate('2021/04'),
-    endDate: undefined,
+    endDate: parseDate('2021/08'),
     skills: ['infrastructure', 'scripting'],
     tech: ['SaltStack', 'Terraform', 'Google Cloud', 'Python + bash', 'Docker']
+  },
+  {
+    key: 'nextcloud',
+    org: CVOrg.NEXTCLOUD,
+    startDate: parseDate('2021/09'),
+    endDate: undefined,
+    skills: ['mobile', 'openSource'],
+    tech: ['Android', 'Kotlin', 'Java']
   }
 ].map((it) => Object.assign(it, { type: CVItemType.WORK }))
 

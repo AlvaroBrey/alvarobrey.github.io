@@ -12,6 +12,7 @@ export enum CVOrg {
   EPFL = 'epfl',
   EVERIS = 'everis',
   IMAGAMES = 'imagames',
+  NEXTCLOUD = 'nextcloud',
   PARRABLE = 'parrable',
   STANFORD = 'stanford',
   UIMP = 'uimp',

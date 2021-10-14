@@ -86,6 +86,10 @@
         "parrable": {
           "title": "DevOps Engineer",
           "shortDescription": "DevOps Engineer at Parrable, a SaaS ID system for partners in the online ad market. Work on automation and streamlining of development and deployment processes."
+        },
+        "nextcloud": {
+          "title": "Android Engineer",
+          "shortDescription": "Android Engineer at Nextcloud (Nextcloud GmbH). Open-source development of the official Nextcloud Android app for file management and sync."
         }
       },
       "oldestFirst": "Oldest first",
@@ -94,6 +98,7 @@
         "epfl": "EPFL on Coursera",
         "everis": "everis Spain",
         "imagames": "Imagames Gamification Services",
+        "nextcloud": "Nextcloud",
         "parrable": "Parrable",
         "stanford": "Stanford University on Coursera",
         "uimp": "Menéndez Pelayo International University",
