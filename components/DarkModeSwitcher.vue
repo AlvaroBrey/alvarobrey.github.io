@@ -1,7 +1,7 @@
 <template>
   <v-switch
-    hide-details
     v-model="isDark"
+    hide-details
     :aria-label="$t('aria.darkMode')"
     :prepend-icon="icons.mdiWhiteBalanceSunny"
     :append-icon="icons.mdiMoonWaningCrescent"
