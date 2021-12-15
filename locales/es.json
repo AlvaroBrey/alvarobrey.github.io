@@ -121,7 +121,7 @@
     "index": {
       "greeting": "Hola! Soy Álvaro Brey.",
       "interests": "Me apasionan la <b>automatización</b> y el <b>código limpio</b>. Como consecuencia, tengo un gran interés en  procesos de desarrollo fuertemente automatizados (CI/CD), containerización y otras formas de mejorar la experiencia de desarrollo y la calidad del código.",
-      "introduction": "Soy un <b>ingeniero software</b> de Santiago de Compostela, España. Mayoritariamente me dedico a <b>DevOps</b> y frontend <b>VueJS</b>, pero tengo experiencia y formación en otras áreas y tecnologías."
+      "introduction": "Soy un <b>ingeniero software</b> de Santiago de Compostela, España. Actualmente me dedico a desarrollo <b>Android</b>, pero tengo experiencia y formación en otras áreas y tecnologías, tales como <b>DevOps</b> y frontend <b>VueJS</b>."
     },
     "me": {
       "contactPage": "Contacto",

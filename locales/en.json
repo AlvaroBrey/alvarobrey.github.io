@@ -123,7 +123,7 @@
     "index": {
       "greeting": "Hi! I'm Álvaro Brey.",
       "interests": "I am passionate about <b>automation</b> and <b>clean code</b>. As a consequence, I am very interested in strongly automated development processes (CI/CD), containerization and other ways to improve code quality and developer experience.",
-      "introduction": "I am a <b>software engineer</b> from Santiago de Compostela, Spain. I mainly do <b>DevOps</b> and <b>VueJS</b> frontend, but I have experience and training in other areas and technologies."
+      "introduction": "I am a <b>software engineer</b> from Santiago de Compostela, Spain. I currently mainly do <b>Android</b> development, but I have experience and training in other areas and technologies such as <b>DevOps</b> and <b>VueJS</b> frontend."
     },
     "me": {
       "contactPage": "Contact",
