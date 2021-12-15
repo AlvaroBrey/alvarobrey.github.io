@@ -46,7 +46,7 @@ const items: ContactItem[] = [
   {
     key: 'mail',
     icon: mdiEmail,
-    link: 'mailto:alvaro.brv@gmail.com'
+    link: 'mailto:alvaro@alvarobrey.com'
   }
 ]
 
