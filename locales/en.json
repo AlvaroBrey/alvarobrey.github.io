@@ -89,7 +89,7 @@
         },
         "nextcloud": {
           "title": "Android Engineer",
-          "shortDescription": "Android Engineer at Nextcloud (Nextcloud GmbH). Open-source development of the official Nextcloud Android app for file management and sync."
+          "shortDescription": "Android engineer at Nextcloud, a self-hosted, open-source file storage, sharing and productivity platform. Work on the main Nextcloud app for file management and sync on Android; additional work on the Nextcloud Talk chat and videocall app. Co-lead efforts to align app architecture and share code and config between different apps, with the intent to deduplicate efforts and facilitate cross-team work."
         }
       },
       "oldestFirst": "Oldest first",
@@ -117,7 +117,8 @@
         "research": "Research",
         "ml": "Machine learning",
         "data_analysis": "Data analysis",
-        "openSource": "Open source development"
+        "openSource": "Open source development",
+        "app_architecture": "App architecture"
       }
     },
     "index": {
