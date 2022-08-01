@@ -2,6 +2,8 @@
 
 ## Build Setup
 
+Build currently requires node.JS version 12.
+
 ```bash
 # install dependencies
 $ yarn install
