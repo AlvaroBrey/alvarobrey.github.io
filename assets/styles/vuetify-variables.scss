@@ -1,12 +1,12 @@
 // Ref: https://github.com/nuxt-community/vuetify-module#customvariables
-$light-bg: #fcf9f8;
+$light-bg: #eff3ef;
 $material-light: (
   'background': $light-bg,
   'app-bar': $light-bg
 );
 
-$dark-bg: #4a4e69;
-$darker-bg: #333751;
+$dark-bg: #3b3b49;
+$darker-bg: #282831;
 $material-dark: (
   'background': $dark-bg,
   'app-bar': $dark-bg,
