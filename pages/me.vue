@@ -13,10 +13,10 @@
         />
         <ul>
           <li>Android</li>
-          <li>VueJS, Typescript, NuxtJS</li>
-          <li>Docker, Kubernetes</li>
-          <li>Git</li>
           <li>Kotlin</li>
+          <li>VueJS, Typescript</li>
+          <li>Docker</li>
+          <li>Git</li>
           <li>Python, shell</li>
           <li>Ansible</li>
           <li>Linux</li>
