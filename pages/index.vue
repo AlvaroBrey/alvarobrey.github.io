@@ -30,7 +30,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { isHomeRoute, Page, pages } from '~/utils/pages'
+import { isHomeRoute, isAboutRoute, Page, pages } from '~/utils/pages'
 import BasicPage from '~/components/BasicPage.vue'
 
 export default Vue.extend({
@@ -38,7 +38,9 @@ export default Vue.extend({
   computed: {
     filteredPages(): readonly Page[] {
       // don't show link to home in home
-      return pages.filter((page) => !isHomeRoute(page.routeName))
+      return pages.filter(
+        (page) => !isHomeRoute(page.routeName) && !isAboutRoute(page.routeName)
+      )
     }
   },
   head() {
