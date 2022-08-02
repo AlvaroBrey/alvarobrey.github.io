@@ -1,42 +1,46 @@
 <template>
   <BasicPage :title="$t('page.me.title')">
     <!-- eslint-disable vue/no-v-html -->
-    <p class="body-1" v-html="$t('page.me.paragraph1')" />
-    <p class="body-1" v-html="$t('page.me.paragraph2')" />
-    <p class="body-1" v-html="$t('page.me.paragraph3')" />
-    <p class="body-1" v-html="$t('page.me.paragraph4')" />
-    <v-row justify="center" align="start">
-      <v-col cols="12" xs="12" md="6">
-        <p
-          class="text-overline mb-0 primary--text"
-          v-text="$t('page.me.whatIDo')"
-        />
-        <ul>
-          <li>Android</li>
-          <li>Kotlin</li>
-          <li>VueJS, Typescript</li>
-          <li>Docker</li>
-          <li>Git</li>
-          <li>Python, shell</li>
-          <li>Ansible</li>
-          <li>Linux</li>
-        </ul>
-      </v-col>
-      <v-col cols="12" xs="12" md="6">
-        <p
-          class="text-overline mb-0 primary--text"
-          v-text="$t('page.me.whatILike')"
-        />
-        <ul>
-          <li v-text="$t('page.me.likes.automation')" />
-          <li v-text="$t('page.me.likes.cleanCode')" />
-          <li v-text="$t('page.me.likes.openSource')" />
-          <li v-text="$t('page.me.likes.fp')" />
-          <li v-text="$t('page.me.likes.reproducible')" />
-          <li v-text="$t('page.me.likes.pairProgramming')" />
-        </ul>
-      </v-col>
-    </v-row>
+    <v-card class="mt-4">
+      <v-card-text class="text--primary">
+        <p class="body-1" v-html="$t('page.me.paragraph1')" />
+        <p class="body-1" v-html="$t('page.me.paragraph2')" />
+        <p class="body-1" v-html="$t('page.me.paragraph3')" />
+        <p class="body-1" v-html="$t('page.me.paragraph4')" />
+        <v-row justify="center" align="start">
+          <v-col cols="12" xs="12" md="6">
+            <p
+              class="text-overline mb-0 primary--text"
+              v-text="$t('page.me.whatIDo')"
+            />
+            <ul>
+              <li>Android</li>
+              <li>Kotlin</li>
+              <li>VueJS, Typescript</li>
+              <li>Docker</li>
+              <li>Git</li>
+              <li>Python, shell</li>
+              <li>Ansible</li>
+              <li>Linux</li>
+            </ul>
+          </v-col>
+          <v-col cols="12" xs="12" md="6">
+            <p
+              class="text-overline mb-0 primary--text"
+              v-text="$t('page.me.whatILike')"
+            />
+            <ul>
+              <li v-text="$t('page.me.likes.automation')" />
+              <li v-text="$t('page.me.likes.cleanCode')" />
+              <li v-text="$t('page.me.likes.openSource')" />
+              <li v-text="$t('page.me.likes.fp')" />
+              <li v-text="$t('page.me.likes.reproducible')" />
+              <li v-text="$t('page.me.likes.pairProgramming')" />
+            </ul>
+          </v-col>
+        </v-row>
+      </v-card-text>
+    </v-card>
     <InfoBar class="mt-4">
       <i18n path="page.me.lookingForContact" tag="span">
         <nuxt-link

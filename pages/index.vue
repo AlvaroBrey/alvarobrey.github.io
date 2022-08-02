@@ -7,24 +7,28 @@
         v-html="$t('page.index.greeting')"
       />
     </template>
-    <div class="px-3">
-      <p v-html="$t('page.index.introduction')" />
-      <p v-html="$t('page.index.interests')" />
-    </div>
-    <div
-      class="d-flex flex-column flex-sm-row justify-center align-center mt-12"
-    >
-      <v-btn
-        v-for="page in filteredPages"
-        :key="page.routeName"
-        class="ma-2 secondary--text"
-        color="primary"
-        nuxt
-        :to="localePath({ name: page.routeName })"
-      >
-        {{ $t(`nav.${page.translationKey}`) }}
-      </v-btn>
-    </div>
+    <v-card>
+      <v-card-text class="text--primary">
+        <div class="px-3">
+          <p v-html="$t('page.index.introduction')" />
+          <p v-html="$t('page.index.interests')" />
+        </div>
+        <div
+          class="d-flex flex-column flex-sm-row justify-center align-center mt-12"
+        >
+          <v-btn
+            v-for="page in filteredPages"
+            :key="page.routeName"
+            class="ma-2 secondary--text"
+            color="primary"
+            nuxt
+            :to="localePath({ name: page.routeName })"
+          >
+            {{ $t(`nav.${page.translationKey}`) }}
+          </v-btn>
+        </div>
+      </v-card-text>
+    </v-card>
   </BasicPage>
 </template>
 
