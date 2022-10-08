@@ -3,10 +3,10 @@
     <!-- eslint-disable vue/no-v-html -->
     <v-card class="mt-4">
       <v-card-text class="text--primary">
-        <p class="body-1" v-html="$t('page.me.paragraph1')" />
-        <p class="body-1" v-html="$t('page.me.paragraph2')" />
-        <p class="body-1" v-html="$t('page.me.paragraph3')" />
-        <p class="body-1" v-html="$t('page.me.paragraph4')" />
+        <p class="body-1" v-html="$t('page.me.intro')" />
+        <p class="body-1" v-html="$t('page.me.automation')" />
+        <p class="body-1" v-html="$t('page.me.opensource')" />
+        <p class="body-1" v-html="$t('page.me.personal')" />
         <v-row justify="center" align="start">
           <v-col cols="12" xs="12" md="6">
             <p
