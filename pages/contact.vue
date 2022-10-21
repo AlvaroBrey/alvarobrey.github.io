@@ -1,9 +1,6 @@
 <template>
   <BasicPage :title="$t('page.contact.title')">
-    <p class="text-body-1">
-      {{ $t('page.contact.intro') }}
-    </p>
-    <v-row justify="center" align="center">
+    <v-row justify="center" align="center" class="mt-6">
       <ContactItemDisplay
         v-for="item in items"
         :key="item.key"
