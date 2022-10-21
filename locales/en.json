@@ -57,23 +57,19 @@
         },
         "ITDegree": {
           "title": "Degree in Computer Science",
-          "shortDescription": "Advanced education related to computer science, including but not limited to: software programming and design, systems engineering and systems administration."
+          "shortDescription": "Advanced education related to computer science, including but not limited to: software programming, architecture and design, systems engineering and systems administration."
         },
         "citius": {
           "title": "Android Developer",
-          "shortDescription": "Full stack development with a strong focus on Android. Research in medication adherence and mHealth. Main project: <a href=\"https://citius.usc.es/calendula\">Calendula</a>, an open-source medication management app."
-        },
-        "everis": {
-          "title": "Programmer",
-          "shortDescription": "Internship as a software developer. Java webpage (Spring) and some tasks in Android."
+          "shortDescription": "Android development, and occasional development on related projects. Research in medication adherence and mHealth. Main project: <a href=\"https://citius.usc.es/calendula\">Calendula</a>, an open-source medication management app."
         },
         "imagames": {
-          "title": "Frontend Developer / DevOps Engineer",
+          "title": "DevOps Engineer / Frontend Developer",
           "shortDescription": "VueJS Frontend for admin dashboards and public applications. Infrastructure and deployment management, monitoring and automation.\nResponsible for proposing and carrying out several extensive upgrades to development processes and infrastructure management, including containerization, automation and CI."
         },
         "machineLearning": {
           "title": "Machine Learning",
-          "shortDescription": "Machine Learning  course imparted by prof. Andrew Ng of Stanford University on Coursera. Both theoretical and practical assignments on neural networks, SVMs and other fundamental Machine Learning algorithms and related skills."
+          "shortDescription": "Theory and assignments on neural networks, SVMs and other fundamental Machine Learning algorithms and related skills."
         },
         "scalaFP": {
           "title": "Functional Programming in Scala",

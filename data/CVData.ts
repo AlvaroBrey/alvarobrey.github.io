@@ -23,12 +23,6 @@ export const educationCVItems: CVTimelineItem[] = [
 
 export const workCVItems: CVTimelineItem[] = [
   {
-    key: 'everis',
-    org: CVOrg.EVERIS,
-    startDate: parseDate('2015/06'),
-    endDate: parseDate('2015/09')
-  },
-  {
     key: 'citius',
     org: CVOrg.CITIUS,
     startDate: parseDate('2016/10'),
