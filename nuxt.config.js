@@ -26,7 +26,15 @@ export default {
         content: BASE_URL + '/og_image.png'
       }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }],
+    link: [
+      {
+        rel: 'icon',
+        type: 'image/svg+xml',
+        sizes: 'any',
+        href: '/favicon.svg'
+      },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.png' }
+    ],
     script: [
       {
         src: 'https://static.cloudflareinsights.com/beacon.min.js',
