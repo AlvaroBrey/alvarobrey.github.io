@@ -12,13 +12,13 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { Page, pages } from '~/utils/pages'
+import { isAboutRoute, Page, pages } from '~/utils/pages'
 
 export default Vue.extend({
   name: 'HeaderNav',
   computed: {
     pages(): readonly Page[] {
-      return pages
+      return pages.filter((page) => !isAboutRoute(page.routeName))
     }
   }
 })
