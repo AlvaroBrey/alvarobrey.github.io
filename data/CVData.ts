@@ -43,14 +43,6 @@ export const workCVItems: CVTimelineItem[] = [
     ]
   },
   {
-    key: 'parrable',
-    org: CVOrg.PARRABLE,
-    startDate: parseDate('2021/04'),
-    endDate: parseDate('2021/08'),
-    skills: ['infrastructure', 'scripting'],
-    tech: ['SaltStack', 'Terraform', 'Google Cloud', 'Python + bash', 'Docker']
-  },
-  {
     key: 'nextcloud',
     org: CVOrg.NEXTCLOUD,
     startDate: parseDate('2021/09'),
