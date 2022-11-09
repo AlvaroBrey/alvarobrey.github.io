@@ -35,7 +35,7 @@ export const workCVItems: CVTimelineItem[] = [
     org: CVOrg.IMAGAMES,
     startDate: parseDate('2018/12'),
     endDate: parseDate('2021/03'),
-    skills: ['infrastructure', 'frontend', 'scripting'],
+    skills: ['infrastructure', 'mobile', 'frontend', 'scripting'],
     tech: [
       'Docker + Ansible + Python',
       'Android + Kotlin + Java',
