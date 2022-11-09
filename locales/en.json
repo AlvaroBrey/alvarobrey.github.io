@@ -64,8 +64,8 @@
           "shortDescription": "Android development, and occasional development on related projects. Research in medication adherence and mHealth. Main project: <a href=\"https://github.com/citiususc/calendula\">Calendula</a>, an open-source medication management app."
         },
         "imagames": {
-          "title": "DevOps Engineer / Frontend Developer",
-          "shortDescription": "VueJS Frontend for admin dashboards and public applications. Infrastructure and deployment management, monitoring and automation.\nResponsible for proposing and carrying out several extensive upgrades to development processes and infrastructure management, including containerization, automation and CI."
+          "title": "DevOps / Android Engineer",
+          "shortDescription": "Infrastructure and deployment management, monitoring and automation.\nResponsible for proposing and carrying out several extensive upgrades to development processes and infrastructure management, including containerization, automation and CI.<br>Android development for client apps, developing new features and maintaining several existing apps, and improving development experience and build times.<br>VueJS Frontend for admin dashboards and public applications."
         },
         "machineLearning": {
           "title": "Machine Learning",

@@ -37,9 +37,9 @@ export const workCVItems: CVTimelineItem[] = [
     endDate: parseDate('2021/03'),
     skills: ['infrastructure', 'frontend', 'scripting'],
     tech: [
-      'Docker + Compose + Kubernetes',
-      'VueJs + Typescript',
-      'Ansible + Python'
+      'Docker + Ansible + Python',
+      'Android + Kotlin + Java',
+      'VueJs + Typescript'
     ]
   },
   {
