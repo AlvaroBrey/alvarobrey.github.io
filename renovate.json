@@ -6,5 +6,8 @@
     ":disableDependencyDashboard",
     "schedule:daily"
   ],
-  "enabledManagers": ["github-actions"]
+  "enabledManagers": ["github-actions"],
+  "github-actions": {
+    "groupName": "actions"
+  } 
 }
