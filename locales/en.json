@@ -86,10 +86,15 @@
         "nextcloud": {
           "title": "Android Engineer",
           "shortDescription": "Android engineer at Nextcloud, a self-hosted, open-source file storage, sharing and productivity platform. Work on the main Nextcloud app for file management and sync on Android; additional work on the Nextcloud Talk chat and videocall app. Co-lead efforts to align app architecture and share code and config between different apps, with the intent to deduplicate efforts and facilitate cross-team work."
+        },
+        "cabify": {
+          "title": "Senior Android Engineer",
+          "shortDescription": "Senior Android Engineer at Cabify, multi-mobility platform for people and parcels. Work on the main public app, with millions of downloads."
         }
       },
       "oldestFirst": "Oldest first",
       "orgs": {
+        "cabify": "Cabify",
         "citius": "CiTIUS - University of Santiago de Compostela",
         "epfl": "EPFL on Coursera",
         "everis": "everis Spain",
@@ -109,7 +114,7 @@
         "frontend": "Front end development",
         "scripting_automation": "Scripting and automation",
         "scripting": "Scripting",
-        "mobile": "Mobile programming",
+        "mobile": "Mobile development",
         "research": "Research",
         "ml": "Machine learning",
         "data_analysis": "Data analysis",

@@ -8,6 +8,7 @@ export enum CVItemType {
 }
 
 export enum CVOrg {
+  CABIFY = 'cabify',
   CITIUS = 'citius',
   EPFL = 'epfl',
   EVERIS = 'everis',

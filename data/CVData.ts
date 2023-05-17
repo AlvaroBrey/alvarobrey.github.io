@@ -46,9 +46,17 @@ export const workCVItems: CVTimelineItem[] = [
     key: 'nextcloud',
     org: CVOrg.NEXTCLOUD,
     startDate: parseDate('2021/09'),
-    endDate: undefined,
+    endDate: parseDate('2023/03'),
     skills: ['mobile', 'openSource', 'app_architecture'],
     tech: ['Android + Kotlin + Java', 'Bash + Python', 'Github Actions']
+  },
+  {
+    key: 'cabify',
+    org: CVOrg.CABIFY,
+    startDate: parseDate('2023/03'),
+    endDate: undefined,
+    skills: ['mobile'],
+    tech: ['Android + Kotlin']
   }
 ].map((it) => Object.assign(it, { type: CVItemType.WORK }))
 
