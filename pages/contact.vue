@@ -14,7 +14,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { mdiEmail, mdiGithub, mdiLinkedin, mdiTwitter } from '@mdi/js'
+import { mdiEmail, mdiGithub, mdiLinkedin } from '@mdi/js'
 import BasicPage from '~/components/BasicPage.vue'
 import ContactItemDisplay from '~/components/contact/ContactItemDisplay.vue'
 
@@ -34,11 +34,6 @@ const items: ContactItem[] = [
     key: 'gitHub',
     icon: mdiGithub,
     link: 'https://github.com/alvarobrey'
-  },
-  {
-    key: 'twitter',
-    icon: mdiTwitter,
-    link: 'https://twitter.com/AlvaroBrey_'
   },
   {
     key: 'mail',
