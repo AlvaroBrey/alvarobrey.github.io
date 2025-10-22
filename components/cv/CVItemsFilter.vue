@@ -41,10 +41,12 @@ export default Vue.extend({
   },
   computed: {
     typesAndColors(): TypeAndColor[] {
-      return Object.values(CVItemType).map((type) => ({
-        type,
-        colorClass: CVItemTypeColors[type]
-      }))
+      return Object.values(CVItemType)
+        .filter((type) => type !== CVItemType.COURSE)
+        .map((type) => ({
+          type,
+          colorClass: CVItemTypeColors[type]
+        }))
     }
   },
   watch: {

@@ -68,7 +68,9 @@ export default Vue.extend({
   },
   computed: {
     sortedItems(): CVTimelineItem[] {
-      let items = CVTimelineItems.sort(sortTimelineItems)
+      let items = CVTimelineItems.sort(sortTimelineItems).filter(
+        (item: CVTimelineItem) => item.type !== CVItemType.COURSE
+      )
       if (this.itemFilter) {
         items = items.filter((item) => item.type === this.itemFilter)
       }
