@@ -89,7 +89,7 @@
         },
         "cabify": {
           "title": "Senior Android Engineer",
-          "shortDescription": "Senior Android Engineer at Cabify, multi-mobility platform for people and parcels. Work on the main public app, with millions of downloads."
+          "shortDescription": "Senior Android Engineer at Cabify, multi-mobility platform for people and parcels. Work on the main Rider public app, with millions of active users. Includes new feature development, maintenance and release management. Frequent contributor to process improvements, CI, and code sharing."
         }
       },
       "oldestFirst": "Oldest first",
@@ -119,7 +119,8 @@
         "ml": "Machine learning",
         "data_analysis": "Data analysis",
         "openSource": "Open source development",
-        "app_architecture": "App architecture"
+        "app_architecture": "App architecture",
+        "app_analytics": "App analytics"
       }
     },
     "index": {
