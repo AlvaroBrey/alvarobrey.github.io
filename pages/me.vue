@@ -15,8 +15,8 @@
             />
             <ul>
               <li>Android</li>
-              <li>Kotlin</li>
-              <li>Python, shell</li>
+              <li>Kotlin, Compose</li>
+              <li>Shell, Python</li>
               <li>Docker</li>
               <li>Git</li>
               <li>Linux</li>

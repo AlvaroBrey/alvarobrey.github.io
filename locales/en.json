@@ -126,7 +126,7 @@
     "index": {
       "greeting": "Hi! I'm Álvaro Brey.",
       "interests": "I am passionate about <b>automation</b> and <b>clean code</b>. As a consequence, I am very interested in strongly automated development processes (CI/CD), containerization and other ways to improve code quality and developer experience.",
-      "introduction": "I am a <b>software engineer</b> from Santiago de Compostela, Spain. I am mainly an <b>Android</b> developer, but I have experience and training in other areas and technologies such as <b>DevOps</b> and <b>VueJS</b> frontend."
+      "introduction": "I am a <b>senior Android engineer</b> from Santiago de Compostela, Spain. I am mainly an Android developer, but I have experience and training in other areas and technologies such as DevOps, web frontend and scripting."
     },
     "me": {
       "contactPage": "Contact",
@@ -139,10 +139,10 @@
         "reproducible": "Reproducible builds, containers"
       },
       "lookingForContact": "Looking for the {0} page?",
-      "intro": "I am <b>Álvaro</b> [<a href=\"https://youtu.be/uq-gYOrU8bA\" class=\"simon\"><b>al</b></a> - βa - ɾo]. I am a software engineer from Santiago de Compostela, Spain. I enjoy trying new technologies and as a consequence I have a somewhat generalist background. However, most of my experience is in Android and DevOps tasks.",
+      "intro": "I am <b>Álvaro</b> [<a href=\"https://youtu.be/uq-gYOrU8bA\" class=\"simon\"><b>al</b> - βa - ɾo</a>]. I am a software engineer from Santiago de Compostela, Spain. I enjoy trying new technologies and as a consequence I have a somewhat generalist background. However, most of my experience is in Android development.",
       "automation": "As a developer, I am guided by the DRY principle and strongly dislike duplication of both code and work. Partly due to this, I am proactive about <b>automating</b> tasks and processes whenever I can. This is something I apply in my daily work by authoring scripts, containers, CI and tooling config, etc. Several of my published <a href=\"https://github.com/alvarobrey\">repos</a> also focus on automation or developer experience.",
       "opensource": "I am also an advocate for <b>open-source</b> software. A significant part of my career has been spent working on open-source projects, and I also <a href=\"https://github.com/alvarobrey\">publish most of my personal projects</a> (like <a href=\"https://github.com/alvarobrey/alvarobrey.github.io\">this page!</a>) for whoever might find them useful, and contribute to third-party repos.",
-      "personal": "When I'm not coding, you can probably find me playing <a href=\"https://en.wikipedia.org/wiki/Disc_golf\">disc golf</a> or video games, messing around with a 3d printer or trying to automate physical things with <a href=\"https://www.home-assistant.io/\">Home Assistant</a>.",
+      "personal": "When I'm not coding, you can probably find me playing <a href=\"https://en.wikipedia.org/wiki/Disc_golf\">disc golf</a> or video games, messing around with a 3d printer, playing with my dog, or trying to automate physical things with <a href=\"https://www.home-assistant.io/\">Home Assistant</a>.",
       "title": "About me",
       "whatIDo": "What I do",
       "whatILike": "What I like"
