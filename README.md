@@ -2,7 +2,7 @@
 
 ## Build Setup
 
-Build currently requires node.JS version 12.
+Build requires node.JS version 22 or newer.
 
 ```bash
 # install dependencies

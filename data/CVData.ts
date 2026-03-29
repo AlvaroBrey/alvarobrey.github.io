@@ -56,7 +56,13 @@ export const workCVItems: CVTimelineItem[] = [
     startDate: parseDate('2023/03'),
     endDate: undefined,
     skills: ['mobile', 'app_architecture', 'scripting', 'app_analytics'],
-    tech: ['Android + Kotlin + Compose', 'Bash', 'Gitlab CI', 'Elixir', 'Cursor']
+    tech: [
+      'Android + Kotlin + Compose',
+      'Bash',
+      'Gitlab CI',
+      'Elixir',
+      'Cursor'
+    ]
   }
 ].map((it) => Object.assign(it, { type: CVItemType.WORK }))
 

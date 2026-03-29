@@ -2,6 +2,9 @@
   "name": "alvarobrey.com",
   "version": "1.0.0",
   "private": true,
+  "engines": {
+    "node": ">=22.14.0"
+  },
   "scripts": {
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
@@ -22,19 +25,19 @@
     }
   },
   "dependencies": {
-    "@nuxt/typescript-runtime": "^2.0.0",
+    "@nuxt/typescript-runtime": "^2.1.0",
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.6.5",
-    "nuxt": "^2.14.6",
+    "nuxt": "^2.15.8",
     "nuxt-i18n": "^6.16.0"
   },
   "devDependencies": {
     "@mdi/js": "^5.9.55",
-    "@nuxt/types": "^2.14.6",
-    "@nuxt/typescript-build": "^2.0.3",
+    "@nuxt/types": "^2.15.8",
+    "@nuxt/typescript-build": "^2.1.0",
     "@nuxtjs/eslint-config": "^3.1.0",
     "@nuxtjs/eslint-config-typescript": "^3.0.0",
-    "@nuxtjs/vuetify": "^1.11.2",
+    "@nuxtjs/vuetify": "^1.12.3",
     "babel-eslint": "^10.1.0",
     "date-fns": "^2.16.1",
     "deepmerge": "^4.2.2",
@@ -42,14 +45,13 @@
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
-    "fibers": "^4.0.3",
     "http-server": "^0.12.3",
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
     "push-dir": "^0.4.1",
     "rimraf": "^3.0.2",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2"
+    "sass": "^1.32.13",
+    "sass-loader": "^10.1.1"
   }
 }
