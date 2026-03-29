@@ -1,1 +1,0 @@
-__NUXT_JSONP__("/es/cv", {data:[{}],fetch:[],mutations:void 0});
