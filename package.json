@@ -16,11 +16,10 @@
     "lint:js": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
     "lint": "yarn lint:js",
     "serve": "http-server ./dist",
-    "generate-serve": "yarn generate && yarn serve",
-    "deploy": "push-dir --dir=dist --branch=gh-pages --cleanup"
+    "generate-serve": "yarn generate && yarn serve"
   },
   "lint-staged": {
-    "*.{js,vue}": "eslint"
+    "*.{js,ts,vue}": "eslint"
   },
   "husky": {
     "hooks": {
@@ -43,7 +42,6 @@
     "@nuxtjs/vuetify": "^1.12.3",
     "babel-eslint": "^10.1.0",
     "date-fns": "^2.16.1",
-    "deepmerge": "^4.2.2",
     "eslint": "^7.10.0",
     "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-nuxt": "^1.0.0",
@@ -53,11 +51,9 @@
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
     "puppeteer": "^25.8.0",
-    "push-dir": "^0.4.1",
     "rimraf": "^3.0.2",
     "sass": "^1.32.13",
     "sass-loader": "^10.1.1",
-    "tsconfig-paths": "^4.2.0",
     "tsx": "^4.23.12"
   }
 }
