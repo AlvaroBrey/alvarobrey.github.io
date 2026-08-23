@@ -83,6 +83,10 @@
           "title": "DevOps Engineer",
           "shortDescription": "DevOps Engineer at Parrable, a SaaS ID system for partners in the online ad market. Work on automation and streamlining of development and deployment processes."
         },
+        "revenuecat":{
+          "title": "Senior SDK Engineer at RevenueCat",
+          "shortDescription": "Senior SDK Engineer at RevenueCat, where we help developers make more money. Multiplatform with focus on Android."
+        },
         "nextcloud": {
           "title": "Android Engineer",
           "shortDescription": "Android engineer at Nextcloud, a self-hosted, open-source file storage, sharing and productivity platform. Work on the main Nextcloud app for file management and sync on Android; additional work on the Nextcloud Talk chat and videocall app. Co-lead efforts to align app architecture and share code and config between different apps, with the intent to deduplicate efforts and facilitate cross-team work."
@@ -101,6 +105,7 @@
         "imagames": "Imagames Gamification Services",
         "nextcloud": "Nextcloud",
         "parrable": "Parrable",
+        "revenuecat": "RevenueCat",
         "stanford": "Stanford University on Coursera",
         "uimp": "Menéndez Pelayo International University",
         "usc": "University of Santiago de Compostela"

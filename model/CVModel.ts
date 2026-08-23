@@ -15,6 +15,7 @@ export enum CVOrg {
   IMAGAMES = 'imagames',
   NEXTCLOUD = 'nextcloud',
   PARRABLE = 'parrable',
+  REVENUECAT = 'revenuecat',
   STANFORD = 'stanford',
   UIMP = 'uimp',
   USC = 'usc'
