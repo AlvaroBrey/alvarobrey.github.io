@@ -6,6 +6,7 @@
     "node": ">=24"
   },
   "scripts": {
+    "prepare": "husky",
     "generate-cv-pdf": "tsx scripts/generate-cv-pdf.ts",
     "predev": "yarn generate-cv-pdf",
     "dev": "nuxt-ts",
@@ -20,11 +21,6 @@
   },
   "lint-staged": {
     "*.{js,ts,vue}": "eslint"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
-    }
   },
   "dependencies": {
     "@nuxt/typescript-runtime": "^2.1.0",
@@ -47,7 +43,7 @@
     "eslint-plugin-nuxt": "^1.0.0",
     "eslint-plugin-prettier": "^3.1.4",
     "http-server": "^0.12.3",
-    "husky": "^4.3.0",
+    "husky": "^9.1.7",
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
     "puppeteer": "^25.8.0",
