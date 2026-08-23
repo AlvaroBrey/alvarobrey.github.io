@@ -9,7 +9,6 @@
           class="secondary--text"
           color="primary"
           :href="pdfHref"
-          download
           target="_blank"
         >
           <v-icon left>{{ icons.mdiFilePdf }}</v-icon>
