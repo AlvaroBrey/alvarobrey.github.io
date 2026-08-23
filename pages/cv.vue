@@ -11,7 +11,7 @@
           :href="pdfHref"
           target="_blank"
         >
-          <v-icon left>{{ icons.mdiFilePdf }}</v-icon>
+          <v-icon left>{{ icons.mdiFilePdfBox }}</v-icon>
           <span>PDF version</span>
         </v-btn>
       </v-row>
@@ -30,7 +30,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { mdiFilePdf } from '@mdi/js'
+import { mdiFilePdfBox } from '@mdi/js'
 import { CVTimelineItems } from '~/data/CVData'
 import CVTimelineItemDisplay from '~/components/cv/CVTimelineItemDisplay.vue'
 import { CVItemType, CVTimelineItem } from '~/model/CVModel'
@@ -46,7 +46,7 @@ export default Vue.extend({
       reverseOrder: false,
       itemFilter: undefined as Optional<CVItemType>,
       icons: {
-        mdiFilePdf
+        mdiFilePdfBox
       }
     }
   },
