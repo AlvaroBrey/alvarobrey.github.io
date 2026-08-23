@@ -8,7 +8,7 @@
         <v-btn
           class="secondary--text"
           color="primary"
-          href="/files/cv_alvarobrey_20260326.pdf"
+          :href="pdfHref"
           download
           target="_blank"
         >
@@ -31,29 +31,14 @@
 
 <script lang="ts">
 import Vue from 'vue'
-import { compareDesc } from 'date-fns'
 import { mdiFilePdf } from '@mdi/js'
 import { CVTimelineItems } from '~/data/CVData'
 import CVTimelineItemDisplay from '~/components/cv/CVTimelineItemDisplay.vue'
 import { CVItemType, CVTimelineItem } from '~/model/CVModel'
 import { Optional } from '~/types/utilityTypes'
 import CVItemsFilter from '~/components/cv/CVItemsFilter.vue'
-
-function getCompareDate(item: CVTimelineItem): Optional<Date> {
-  return item.startDate ?? item.endDate
-}
-
-function sortTimelineItems(a: CVTimelineItem, b: CVTimelineItem): number {
-  const aDate = getCompareDate(a)
-  const bDate = getCompareDate(b)
-  if (aDate === undefined) {
-    return -1
-  }
-  if (bDate === undefined) {
-    return 1
-  }
-  return compareDesc(aDate, bDate)
-}
+import { CV_PDF_FILENAME } from '~/data/generated/cvPdf'
+import { sortTimelineItems } from '~/utils/cvTimeline'
 
 export default Vue.extend({
   components: { CVItemsFilter, CVTimelineItemDisplay },
@@ -67,6 +52,9 @@ export default Vue.extend({
     }
   },
   computed: {
+    pdfHref(): string {
+      return `/files/${CV_PDF_FILENAME}`
+    },
     sortedItems(): CVTimelineItem[] {
       let items = CVTimelineItems.sort(sortTimelineItems).filter(
         (item: CVTimelineItem) => item.type !== CVItemType.COURSE

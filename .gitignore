@@ -71,6 +71,10 @@ typings/
 # Nuxt generate
 dist
 
+# Build-time generated CV PDF + its filename module (see scripts/generate-cv-pdf.ts)
+static/files/cv_alvarobrey.*.pdf
+data/generated
+
 # vuepress build output
 .vuepress/dist
 

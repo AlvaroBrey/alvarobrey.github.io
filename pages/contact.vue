@@ -17,30 +17,15 @@ import Vue from 'vue'
 import { mdiEmail, mdiGithub, mdiLinkedin } from '@mdi/js'
 import BasicPage from '~/components/BasicPage.vue'
 import ContactItemDisplay from '~/components/contact/ContactItemDisplay.vue'
+import { contactLinks } from '~/data/ContactData'
 
-interface ContactItem {
-  key: string
-  icon: string
-  link: string
+const icons: Record<string, string> = {
+  linkedIn: mdiLinkedin,
+  gitHub: mdiGithub,
+  mail: mdiEmail
 }
 
-const items: ContactItem[] = [
-  {
-    key: 'linkedIn',
-    icon: mdiLinkedin,
-    link: 'https://linkedin.com/in/alvarobrey'
-  },
-  {
-    key: 'gitHub',
-    icon: mdiGithub,
-    link: 'https://github.com/alvarobrey'
-  },
-  {
-    key: 'mail',
-    icon: mdiEmail,
-    link: 'mailto:alvaro@alvarobrey.com'
-  }
-]
+const items = contactLinks.map((it) => ({ ...it, icon: icons[it.key] }))
 
 export default Vue.extend({
   components: { ContactItemDisplay, BasicPage },

@@ -6,9 +6,12 @@
     "node": ">=22.14.0"
   },
   "scripts": {
+    "generate-cv-pdf": "tsx scripts/generate-cv-pdf.ts",
+    "predev": "yarn generate-cv-pdf",
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
+    "pregenerate": "yarn generate-cv-pdf",
     "generate": "rimraf .nuxt dist && nuxt-ts generate",
     "lint:js": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
     "lint": "yarn lint:js",
@@ -49,9 +52,12 @@
     "husky": "^4.3.0",
     "lint-staged": "^10.4.0",
     "prettier": "^2.1.2",
+    "puppeteer": "^25.8.0",
     "push-dir": "^0.4.1",
     "rimraf": "^3.0.2",
     "sass": "^1.32.13",
-    "sass-loader": "^10.1.1"
+    "sass-loader": "^10.1.1",
+    "tsconfig-paths": "^4.2.0",
+    "tsx": "^4.23.12"
   }
 }
