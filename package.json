@@ -44,7 +44,7 @@
     "eslint-plugin-prettier": "^3.1.4",
     "http-server": "^0.12.3",
     "husky": "^9.1.7",
-    "lint-staged": "^10.4.0",
+    "lint-staged": "^17.3.0",
     "prettier": "^2.1.2",
     "puppeteer": "^25.8.0",
     "rimraf": "^3.0.2",
