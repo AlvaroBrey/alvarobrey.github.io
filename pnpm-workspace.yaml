@@ -1,0 +1,16 @@
+# Nuxt 2 externalises server-side dependencies and resolves them from the project
+# root, so its transitive tree has to be flat. Without this, `nuxt generate`
+# renders zero pages (and still exits 0). Drop it at the Svelte migration.
+shamefullyHoist: true
+
+# puppeteer's postinstall downloads Chromium into ~/.cache/puppeteer, outside its
+# own package directory. A side-effects cache hit would skip that download and
+# leave no browser behind for the CV PDF step.
+sideEffectsCache: false
+
+allowBuilds:
+  '@parcel/watcher': true
+  esbuild: true
+  puppeteer: true
+  core-js: false
+  nuxt: false

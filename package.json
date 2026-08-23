@@ -2,22 +2,23 @@
   "name": "alvarobrey.com",
   "version": "1.0.0",
   "private": true,
+  "packageManager": "pnpm@11.22.0",
   "engines": {
     "node": ">=24"
   },
   "scripts": {
     "prepare": "husky",
     "generate-cv-pdf": "tsx scripts/generate-cv-pdf.ts",
-    "predev": "yarn generate-cv-pdf",
+    "predev": "pnpm generate-cv-pdf",
     "dev": "nuxt-ts",
     "build": "nuxt-ts build",
     "start": "nuxt-ts start",
-    "pregenerate": "yarn generate-cv-pdf",
+    "pregenerate": "pnpm generate-cv-pdf",
     "generate": "rimraf .nuxt dist && nuxt-ts generate",
     "lint:js": "eslint --ext .js,.ts,.vue --ignore-path .gitignore .",
-    "lint": "yarn lint:js",
+    "lint": "pnpm lint:js",
     "serve": "http-server ./dist",
-    "generate-serve": "yarn generate && yarn serve"
+    "generate-serve": "pnpm generate && pnpm serve"
   },
   "lint-staged": {
     "*.{js,ts,vue}": "eslint"
@@ -27,7 +28,8 @@
     "@nuxtjs/sitemap": "^2.4.0",
     "core-js": "^3.6.5",
     "nuxt": "^2.15.8",
-    "nuxt-i18n": "^6.16.0"
+    "nuxt-i18n": "^6.16.0",
+    "vue": "2.7.16"
   },
   "devDependencies": {
     "@mdi/js": "^7.4.47",
@@ -50,6 +52,7 @@
     "rimraf": "^6.1.3",
     "sass": "^1.32.13",
     "sass-loader": "^10.1.1",
-    "tsx": "^4.23.12"
+    "tsx": "^4.23.12",
+    "vuetify": "2.7.2"
   }
 }
