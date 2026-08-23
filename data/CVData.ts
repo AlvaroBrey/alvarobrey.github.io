@@ -84,7 +84,7 @@ export const courseCVItems: CVTimelineItem[] = [
 export const hobbyItems: CVTimelineItem[] = [
   {
     key: 'androidRoms',
-    org: undefined,
+    org: CVOrg.LINEAGEOS,
     startDate: parseDate('2015/06'),
     endDate: parseDate('2017/08'),
     type: CVItemType.HOBBY,

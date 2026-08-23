@@ -17,7 +17,12 @@
             v-text="$t(`page.cv.items.${item.key}.title`)"
           />
           <v-card-subtitle>
-            <span v-if="hasOrg">{{ $t(`page.cv.orgs.${item.org}`) }}</span>
+            <span v-if="showOrgName">
+              <a v-if="orgUrl" :href="orgUrl" target="_blank" rel="noopener">{{
+                orgName
+              }}</a>
+              <span v-else>{{ orgName }}</span>
+            </span>
             <span class="hidden-lg-and-up">
               <span class="mx-1">|</span>
               <span>{{ dateText }}</span>
@@ -54,6 +59,8 @@ import { format } from 'date-fns'
 import { CVTimelineItem } from '~/model/CVModel'
 import { Optional } from '~/types/utilityTypes'
 import { CV_DATE_FORMAT, CVItemTypeColors } from '~/model/ui/CVUIModel'
+import { orgUrls } from '~/data/OrgData'
+import { shouldShowOrgName } from '~/utils/cvTimeline'
 import CvSkillsAndTechDisplay from '~/components/cv/CvSkillsAndTechDisplay.vue'
 
 export default Vue.extend({
@@ -105,6 +112,15 @@ export default Vue.extend({
     },
     hasOrg(): boolean {
       return this.item.org !== undefined
+    },
+    showOrgName(): boolean {
+      return shouldShowOrgName(this.item)
+    },
+    orgName(): string {
+      return this.$tc(`page.cv.orgs.${this.item.org}`)
+    },
+    orgUrl(): Optional<string> {
+      return this.item.org ? orgUrls[this.item.org] : undefined
     },
     description(): string {
       return this.$tc(`page.cv.items.${this.item.key}.shortDescription`)

@@ -13,6 +13,7 @@ export enum CVOrg {
   EPFL = 'epfl',
   EVERIS = 'everis',
   IMAGAMES = 'imagames',
+  LINEAGEOS = 'lineageos',
   NEXTCLOUD = 'nextcloud',
   PARRABLE = 'parrable',
   REVENUECAT = 'revenuecat',
