@@ -3,6 +3,16 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
+  /* Vuetify's breakpoints, not Tailwind's defaults. The layout was designed
+     against these, and the sm/md/lg utilities throughout are direct ports of
+     v-col props and $vuetify.breakpoint checks -- notably the nav, which
+     swapped to tabs at 960px (smAndDown), not Tailwind's 768px. */
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 960px;
+  --breakpoint-lg: 1264px;
+  --breakpoint-xl: 1904px;
+  --breakpoint-2xl: initial;
+
   --color-primary: #388e3c;
   --color-on-primary: #eff3ef;
   --color-background: #eff3ef;
