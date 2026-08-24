@@ -2,21 +2,18 @@
 
 ## Build Setup
 
-Build requires node.JS version 22 or newer.
+Build requires Node.js version 24 or newer and pnpm.
 
 ```bash
 # install dependencies
-$ yarn install
+$ pnpm install
 
-# serve with hot reload at localhost:3000
-$ yarn dev
+# serve with hot reload at localhost:5173
+$ pnpm dev
 
-# build for production and launch server
-$ yarn build
-$ yarn start
-
-# generate static project
-$ yarn generate
+# build the static site to ./build
+$ pnpm build
+$ pnpm preview
 ```
 
-For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+Built with [SvelteKit](https://svelte.dev/docs/kit).

@@ -11,12 +11,26 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
+      - name: Setup pnpm
+        uses: pnpm/action-setup@0977fd99725f1db4007ccb2928dbb4e90d06cc86 # v6.0.10
+
       - name: Setup Node
         uses: actions/setup-node@820762786026740c76f36085b0efc47a31fe5020 # v7.0.0
         with:
           node-version: '24.x'
-          cache: yarn
+          cache: pnpm
 
-      - run: yarn install --frozen-lockfile
-      - run: yarn lint
-      - run: yarn generate
+      - run: pnpm install --frozen-lockfile
+      - run: pnpm check
+      - run: pnpm lint
+      - run: pnpm build
+
+      - name: Check build output
+        run: |
+          test -s build/index.html
+          test -s build/cv/index.html
+          test -s build/404.html
+          test -f build/.nojekyll
+          test -s build/CNAME
+          test -s build/sitemap.xml
+          ls build/files/cv_alvarobrey.*.pdf
