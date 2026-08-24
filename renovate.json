@@ -1,7 +1,7 @@
 {
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base",
+    "config:recommended",
     "helpers:pinGitHubActionDigests",
     ":disableDependencyDashboard",
     "schedule:daily"
@@ -9,5 +9,12 @@
   "enabledManagers": ["github-actions", "npm"],
   "github-actions": {
     "groupName": "actions"
-  }
+  },
+  "packageRules": [
+    {
+      "matchManagers": ["npm"],
+      "matchUpdateTypes": ["minor", "patch"],
+      "groupName": "npm (non-major)"
+    }
+  ]
 }
