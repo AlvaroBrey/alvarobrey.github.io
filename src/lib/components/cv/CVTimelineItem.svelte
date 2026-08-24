@@ -34,14 +34,26 @@
 </script>
 
 <div class="relative pl-10">
+  {#if logo}
+    <!-- On the narrowest screens the logo rides in the timeline dot instead of
+         beside the card, so it doesn't eat the card's text width. -->
+    <img
+      src={logo}
+      alt=""
+      class="absolute top-0 left-4 h-10 w-10 -translate-x-1/2 rounded-full bg-white object-contain p-1 sm:hidden"
+      style="box-shadow: 0 0 0 2px {color}"
+    />
+  {/if}
   <div
-    class="absolute top-1.5 left-4 h-3 w-3 -translate-x-1/2 rounded-full ring-4 ring-background"
+    class="absolute top-1.5 left-4 h-3 w-3 -translate-x-1/2 rounded-full ring-4 ring-background {logo
+      ? 'hidden sm:block'
+      : ''}"
     style="background-color: {color}"
   ></div>
   <div class="rounded bg-surface p-4 shadow">
     <div class="flex justify-between gap-4">
       <div class="flex-1">
-        <h3 class="text-lg font-medium text-body">
+        <h3 class="text-xl font-medium text-primary">
           {t(`page.cv.items.${item.key}.title`)}
         </h3>
         <p class="text-sm text-muted">
@@ -66,7 +78,11 @@
         {/if}
       </div>
       {#if logo}
-        <img src={logo} alt="" class="h-20 w-20 shrink-0 object-contain" />
+        <img
+          src={logo}
+          alt=""
+          class="hidden shrink-0 object-contain sm:block sm:h-20 sm:w-20 lg:h-36 lg:w-36"
+        />
       {/if}
     </div>
   </div>
