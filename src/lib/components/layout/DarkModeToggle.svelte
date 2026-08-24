@@ -1,15 +1,13 @@
 <script lang="ts">
+  import { browser } from '$app/environment'
   import { mdiMoonWaningCrescent, mdiWhiteBalanceSunny } from '@mdi/js'
-  import { onMount } from 'svelte'
   import { t } from '../../i18n'
-  import { applyDark, storeDark } from '../../utils/theme'
+  import { applyDark, isDark, storeDark } from '../../utils/theme'
   import Icon from '../ui/Icon.svelte'
 
-  let dark = $state(false)
-
-  onMount(() => {
-    dark = document.documentElement.classList.contains('dark')
-  })
+  // Only drives aria-checked -- the visuals follow the `dark` class on <html>
+  // via dark: variants, so the prerendered markup is already correct.
+  let dark = $state(browser ? isDark() : false)
 
   function toggle() {
     dark = !dark
@@ -29,22 +27,18 @@
   <Icon
     path={mdiWhiteBalanceSunny}
     size={20}
-    class={dark ? 'text-muted' : 'text-primary'}
+    class="text-primary dark:text-muted"
   />
   <span
-    class="relative inline-flex h-5 w-9 items-center rounded-full transition-colors {dark
-      ? 'bg-primary'
-      : 'bg-muted/30'}"
+    class="relative inline-flex h-5 w-9 items-center rounded-full bg-muted/30 transition-colors dark:bg-primary"
   >
     <span
-      class="inline-block h-4 w-4 transform rounded-full bg-surface transition-transform {dark
-        ? 'translate-x-4'
-        : 'translate-x-0.5'}"
+      class="inline-block h-4 w-4 translate-x-0.5 transform rounded-full bg-surface transition-transform dark:translate-x-4"
     ></span>
   </span>
   <Icon
     path={mdiMoonWaningCrescent}
     size={20}
-    class={dark ? 'text-primary' : 'text-muted'}
+    class="text-muted dark:text-primary"
   />
 </button>

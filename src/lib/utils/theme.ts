@@ -2,10 +2,10 @@ import { browser } from '$app/environment'
 
 const STORAGE_KEY = 'alvarobrey.com.darkTheme'
 
-export function getStoredDark(): boolean | undefined {
-  if (!browser) return undefined
-  const stored = localStorage.getItem(STORAGE_KEY)
-  return stored === null ? undefined : stored === 'true'
+// The class is set by a blocking script in app.html before first paint, so the
+// DOM is the source of truth for the current theme rather than localStorage.
+export function isDark(): boolean {
+  return browser && document.documentElement.classList.contains('dark')
 }
 
 export function storeDark(value: boolean): void {

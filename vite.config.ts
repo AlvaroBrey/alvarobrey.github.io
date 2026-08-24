@@ -7,7 +7,9 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     sveltekit({
-      adapter: adapter({ fallback: '404.html' }),
+      // No SPA fallback: every route is prerendered, and the postbuild step
+      // copies the prerendered /404 page to build/404.html for GitHub Pages.
+      adapter: adapter(),
       prerender: { handleHttpError: 'fail' }
     })
   ]
