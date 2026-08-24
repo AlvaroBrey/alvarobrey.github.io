@@ -35,7 +35,7 @@
   {#if logo}
     <!-- On the narrowest screens the logo rides in the timeline dot instead of
          beside the card, so it doesn't eat the card's text width. -->
-    <img
+    <enhanced:img
       src={logo}
       alt=""
       class="absolute top-0 left-4 h-10 w-10 -translate-x-1/2 rounded-full bg-white object-contain p-1 sm:hidden"
@@ -79,7 +79,7 @@
         {/if}
       </div>
       {#if logo}
-        <img
+        <enhanced:img
           src={logo}
           alt=""
           class="hidden shrink-0 object-contain sm:block sm:h-20 sm:w-20 lg:h-36 lg:w-36"
