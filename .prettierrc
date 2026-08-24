@@ -1,5 +1,8 @@
 {
   "semi": false,
   "singleQuote": true,
-  "trailingComma": "none"
+  "trailingComma": "none",
+  "plugins": ["prettier-plugin-svelte", "prettier-plugin-tailwindcss"],
+  "tailwindStylesheet": "./src/app.css",
+  "overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }]
 }

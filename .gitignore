@@ -62,18 +62,15 @@ typings/
 # parcel-bundler cache (https://parceljs.org/)
 .cache
 
-# next.js build output
-.next
-
-# nuxt.js build output
-.nuxt
-
-# Nuxt generate
-dist
+# SvelteKit build output
+/build
+/.svelte-kit
+/vite.config.ts.timestamp-*
+/vite.config.js.timestamp-*
 
 # Build-time generated CV PDF + its filename module (see scripts/generate-cv-pdf.ts)
 static/files/cv_alvarobrey.*.pdf
-data/generated
+src/lib/generated
 
 # vuepress build output
 .vuepress/dist

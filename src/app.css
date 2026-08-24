@@ -1,0 +1,63 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-primary: #388e3c;
+  --color-on-primary: #eff3ef;
+  --color-background: #eff3ef;
+  --color-surface: #ffffff;
+  --color-body: rgba(0, 0, 0, 0.87);
+  --color-muted: rgba(0, 0, 0, 0.6);
+  --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+}
+
+.dark {
+  --color-primary: #4caf50;
+  --color-on-primary: #3b3b49;
+  --color-background: #3b3b49;
+  --color-surface: #282831;
+  --color-body: #ffffff;
+  --color-muted: rgba(255, 255, 255, 0.7);
+}
+
+/* roboto-300 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 300;
+  src: url('./lib/assets/fonts/roboto-v20-latin-300.woff2') format('woff2');
+}
+
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('./lib/assets/fonts/roboto-v20-latin-regular.woff2') format('woff2');
+}
+
+/* roboto-500 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url('./lib/assets/fonts/roboto-v20-latin-500.woff2') format('woff2');
+}
+
+/* roboto-700 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url('./lib/assets/fonts/roboto-v20-latin-700.woff2') format('woff2');
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-body);
+}
