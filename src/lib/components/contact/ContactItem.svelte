@@ -20,7 +20,7 @@
       size={120}
       class="text-body transition-colors group-hover:text-primary"
     />
-    <p class="text-lg">
+    <p class="text-lg transition-colors group-hover:text-body">
       {t(`page.contact.item.${translationKey}`)}
     </p>
   </a>

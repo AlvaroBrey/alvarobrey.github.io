@@ -14,11 +14,11 @@
   {#each navPages as p (p.href)}
     <a
       href={p.href}
-      class="border-b-2 py-1 text-sm font-medium tracking-wide uppercase transition-colors {isActive(
+      class="border-b-2 py-1 text-sm font-medium tracking-wide uppercase no-underline transition-colors {isActive(
         p.href
       )
         ? 'border-primary text-primary'
-        : 'border-transparent hover:text-primary'}"
+        : 'border-transparent text-muted hover:text-body'}"
     >
       {t(`nav.${p.translationKey}`)}
     </a>
