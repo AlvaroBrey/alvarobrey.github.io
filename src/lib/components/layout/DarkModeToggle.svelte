@@ -2,7 +2,7 @@
   import { browser } from '$app/environment'
   import { mdiMoonWaningCrescent, mdiWhiteBalanceSunny } from '@mdi/js'
   import { t } from '../../i18n'
-  import { applyDark, isDark, storeDark } from '../../utils/theme'
+  import { isDark, setDark } from '../../utils/theme'
   import Icon from '../ui/Icon.svelte'
 
   // Only drives aria-checked -- the visuals follow the `dark` class on <html>
@@ -11,8 +11,7 @@
 
   function toggle() {
     dark = !dark
-    applyDark(dark)
-    storeDark(dark)
+    setDark(dark)
   }
 </script>
 

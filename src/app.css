@@ -40,15 +40,13 @@
     color: var(--color-primary);
     text-decoration: underline;
   }
-}
 
-/* roboto-300 - latin */
-@font-face {
-  font-family: 'Roboto';
-  font-style: normal;
-  font-display: swap;
-  font-weight: 300;
-  src: url('./lib/assets/fonts/roboto-v20-latin-300.woff2') format('woff2');
+  /* Opt-out for the easter-egg link embedded in page.me.intro, which should
+     read as plain text. */
+  main a.simon {
+    color: inherit;
+    text-decoration: inherit;
+  }
 }
 
 /* roboto-regular - latin */

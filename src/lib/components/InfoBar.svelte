@@ -12,16 +12,10 @@
 </script>
 
 <div
-  class="info-bar flex items-start gap-3 rounded bg-primary p-4 text-white {className}"
+  class="flex items-start gap-3 rounded bg-primary p-4 text-white [&_a]:text-inherit {className}"
 >
   <Icon path={mdiInformation} class="shrink-0" />
   <div>
     {@render children()}
   </div>
 </div>
-
-<style>
-  .info-bar :global(a) {
-    color: inherit;
-  }
-</style>

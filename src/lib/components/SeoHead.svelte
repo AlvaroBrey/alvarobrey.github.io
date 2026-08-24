@@ -1,5 +1,6 @@
 <script lang="ts">
   import { page } from '$app/state'
+  import { canonicalUrl } from '../utils/urls'
 
   interface Props {
     title: string
@@ -8,11 +9,7 @@
 
   let { title, noindex = false }: Props = $props()
 
-  // Strip the trailing slash that `trailingSlash: 'always'` adds, but keep it
-  // on the root so the canonical URLs match what the site served before.
-  const canonical = $derived(
-    'https://alvarobrey.com' + page.url.pathname.replace(/(.)\/$/, '$1')
-  )
+  const canonical = $derived(canonicalUrl(page.url.pathname))
 </script>
 
 <svelte:head>

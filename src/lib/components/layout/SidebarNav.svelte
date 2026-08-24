@@ -2,17 +2,13 @@
   import { fly } from 'svelte/transition'
   import { page } from '$app/state'
   import { t } from '../../i18n'
-  import { pages } from '../../utils/pages'
+  import { isActive, pages } from '../../utils/pages'
 
   interface Props {
     open?: boolean
   }
 
   let { open = $bindable(false) }: Props = $props()
-
-  function isActive(href: string): boolean {
-    return page.url.pathname === href || page.url.pathname === href + '/'
-  }
 
   function close() {
     open = false
@@ -52,7 +48,8 @@
           <a
             href={p.href}
             onclick={close}
-            class="block px-4 py-2 text-sm no-underline hover:bg-primary/10 {isActive(
+            class="block px-4 py-2 text-sm hover:bg-primary/10 {isActive(
+              page.url.pathname,
               p.href
             )
               ? 'bg-muted/15 font-medium'

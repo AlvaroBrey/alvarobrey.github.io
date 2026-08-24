@@ -1,17 +1,16 @@
 import { browser } from '$app/environment'
 
+// Keep in sync with the pre-paint script in src/app.html, which sets the class
+// before first paint and therefore can't import this module.
 const STORAGE_KEY = 'alvarobrey.com.darkTheme'
 
-// The class is set by a blocking script in app.html before first paint, so the
-// DOM is the source of truth for the current theme rather than localStorage.
+// That script is what puts the class on <html>, so the DOM is the source of
+// truth for the current theme rather than localStorage.
 export function isDark(): boolean {
   return browser && document.documentElement.classList.contains('dark')
 }
 
-export function storeDark(value: boolean): void {
-  if (browser) localStorage.setItem(STORAGE_KEY, value.toString())
-}
-
-export function applyDark(value: boolean): void {
-  if (browser) document.documentElement.classList.toggle('dark', value)
+export function setDark(value: boolean): void {
+  document.documentElement.classList.toggle('dark', value)
+  localStorage.setItem(STORAGE_KEY, value.toString())
 }

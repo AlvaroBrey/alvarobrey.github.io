@@ -13,7 +13,6 @@
     "dev": "vite dev",
     "prebuild": "pnpm generate-cv-pdf",
     "build": "vite build",
-    "postbuild": "cp build/404/index.html build/404.html",
     "preview": "vite preview",
     "generate-cv-pdf": "tsx scripts/generate-cv-pdf.ts",
     "precheck": "pnpm generate-cv-pdf",

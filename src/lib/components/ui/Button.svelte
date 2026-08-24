@@ -2,40 +2,19 @@
   import type { Snippet } from 'svelte'
 
   interface Props {
-    href?: string
+    href: string
     target?: string
-    variant?: 'filled' | 'text'
-    type?: 'button' | 'submit'
     class?: string
-    onclick?: () => void
     children: Snippet
   }
 
-  let {
-    href,
-    target,
-    variant = 'filled',
-    type = 'button',
-    class: className = '',
-    onclick,
-    children
-  }: Props = $props()
-
-  const base =
-    'inline-flex items-center gap-2 rounded px-4 py-2 text-sm font-medium tracking-wide uppercase no-underline transition-colors'
-  const variantClass = $derived(
-    variant === 'filled'
-      ? 'bg-primary text-on-primary hover:opacity-90'
-      : 'text-primary hover:bg-primary/10'
-  )
+  let { href, target, class: className = '', children }: Props = $props()
 </script>
 
-{#if href}
-  <a {href} {target} class="{base} {variantClass} {className}">
-    {@render children()}
-  </a>
-{:else}
-  <button {type} {onclick} class="{base} {variantClass} {className}">
-    {@render children()}
-  </button>
-{/if}
+<a
+  {href}
+  {target}
+  class="inline-flex items-center gap-2 rounded bg-primary px-4 py-2 text-sm font-medium tracking-wide text-on-primary uppercase no-underline transition-colors hover:opacity-90 {className}"
+>
+  {@render children()}
+</a>

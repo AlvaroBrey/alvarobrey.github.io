@@ -7,6 +7,7 @@
   import { shouldShowOrgName } from '../../utils/cvTimeline'
   import { orgLogo } from '../../utils/orgLogos'
   import { t } from '../../i18n'
+  import Card from '../ui/Card.svelte'
   import SkillsAndTech from './SkillsAndTech.svelte'
 
   interface Props {
@@ -16,9 +17,6 @@
   let { item }: Props = $props()
 
   const color = $derived(CVItemTypeColors[item.type])
-  const showOrgName = $derived(shouldShowOrgName(item))
-  const orgName = $derived(item.org ? t(`page.cv.orgs.${item.org}`) : '')
-  const orgUrl = $derived(item.org ? orgUrls[item.org] : undefined)
   const description = $derived(t(`page.cv.items.${item.key}.shortDescription`))
   const logo = $derived(orgLogo(item.org))
 
@@ -46,20 +44,23 @@
   {/if}
   <div
     class="absolute top-1.5 left-4 h-3 w-3 -translate-x-1/2 rounded-full ring-4 ring-background {logo
-      ? 'hidden sm:block'
+      ? 'max-sm:hidden'
       : ''}"
     style="background-color: {color}"
   ></div>
-  <div class="rounded bg-surface p-4 shadow">
+  <Card class="p-4">
     <div class="flex justify-between gap-4">
       <div class="flex-1">
         <h3 class="text-xl font-medium text-primary">
           {t(`page.cv.items.${item.key}.title`)}
         </h3>
         <p class="text-sm text-muted">
-          {#if showOrgName}
-            {#if orgUrl}
-              <a href={orgUrl} class="hover:underline">{orgName}</a>
+          {#if item.org && shouldShowOrgName(item)}
+            {@const orgName = t(`page.cv.orgs.${item.org}`)}
+            {#if orgUrls[item.org]}
+              <a href={orgUrls[item.org]} target="_blank" rel="noopener">
+                {orgName}
+              </a>
             {:else}
               {orgName}
             {/if}
@@ -85,5 +86,5 @@
         />
       {/if}
     </div>
-  </div>
+  </Card>
 </div>

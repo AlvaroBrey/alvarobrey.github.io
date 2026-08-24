@@ -1,3 +1,5 @@
+import { canonicalPath } from './urls'
+
 export interface Page {
   translationKey: string
   href: string
@@ -17,4 +19,8 @@ export function isHome(href: string): boolean {
 
 export function isAbout(href: string): boolean {
   return href === '/about'
+}
+
+export function isActive(pathname: string, href: string): boolean {
+  return canonicalPath(pathname) === href
 }

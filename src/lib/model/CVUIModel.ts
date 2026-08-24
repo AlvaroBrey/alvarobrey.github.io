@@ -8,3 +8,10 @@ export const CVItemTypeColors: Record<CVItemType, string> = {
 }
 
 export const CV_DATE_FORMAT = 'yyyy/MM'
+
+// COURSE items are omitted from the site (and from the PDF's sections), so both
+// the timeline and its filter chips work from this list rather than each
+// excluding COURSE on their own.
+export const visibleCVItemTypes: CVItemType[] = Object.values(
+  CVItemType
+).filter((type) => type !== CVItemType.COURSE)

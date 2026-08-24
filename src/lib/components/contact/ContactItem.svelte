@@ -1,5 +1,6 @@
 <script lang="ts">
   import { t } from '../../i18n'
+  import { displayUrl } from '../../utils/urls'
   import Icon from '../ui/Icon.svelte'
 
   interface Props {
@@ -10,7 +11,7 @@
 
   let { icon, translationKey, link }: Props = $props()
 
-  const tooltip = $derived(link.replace('https://', '').replace('mailto:', ''))
+  const tooltip = $derived(displayUrl(link))
 </script>
 
 <div class="group relative flex flex-col items-center text-center">

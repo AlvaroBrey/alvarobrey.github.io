@@ -60,10 +60,3 @@
     >
   </InfoBar>
 </BasicPage>
-
-<style>
-  :global(a.simon) {
-    color: inherit !important;
-    text-decoration: inherit !important;
-  }
-</style>

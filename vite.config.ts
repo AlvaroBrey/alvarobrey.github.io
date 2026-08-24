@@ -7,9 +7,13 @@ export default defineConfig({
   plugins: [
     tailwindcss(),
     sveltekit({
-      // No SPA fallback: every route is prerendered, and the postbuild step
-      // copies the prerendered /404 page to build/404.html for GitHub Pages.
+      // No SPA fallback: every route is prerendered, and /404 emits
+      // build/404.html directly (see src/routes/404/+page.ts).
       adapter: adapter(),
+      // 404.html is served from arbitrary URLs, so its asset references have to
+      // be absolute -- relative ones resolve against the requested path and
+      // break for anything below the root.
+      paths: { relative: false },
       prerender: { handleHttpError: 'fail' }
     })
   ]
