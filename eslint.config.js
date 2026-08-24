@@ -21,6 +21,12 @@ export default ts.config(
         extraFileExtensions: ['.svelte'],
         parser: ts.parser
       }
+    },
+    rules: {
+      // This site deploys to a fixed custom-domain root with no `paths.base`,
+      // so there is nothing for resolve() to resolve; internal links are
+      // plain strings by design (see src/lib/utils/pages.ts).
+      'svelte/no-navigation-without-resolve': 'off'
     }
   },
   {
