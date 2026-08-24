@@ -12,10 +12,10 @@
 </script>
 
 <div
-  class="info-bar flex items-start gap-3 rounded bg-primary/10 p-4 text-primary {className}"
+  class="info-bar flex items-start gap-3 rounded bg-primary p-4 text-white {className}"
 >
   <Icon path={mdiInformation} class="shrink-0" />
-  <div class="text-body">
+  <div>
     {@render children()}
   </div>
 </div>

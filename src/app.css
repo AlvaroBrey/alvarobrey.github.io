@@ -21,6 +21,17 @@
   --color-muted: rgba(255, 255, 255, 0.7);
 }
 
+@layer base {
+  /* Vuetify coloured every anchor with the theme's primary; Tailwind's
+     preflight resets them to inherit, which left the links inside prose
+     indistinguishable from body text. Components that set their own text
+     colour (buttons, cards) override this from the utilities layer. */
+  main a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+}
+
 /* roboto-300 - latin */
 @font-face {
   font-family: 'Roboto';

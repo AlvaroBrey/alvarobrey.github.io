@@ -22,7 +22,7 @@
   }: Props = $props()
 
   const base =
-    'inline-flex items-center gap-2 rounded px-4 py-2 text-sm font-medium uppercase tracking-wide transition-colors'
+    'inline-flex items-center gap-2 rounded px-4 py-2 text-sm font-medium tracking-wide uppercase no-underline transition-colors'
   const variantClass = $derived(
     variant === 'filled'
       ? 'bg-primary text-on-primary hover:opacity-90'

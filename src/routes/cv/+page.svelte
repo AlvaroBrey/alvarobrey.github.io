@@ -32,7 +32,7 @@
     <a
       href={pdfHref}
       target="_blank"
-      class="inline-flex items-center gap-2 rounded bg-primary px-4 py-2 text-sm font-medium text-on-primary uppercase hover:opacity-90"
+      class="inline-flex items-center gap-2 rounded bg-primary px-4 py-2 text-sm font-medium text-on-primary uppercase no-underline hover:opacity-90"
     >
       <Icon path={mdiFilePdfBox} size={20} />
       PDF version

@@ -14,7 +14,7 @@
 <!-- eslint-disable svelte/no-at-html-tags -- locale content, not user input -->
 <BasicPage>
   {#snippet titleContent()}
-    <h1 class="my-12 text-center text-5xl text-primary">
+    <h1 class="my-12 text-center text-6xl text-primary">
       {@html t('page.index.greeting')}
     </h1>
   {/snippet}

@@ -18,7 +18,7 @@
 <SeoHead title={t('nav.contact')} />
 
 <BasicPage title={t('page.contact.title')}>
-  <div class="mt-6 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
+  <div class="mt-6 flex flex-wrap justify-center gap-x-20 gap-y-8">
     {#each items as item (item.key)}
       <ContactItem
         icon={item.icon}

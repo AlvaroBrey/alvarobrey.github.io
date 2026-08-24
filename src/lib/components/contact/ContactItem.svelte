@@ -14,13 +14,13 @@
 </script>
 
 <div class="group relative flex flex-col items-center text-center">
-  <a href={link} target="_blank" rel="noopener" class="block">
+  <a href={link} target="_blank" rel="noopener" class="block no-underline">
     <Icon
       path={icon}
       size={120}
-      class="text-muted transition-colors group-hover:text-primary"
+      class="text-body transition-colors group-hover:text-primary"
     />
-    <p class="text-lg text-body">
+    <p class="text-lg">
       {t(`page.contact.item.${translationKey}`)}
     </p>
   </a>

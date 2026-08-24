@@ -17,12 +17,12 @@
 </script>
 
 <header
-  class="relative flex items-center bg-surface px-4 py-3 shadow-md md:shadow-none"
+  class="relative flex h-16 items-center justify-center bg-background px-4 shadow-md md:shadow-none"
 >
   {#if showNav}
     <button
       type="button"
-      class="md:hidden"
+      class="absolute left-4 md:hidden"
       aria-label="Open menu"
       onclick={onToggleSidebar}
     >
@@ -33,7 +33,7 @@
     </div>
   {/if}
   <div
-    class="right-controls absolute top-4 right-4 z-50 flex items-center gap-3"
+    class="absolute top-1/2 right-4 z-50 flex -translate-y-1/2 items-center gap-3"
   >
     <DarkModeToggle />
     <LocaleSelector />
