@@ -6,8 +6,6 @@
   import SeoHead from '$lib/components/SeoHead.svelte'
   import Card from '$lib/components/ui/Card.svelte'
 
-  // Kept as one sentence rather than split around the link, so a translator
-  // can reorder it. The anchor is authored here, not user input.
   const lookingForContact = m.page_me_looking_for_contact({
     link: `<a href="/contact" class="underline">${m.page_me_contact_page()}</a>`
   })

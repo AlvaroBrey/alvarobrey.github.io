@@ -12,12 +12,10 @@ export default defineConfig({
     enhancedImages(),
     tailwindcss(),
     sveltekit({
-      // No SPA fallback: every route is prerendered, and /404 emits
-      // build/404.html directly (see src/routes/404/+page.ts).
+      // No SPA fallback: /404 is prerendered to build/404.html instead.
       adapter: adapter(),
-      // 404.html is served from arbitrary URLs, so its asset references have to
-      // be absolute -- relative ones resolve against the requested path and
-      // break for anything below the root.
+      // 404.html is served from arbitrary URLs, so relative asset paths would
+      // resolve against the requested path.
       paths: { relative: false },
       prerender: { handleHttpError: 'fail' }
     })

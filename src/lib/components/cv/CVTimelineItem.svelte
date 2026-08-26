@@ -38,8 +38,7 @@
 
 <div class="relative pl-10">
   {#if logo}
-    <!-- On the narrowest screens the logo rides in the timeline dot instead of
-         beside the card, so it doesn't eat the card's text width. -->
+    <!-- Below sm the logo rides in the dot rather than beside the card. -->
     <enhanced:img
       src={logo}
       alt=""
@@ -71,7 +70,7 @@
           <span>{dateText}</span>
         </p>
         {#if item.shortDescription}
-          <!-- eslint-disable-next-line svelte/no-at-html-tags -- authored content, not user input -->
+          <!-- eslint-disable-next-line svelte/no-at-html-tags -- locale content, not user input -->
           <p class="mt-2 text-sm text-body">{@html item.shortDescription}</p>
         {/if}
         {#if item.skills || item.tech}

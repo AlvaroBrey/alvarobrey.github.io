@@ -5,8 +5,7 @@
   import { isDark, setDark } from '../../utils/theme'
   import Icon from '../ui/Icon.svelte'
 
-  // Only drives aria-checked -- the visuals follow the `dark` class on <html>
-  // via dark: variants, so the prerendered markup is already correct.
+  // Drives aria-checked only; the visuals follow the `dark` class via CSS.
   let dark = $state(browser ? isDark() : false)
 
   function toggle() {

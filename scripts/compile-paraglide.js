@@ -1,5 +1,4 @@
-// svelte-check doesn't run Vite, so `precheck` compiles the messages here using
-// the same options the Vite plugin gets.
+// svelte-check doesn't run Vite, so the plugin never fires for `check`.
 import { compile } from '@inlang/paraglide-js'
 import { paraglideOptions } from '../paraglide.config.js'
 

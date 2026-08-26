@@ -1,6 +1,5 @@
 import type { Skill } from '../model/CVModel'
 
-// Keyed by every Skill, so a typo in a CV item's skills list is a type error.
 export const skillLabels: Record<Skill, string> = {
   app_analytics: 'App analytics',
   app_architecture: 'App architecture',
