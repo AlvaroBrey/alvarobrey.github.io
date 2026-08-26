@@ -10,8 +10,10 @@ export function canonicalUrl(pathname: string): string {
   return SITE_URL + canonicalPath(pathname)
 }
 
+// Mirrors live under the page's own path so Cloudflare can negotiate them by
+// appending to the request path, with no rewrite functions above the free plan.
 export function markdownPath(href: string): string {
-  return href === '/' ? '/index.md' : `${href}.md`
+  return href === '/' ? '/index.md' : `${href}/index.md`
 }
 
 export function markdownUrl(href: string): string {
