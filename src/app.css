@@ -3,14 +3,6 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  /* Vuetify's breakpoints, not Tailwind's: every sm/md/lg utility here is a
-     port of a v-col prop or $vuetify.breakpoint check. */
-  --breakpoint-sm: 600px;
-  --breakpoint-md: 960px;
-  --breakpoint-lg: 1264px;
-  --breakpoint-xl: 1904px;
-  --breakpoint-2xl: initial;
-
   --color-primary: #388e3c;
   --color-on-primary: #eff3ef;
   --color-background: #eff3ef;
