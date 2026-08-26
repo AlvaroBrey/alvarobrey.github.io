@@ -1,30 +1,32 @@
 <script lang="ts">
+  import { m } from '$lib/paraglide/messages'
   import { pageLabel } from '$lib/utils/pages'
   import BasicPage from '$lib/components/BasicPage.svelte'
   import InfoBar from '$lib/components/InfoBar.svelte'
   import SeoHead from '$lib/components/SeoHead.svelte'
   import Card from '$lib/components/ui/Card.svelte'
-  import { t } from '$lib/i18n'
 
-  const [contactBefore, contactAfter] = t('page.me.lookingForContact').split(
-    '{0}'
-  )
+  // Kept as one sentence rather than split around the link, so a translator
+  // can reorder it. The anchor is authored here, not user input.
+  const lookingForContact = m.page_me_looking_for_contact({
+    link: `<a href="/contact" class="underline">${m.page_me_contact_page()}</a>`
+  })
 </script>
 
 <SeoHead title={pageLabel('/me')} />
 
 <!-- eslint-disable svelte/no-at-html-tags -- locale content, not user input -->
-<BasicPage title={t('page.me.title')}>
+<BasicPage title={m.page_me_title()}>
   <Card class="mt-4">
     <div class="space-y-4 p-6 text-body">
-      <p>{@html t('page.me.intro')}</p>
-      <p>{@html t('page.me.automation')}</p>
-      <p>{@html t('page.me.opensource')}</p>
-      <p>{@html t('page.me.personal')}</p>
+      <p>{@html m.page_me_intro()}</p>
+      <p>{@html m.page_me_automation()}</p>
+      <p>{@html m.page_me_opensource()}</p>
+      <p>{@html m.page_me_personal()}</p>
       <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
         <div>
           <p class="mb-0 text-sm tracking-wide text-primary uppercase">
-            {t('page.me.whatIDo')}
+            {m.page_me_what_ido()}
           </p>
           <ul class="list-disc pl-5">
             <li>Android</li>
@@ -39,25 +41,22 @@
         </div>
         <div>
           <p class="mb-0 text-sm tracking-wide text-primary uppercase">
-            {t('page.me.whatILike')}
+            {m.page_me_what_ilike()}
           </p>
           <ul class="list-disc pl-5">
-            <li>{t('page.me.likes.automation')}</li>
-            <li>{t('page.me.likes.cleanCode')}</li>
-            <li>{t('page.me.likes.openSource')}</li>
-            <li>{t('page.me.likes.fp')}</li>
-            <li>{t('page.me.likes.reproducible')}</li>
-            <li>{t('page.me.likes.pairProgramming')}</li>
+            <li>{m.page_me_likes_automation()}</li>
+            <li>{m.page_me_likes_clean_code()}</li>
+            <li>{m.page_me_likes_open_source()}</li>
+            <li>{m.page_me_likes_fp()}</li>
+            <li>{m.page_me_likes_reproducible()}</li>
+            <li>{m.page_me_likes_pair_programming()}</li>
           </ul>
         </div>
       </div>
     </div>
   </Card>
   <InfoBar class="mt-4">
-    <span
-      >{contactBefore}<a href="/contact" class="underline"
-        >{t('page.me.contactPage')}</a
-      >{contactAfter}</span
-    >
+    <!-- eslint-disable-next-line svelte/no-at-html-tags -- authored content -->
+    <span>{@html lookingForContact}</span>
   </InfoBar>
 </BasicPage>

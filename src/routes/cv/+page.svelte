@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { m } from '$lib/paraglide/messages'
   import { pageLabel } from '$lib/utils/pages'
   import { mdiFilePdfBox } from '@mdi/js'
   import BasicPage from '$lib/components/BasicPage.svelte'
@@ -9,7 +10,6 @@
   import Icon from '$lib/components/ui/Icon.svelte'
   import { CVTimelineItems } from '$lib/data/CVData'
   import { CV_PDF_FILENAME } from '$lib/generated/cvPdf'
-  import { t } from '$lib/i18n'
   import type { CVItemType } from '$lib/model/CVModel'
   import { visibleCVItemTypes } from '$lib/model/CVUIModel'
   import type { Optional } from '$lib/types/utilityTypes'
@@ -37,7 +37,7 @@
   {#snippet titleContent()}
     <div class="mb-6 flex flex-wrap items-center justify-between gap-4">
       <!-- eslint-disable-next-line svelte/no-at-html-tags -- locale content, not user input -->
-      <h1 class="text-4xl text-primary">{@html t('page.cv.title')}</h1>
+      <h1 class="text-4xl text-primary">{@html m.page_cv_title()}</h1>
       <Button href={pdfHref} target="_blank">
         <Icon path={mdiFilePdfBox} size={20} />
         PDF version

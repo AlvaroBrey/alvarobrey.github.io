@@ -15,10 +15,11 @@
     "build": "vite build",
     "preview": "vite preview",
     "generate-cv-pdf": "tsx scripts/generate-cv-pdf.ts",
-    "precheck": "pnpm generate-cv-pdf",
+    "precheck": "pnpm paraglide && pnpm generate-cv-pdf",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
     "lint": "prettier --check . && eslint .",
-    "format": "prettier --write ."
+    "format": "prettier --write .",
+    "paraglide": "paraglide-js compile --project ./project.inlang --outdir ./src/lib/paraglide"
   },
   "lint-staged": {
     "*.{js,ts,svelte}": [
@@ -28,6 +29,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@inlang/paraglide-js": "^2.24.1",
     "@mdi/js": "^7.4.47",
     "@sveltejs/adapter-static": "^3.0.10",
     "@sveltejs/enhanced-img": "^0.11.0",

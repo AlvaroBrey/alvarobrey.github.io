@@ -1,7 +1,7 @@
 <script lang="ts">
+  import { m } from '../../paraglide/messages'
   import { browser } from '$app/environment'
   import { mdiMoonWaningCrescent, mdiWhiteBalanceSunny } from '@mdi/js'
-  import { t } from '../../i18n'
   import { isDark, setDark } from '../../utils/theme'
   import Icon from '../ui/Icon.svelte'
 
@@ -19,7 +19,7 @@
   type="button"
   role="switch"
   aria-checked={dark}
-  aria-label={t('aria.darkMode')}
+  aria-label={m.aria_dark_mode()}
   onclick={toggle}
   class="flex items-center gap-1"
 >

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { m } from '../../paraglide/messages'
   import { format } from 'date-fns'
   import type { Optional } from '../../types/utilityTypes'
   import type { CVTimelineItem as CVTimelineItemType } from '../../model/CVModel'
@@ -6,7 +7,6 @@
   import { orgs } from '../../data/OrgData'
   import { shouldShowOrgName } from '../../utils/cvTimeline'
   import { orgLogo } from '../../utils/orgLogos'
-  import { t } from '../../i18n'
   import Card from '../ui/Card.svelte'
   import SkillsAndTech from './SkillsAndTech.svelte'
 
@@ -21,7 +21,7 @@
   const logo = $derived(orgLogo(item.org))
 
   function formatDate(date: Optional<Date>): string {
-    return date ? format(date, CV_DATE_FORMAT) : t('page.cv.present')
+    return date ? format(date, CV_DATE_FORMAT) : m.page_cv_present()
   }
 
   const dateText = $derived(

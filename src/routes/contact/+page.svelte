@@ -1,10 +1,10 @@
 <script lang="ts">
+  import { m } from '$lib/paraglide/messages'
   import { pageLabel } from '$lib/utils/pages'
   import { mdiEmail, mdiGithub, mdiLinkedin } from '@mdi/js'
   import BasicPage from '$lib/components/BasicPage.svelte'
   import SeoHead from '$lib/components/SeoHead.svelte'
   import ContactItem from '$lib/components/contact/ContactItem.svelte'
-  import { t } from '$lib/i18n'
   import { contactLinks } from '$lib/data/ContactData'
 
   const icons: Record<string, string> = {
@@ -18,7 +18,7 @@
 
 <SeoHead title={pageLabel('/contact')} />
 
-<BasicPage title={t('page.contact.title')}>
+<BasicPage title={m.page_contact_title()}>
   <div
     class="mt-6 flex flex-col items-center gap-8 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-20"
   >
