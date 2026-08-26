@@ -10,13 +10,10 @@
   import { CVTimelineItems } from '$lib/data/CVData'
   import { CV_PDF_FILENAME } from '$lib/generated/cvPdf'
   import type { CVItemType } from '$lib/model/CVModel'
-  import { visibleCVItemTypes } from '$lib/model/CVUIModel'
   import type { Optional } from '$lib/types/utilityTypes'
   import { sortTimelineItems } from '$lib/utils/cvTimeline'
 
-  const visibleItems = [...CVTimelineItems]
-    .sort(sortTimelineItems)
-    .filter((item) => visibleCVItemTypes.includes(item.type))
+  const sortedItems = [...CVTimelineItems].sort(sortTimelineItems)
 
   const pdfHref = `/files/${CV_PDF_FILENAME}`
 
@@ -24,8 +21,8 @@
 
   const shownItems = $derived(
     filter === undefined
-      ? visibleItems
-      : visibleItems.filter((item) => item.type === filter)
+      ? sortedItems
+      : sortedItems.filter((item) => item.type === filter)
   )
 
   const title = pageLabel('/cv')
