@@ -42,4 +42,9 @@ jobs:
           test -f build/.nojekyll
           test -s build/CNAME
           test -s build/sitemap.xml
+          test -s build/robots.txt
+          test -s build/llms.txt
+          test -s build/llms-full.txt
+          test -s build/index.md
+          test -s build/cv.md
           ls build/files/cv_alvarobrey.*.pdf
