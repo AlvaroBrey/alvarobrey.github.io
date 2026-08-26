@@ -13,7 +13,7 @@ function withType(items: CVItemInput[], type: CVItemType): CVTimelineItem[] {
   return items.map((item) => ({ ...item, type }))
 }
 
-export const educationCVItems: CVTimelineItem[] = withType(
+const educationCVItems: CVTimelineItem[] = withType(
   [
     {
       key: 'ITDegree',
@@ -39,7 +39,7 @@ export const educationCVItems: CVTimelineItem[] = withType(
   CVItemType.EDUCATION
 )
 
-export const workCVItems: CVTimelineItem[] = withType(
+const workCVItems: CVTimelineItem[] = withType(
   [
     {
       key: 'citius',
@@ -106,7 +106,7 @@ export const workCVItems: CVTimelineItem[] = withType(
   CVItemType.WORK
 )
 
-export const hobbyItems: CVTimelineItem[] = withType(
+const hobbyItems: CVTimelineItem[] = withType(
   [
     {
       key: 'androidRoms',
