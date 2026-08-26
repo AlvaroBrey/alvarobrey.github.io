@@ -12,31 +12,35 @@ import { dirname, join } from 'path'
 import { fileURLToPath } from 'url'
 import { format } from 'date-fns'
 import { launch } from 'puppeteer'
-import { CVItemType, CVTimelineItem } from '../model/CVModel'
-import { Optional } from '../types/utilityTypes'
-import { shouldShowOrgName, sortTimelineItems } from '../utils/cvTimeline'
-import { CVTimelineItems } from '../data/CVData'
-import { contactLinks } from '../data/ContactData'
+import { CVItemType } from '../src/lib/model/CVModel'
+import type { CVTimelineItem } from '../src/lib/model/CVModel'
+import type { Optional } from '../src/lib/types/utilityTypes'
 import {
-  LabeledValue,
+  shouldShowOrgName,
+  sortTimelineItems
+} from '../src/lib/utils/cvTimeline'
+import { CVTimelineItems } from '../src/lib/data/CVData'
+import { contactLinks } from '../src/lib/data/ContactData'
+import {
   cvPdfAbout,
   cvPdfEducationSuffix,
   cvPdfLanguages,
   cvPdfLocations,
   cvPdfProfile,
   cvPdfSkills
-} from '../data/CvPdfData'
-import { orgUrls } from '../data/OrgData'
-import en from '../locales/en.json'
+} from '../src/lib/data/CvPdfData'
+import type { LabeledValue } from '../src/lib/data/CvPdfData'
+import { orgUrls } from '../src/lib/data/OrgData'
+import { t } from '../src/lib/i18n/index'
+import { displayUrl } from '../src/lib/utils/urls'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const ROOT = join(__dirname, '..')
 const OUTPUT_DIR = join(ROOT, 'static', 'files')
-const ORGS_DIR = join(ROOT, 'assets', 'img', 'orgs')
-const GENERATED_MODULE = join(ROOT, 'data', 'generated', 'cvPdf.ts')
+const ORGS_DIR = join(ROOT, 'src', 'lib', 'assets', 'orgs')
+const GENERATED_MODULE = join(ROOT, 'src', 'lib', 'generated', 'cvPdf.ts')
 const FILENAME_PREFIX = 'cv_alvarobrey.'
 
-const cv = en.page.cv
 const DISPLAY_DATE_FORMAT = 'MMM yyyy'
 
 type Section = { title: string; type: CVItemType }
@@ -46,21 +50,13 @@ const SECTIONS: Section[] = [
   { title: 'Open source & hobbies', type: CVItemType.HOBBY }
 ]
 
-function t(obj: Record<string, any>, key: string): string {
-  return obj?.[key] ?? key
-}
-
-function displayUrl(link: string): string {
-  return link.replace(/^mailto:/, '').replace(/^https?:\/\//, '')
-}
-
 function sectionHtml(title: string, body: string, extraClass = ''): string {
   const cls = extraClass ? `section ${extraClass}` : 'section'
   return `<section class="${cls}"><h2>${title}</h2>${body}</section>`
 }
 
 function formatDateRange(item: CVTimelineItem): string {
-  const present = t(cv, 'present')
+  const present = t('page.cv.present')
   if (!item.startDate) {
     return item.endDate ? format(item.endDate, DISPLAY_DATE_FORMAT) : ''
   }
@@ -84,23 +80,21 @@ function renderTech(item: CVTimelineItem): string {
   if (!item.tech?.length) return ''
   const techs = item.tech.flatMap((entry) => entry.split(/\s*\+\s*/))
   return `<p class="tech"><span class="tech-label">${t(
-    cv,
-    'techTitle'
+    'page.cv.techTitle'
   )}:</span> ${techs.join(', ')}</p>`
 }
 
 function renderItem(item: CVTimelineItem): string {
-  const strings = (cv.items as Record<string, any>)[item.key]
-  const title = t(strings, 'title')
+  const title = t(`page.cv.items.${item.key}.title`)
   let org = ''
-  if (shouldShowOrgName(item)) {
-    const orgLabel = t(cv.orgs, item.org!)
-    const orgUrl = orgUrls[item.org!]
+  if (shouldShowOrgName(item) && item.org) {
+    const orgLabel = t(`page.cv.orgs.${item.org}`)
+    const orgUrl = orgUrls[item.org]
     org = orgUrl ? `<a href="${escapeAttr(orgUrl)}">${orgLabel}</a>` : orgLabel
   }
   const location = cvPdfLocations[item.key]
   const paragraphs = [
-    t(strings, 'shortDescription'),
+    t(`page.cv.items.${item.key}.shortDescription`),
     cvPdfEducationSuffix[item.key]
   ].filter(Boolean)
   const desc = paragraphs.length
@@ -160,9 +154,8 @@ function contactRow(label: string, link: string, value: string): string {
 }
 
 function contactHtml(): string {
-  const labels = en.page.contact.item as Record<string, string>
   const rows = contactLinks.map(({ key, link }) =>
-    contactRow(labels[key] ?? key, link, displayUrl(link))
+    contactRow(t(`page.contact.item.${key}`), link, displayUrl(link))
   )
   const site = cvPdfProfile.website
   rows.push(contactRow('Website', site, displayUrl(site)))
@@ -250,6 +243,17 @@ async function main() {
   const hash = createHash('sha256').update(html).digest('hex').slice(0, 8)
   const filename = `${FILENAME_PREFIX}${hash}.pdf`
 
+  // Both `check` and `build` run this, so skip the Chromium launch when the
+  // content hasn't changed since the last render.
+  if (
+    existsSync(join(OUTPUT_DIR, filename)) &&
+    existsSync(GENERATED_MODULE) &&
+    readFileSync(GENERATED_MODULE, 'utf8').includes(filename)
+  ) {
+    console.log(`Reusing static/files/${filename}`)
+    return
+  }
+
   const browser = await launch({
     headless: true,
     args: ['--no-sandbox', '--disable-setuid-sandbox']
@@ -278,7 +282,6 @@ async function main() {
         `export const CV_PDF_FILENAME = '${filename}'\n`
     )
 
-    // eslint-disable-next-line no-console
     console.log(`Generated static/files/${filename}`)
   } finally {
     await browser.close()
@@ -286,7 +289,6 @@ async function main() {
 }
 
 main().catch((err) => {
-  // eslint-disable-next-line no-console
   console.error(err)
   process.exit(1)
 })

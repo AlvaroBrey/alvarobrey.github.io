@@ -1,0 +1,82 @@
+@import 'tailwindcss';
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  /* Vuetify's breakpoints, not Tailwind's defaults. The layout was designed
+     against these, and the sm/md/lg utilities throughout are direct ports of
+     v-col props and $vuetify.breakpoint checks -- notably the nav, which
+     swapped to tabs at 960px (smAndDown), not Tailwind's 768px. */
+  --breakpoint-sm: 600px;
+  --breakpoint-md: 960px;
+  --breakpoint-lg: 1264px;
+  --breakpoint-xl: 1904px;
+  --breakpoint-2xl: initial;
+
+  --color-primary: #388e3c;
+  --color-on-primary: #eff3ef;
+  --color-background: #eff3ef;
+  --color-surface: #ffffff;
+  --color-body: rgba(0, 0, 0, 0.87);
+  --color-muted: rgba(0, 0, 0, 0.6);
+  --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+}
+
+.dark {
+  --color-primary: #4caf50;
+  --color-on-primary: #3b3b49;
+  --color-background: #3b3b49;
+  --color-surface: #282831;
+  --color-body: #ffffff;
+  --color-muted: rgba(255, 255, 255, 0.7);
+}
+
+@layer base {
+  /* Vuetify coloured every anchor with the theme's primary; Tailwind's
+     preflight resets them to inherit, which left the links inside prose
+     indistinguishable from body text. Components that set their own text
+     colour (buttons, cards) override this from the utilities layer. */
+  main a {
+    color: var(--color-primary);
+    text-decoration: underline;
+  }
+
+  /* Opt-out for the easter-egg link embedded in page.me.intro, which should
+     read as plain text. */
+  main a.simon {
+    color: inherit;
+    text-decoration: inherit;
+  }
+}
+
+/* roboto-regular - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 400;
+  src: url('./lib/assets/fonts/roboto-v20-latin-regular.woff2') format('woff2');
+}
+
+/* roboto-500 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 500;
+  src: url('./lib/assets/fonts/roboto-v20-latin-500.woff2') format('woff2');
+}
+
+/* roboto-700 - latin */
+@font-face {
+  font-family: 'Roboto';
+  font-style: normal;
+  font-display: swap;
+  font-weight: 700;
+  src: url('./lib/assets/fonts/roboto-v20-latin-700.woff2') format('woff2');
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-body);
+}
