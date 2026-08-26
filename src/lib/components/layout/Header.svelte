@@ -4,7 +4,6 @@
   import { isHome } from '../../utils/pages'
   import Icon from '../ui/Icon.svelte'
   import DarkModeToggle from './DarkModeToggle.svelte'
-  import LocaleSelector from './LocaleSelector.svelte'
   import Nav from './Nav.svelte'
 
   interface Props {
@@ -36,6 +35,5 @@
     class="absolute top-1/2 right-4 z-50 flex -translate-y-1/2 items-center gap-3"
   >
     <DarkModeToggle />
-    <LocaleSelector />
   </div>
 </header>
