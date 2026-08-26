@@ -3,10 +3,8 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
-  /* Vuetify's breakpoints, not Tailwind's defaults. The layout was designed
-     against these, and the sm/md/lg utilities throughout are direct ports of
-     v-col props and $vuetify.breakpoint checks -- notably the nav, which
-     swapped to tabs at 960px (smAndDown), not Tailwind's 768px. */
+  /* Vuetify's breakpoints, not Tailwind's: every sm/md/lg utility here is a
+     port of a v-col prop or $vuetify.breakpoint check. */
   --breakpoint-sm: 600px;
   --breakpoint-md: 960px;
   --breakpoint-lg: 1264px;
@@ -32,24 +30,20 @@
 }
 
 @layer base {
-  /* Vuetify coloured every anchor with the theme's primary; Tailwind's
-     preflight resets them to inherit, which left the links inside prose
-     indistinguishable from body text. Components that set their own text
-     colour (buttons, cards) override this from the utilities layer. */
+  /* Tailwind's preflight resets anchors to inherit, which leaves prose links
+     indistinguishable from body text. */
   main a {
     color: var(--color-primary);
     text-decoration: underline;
   }
 
-  /* Opt-out for the easter-egg link embedded in page.me.intro, which should
-     read as plain text. */
+  /* Easter-egg link inside page_me_intro; reads as plain text. */
   main a.simon {
     color: inherit;
     text-decoration: inherit;
   }
 }
 
-/* roboto-regular - latin */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
@@ -58,7 +52,6 @@
   src: url('./lib/assets/fonts/roboto-v20-latin-regular.woff2') format('woff2');
 }
 
-/* roboto-500 - latin */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;
@@ -67,7 +60,6 @@
   src: url('./lib/assets/fonts/roboto-v20-latin-500.woff2') format('woff2');
 }
 
-/* roboto-700 - latin */
 @font-face {
   font-family: 'Roboto';
   font-style: normal;

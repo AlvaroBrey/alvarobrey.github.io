@@ -19,8 +19,6 @@
   const CHIP =
     'flex items-center gap-1 rounded-full border px-3 py-1 text-sm transition-colors'
 
-  // The type chips are coloured from data, so they carry inline styles the
-  // "All" chip expresses with theme tokens instead.
   function chipStyle(type: CVItemType, selected: boolean): string {
     const color = CVItemTypeColors[type]
     return `border-color: ${color}; background-color: ${

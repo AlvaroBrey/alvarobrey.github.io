@@ -7,8 +7,6 @@ function parseDate(date: string): Date {
   return parse(date, CV_DATE_FORMAT, new Date())
 }
 
-// Typing the literals before the type is stamped on means skills and orgs are
-// checked where they're written, rather than widening to string[] first.
 type CVItemInput = Omit<CVTimelineItem, 'type'>
 
 function withType(items: CVItemInput[], type: CVItemType): CVTimelineItem[] {

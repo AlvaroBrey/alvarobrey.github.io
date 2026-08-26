@@ -1,8 +1,7 @@
 export const SITE_URL = 'https://alvarobrey.com'
 
-// `trailingSlash: 'always'` (see src/routes/+layout.ts) means every pathname
-// arrives with a trailing slash. Canonical URLs and the sitemap drop it, except
-// on the root, so they match the URLs the site published before the migration.
+// `trailingSlash: 'always'` puts a slash on every pathname; canonical URLs
+// drop it, except on the root, to match the URLs the site already published.
 export function canonicalPath(pathname: string): string {
   return pathname.replace(/(.)\/$/, '$1')
 }

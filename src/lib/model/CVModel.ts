@@ -36,8 +36,7 @@ export interface CVTimelineItem {
   key: string
   title: string
   shortDescription?: string
-  // Both describe the item rather than a particular rendering; only the CV PDF
-  // shows them today, but they belong to the record either way.
+  // Rendered by the CV PDF only -- unused in the components, not dead.
   location?: string
   note?: string
   org: Optional<CVOrg>

@@ -14,10 +14,8 @@ export const CVItemTypeLabels: Record<CVItemType, string> = {
   [CVItemType.HOBBY]: 'Hobby'
 }
 
-// Labels for the CV item's own fields, kept beside the data rather than in the
-// message catalogue because scripts/generate-cv-pdf.ts renders the same fields
-// and can't reach Paraglide's browser runtime. `filterAll` sits here so the
-// filter chips read every label from one place.
+// Beside the data rather than in the catalogue: generate-cv-pdf.ts renders
+// these same fields and can't reach Paraglide's browser runtime.
 export const cvLabels = {
   skills: 'Key skills',
   tech: 'Key technologies',
@@ -27,9 +25,6 @@ export const cvLabels = {
 
 export const CV_DATE_FORMAT = 'yyyy/MM'
 
-// COURSE items are omitted from the site (and from the PDF's sections), so both
-// the timeline and its filter chips work from this list rather than each
-// excluding COURSE on their own.
 export const visibleCVItemTypes: CVItemType[] = Object.values(
   CVItemType
 ).filter((type) => type !== CVItemType.COURSE)

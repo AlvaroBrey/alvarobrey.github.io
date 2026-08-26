@@ -1,4 +1,3 @@
-// Renders the downloadable CV PDF from the web CV data at build time.
 import { createHash } from 'crypto'
 import {
   existsSync,
@@ -40,10 +39,6 @@ const GENERATED_MODULE = join(ROOT, 'src', 'lib', 'generated', 'cvPdf.ts')
 const FILENAME_PREFIX = 'cv_alvarobrey.'
 
 const DISPLAY_DATE_FORMAT = 'MMM yyyy'
-
-// The PDF has always been English-only -- its section headings are literals
-// below -- so it carries its own chrome rather than depending on the app's
-// i18n layer. Everything else it renders now comes from the data itself.
 
 type Section = { title: string; type: CVItemType }
 const SECTIONS: Section[] = [
@@ -240,8 +235,6 @@ async function main() {
   const hash = createHash('sha256').update(html).digest('hex').slice(0, 8)
   const filename = `${FILENAME_PREFIX}${hash}.pdf`
 
-  // Both `check` and `build` run this, so skip the Chromium launch when the
-  // content hasn't changed since the last render.
   if (
     existsSync(join(OUTPUT_DIR, filename)) &&
     existsSync(GENERATED_MODULE) &&

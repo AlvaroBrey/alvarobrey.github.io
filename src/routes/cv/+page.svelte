@@ -14,7 +14,6 @@
   import type { Optional } from '$lib/types/utilityTypes'
   import { sortTimelineItems } from '$lib/utils/cvTimeline'
 
-  // Order never depends on the filter, so sort once at module scope.
   const visibleItems = [...CVTimelineItems]
     .sort(sortTimelineItems)
     .filter((item) => visibleCVItemTypes.includes(item.type))

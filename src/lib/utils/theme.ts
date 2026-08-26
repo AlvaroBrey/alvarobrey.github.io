@@ -1,11 +1,10 @@
 import { browser } from '$app/environment'
 
-// Keep in sync with the pre-paint script in src/app.html, which sets the class
-// before first paint and therefore can't import this module.
+// Duplicated in the pre-paint script in src/app.html, which runs before any
+// module loads. Renaming this silently orphans saved preferences.
 const STORAGE_KEY = 'alvarobrey.com.darkTheme'
 
-// That script is what puts the class on <html>, so the DOM is the source of
-// truth for the current theme rather than localStorage.
+// That script sets the class, so the DOM leads localStorage here.
 export function isDark(): boolean {
   return browser && document.documentElement.classList.contains('dark')
 }

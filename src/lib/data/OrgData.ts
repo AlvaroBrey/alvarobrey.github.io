@@ -5,8 +5,6 @@ export interface Org {
   url?: string
 }
 
-// Keyed by every CVOrg member, so adding one to the enum without naming it
-// here is a type error rather than a blank label at runtime.
 export const orgs: Record<CVOrg, Org> = {
   [CVOrg.CABIFY]: { name: 'Cabify', url: 'https://cabify.com' },
   [CVOrg.CITIUS]: {
