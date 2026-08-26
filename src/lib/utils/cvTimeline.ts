@@ -3,7 +3,7 @@ import { CVItemType } from '../model/CVModel'
 import type { CVTimelineItem } from '../model/CVModel'
 import type { Optional } from '../types/utilityTypes'
 
-export function getCompareDate(item: CVTimelineItem): Optional<Date> {
+function getCompareDate(item: CVTimelineItem): Optional<Date> {
   return item.startDate ?? item.endDate
 }
 
