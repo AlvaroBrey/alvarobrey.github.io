@@ -16,9 +16,11 @@
 >
   {m.aria_skip_to_content()}
 </a>
-<Header onToggleSidebar={() => (sidebarOpen = true)} />
-<SidebarNav bind:open={sidebarOpen} />
-<main id="content" class="mx-auto max-w-6xl px-4 py-8">
-  {@render children()}
-</main>
-<Footer />
+<div class="flex min-h-screen flex-col">
+  <Header onToggleSidebar={() => (sidebarOpen = true)} />
+  <SidebarNav bind:open={sidebarOpen} />
+  <main id="content" class="mx-auto w-full max-w-6xl grow px-4 py-8">
+    {@render children()}
+  </main>
+  <Footer />
+</div>
