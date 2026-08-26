@@ -17,6 +17,7 @@ export function htmlToMarkdown(html: string): string {
       (_, url: string, text: string) => `[${text}](${absoluteUrl(url)})`
     )
     .replace(/<\/?b>/g, '**')
+    .replace(/<\/?code>/g, '`')
     .replace(/<\/?i>/g, '*')
     .replace(/<br\s*\/?>/g, '\n')
     .replace(/<[^>]+>/g, '')

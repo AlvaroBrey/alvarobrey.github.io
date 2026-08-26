@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { m } from '$lib/paraglide/messages'
   import { pageLabel } from '$lib/utils/pages'
   import { mdiFilePdfBox } from '@mdi/js'
   import BasicPage from '$lib/components/BasicPage.svelte'
@@ -37,7 +38,7 @@
       <h1 class="text-4xl text-primary">{title}</h1>
       <Button href={pdfHref} target="_blank">
         <Icon path={mdiFilePdfBox} size={20} />
-        PDF version
+        {m.page_cv_pdf_version()}
       </Button>
     </div>
   {/snippet}

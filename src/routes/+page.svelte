@@ -4,9 +4,9 @@
   import SeoHead from '$lib/components/SeoHead.svelte'
   import Button from '$lib/components/ui/Button.svelte'
   import Card from '$lib/components/ui/Card.svelte'
-  import { isAbout, isHome, pages, pageLabel } from '$lib/utils/pages'
+  import { isHome, navPages, pageLabel } from '$lib/utils/pages'
 
-  const filteredPages = pages.filter((p) => !isHome(p.href) && !isAbout(p.href))
+  const filteredPages = navPages.filter((p) => !isHome(p.href))
 </script>
 
 <SeoHead title={pageLabel('/')} />
