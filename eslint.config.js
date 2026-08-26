@@ -30,6 +30,13 @@ export default ts.config(
     }
   },
   {
-    ignores: ['build/', '.svelte-kit/', 'src/lib/generated/', 'node_modules/']
+    ignores: [
+      'build/',
+      '.svelte-kit/',
+      'src/lib/generated/',
+      'src/lib/paraglide/',
+      'project.inlang/cache/',
+      'node_modules/'
+    ]
   }
 )

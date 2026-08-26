@@ -1,3 +1,5 @@
+import { paraglideVitePlugin } from '@inlang/paraglide-js'
+import { paraglideOptions } from './paraglide.config.js'
 import { enhancedImages } from '@sveltejs/enhanced-img'
 import adapter from '@sveltejs/adapter-static'
 import { sveltekit } from '@sveltejs/kit/vite'
@@ -6,6 +8,7 @@ import { defineConfig } from 'vite'
 
 export default defineConfig({
   plugins: [
+    paraglideVitePlugin(paraglideOptions),
     enhancedImages(),
     tailwindcss(),
     sveltekit({

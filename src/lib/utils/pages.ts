@@ -1,16 +1,16 @@
 import { canonicalPath } from './urls'
 
 export interface Page {
-  translationKey: string
+  label: string
   href: string
 }
 
 export const pages: readonly Page[] = Object.freeze([
-  { translationKey: 'home', href: '/' },
-  { translationKey: 'me', href: '/me' },
-  { translationKey: 'cv', href: '/cv' },
-  { translationKey: 'contact', href: '/contact' },
-  { translationKey: 'about', href: '/about' }
+  { label: 'Home', href: '/' },
+  { label: 'About me', href: '/me' },
+  { label: 'My CV', href: '/cv' },
+  { label: 'Contact', href: '/contact' },
+  { label: 'About this page', href: '/about' }
 ])
 
 export function isHome(href: string): boolean {
@@ -23,4 +23,8 @@ export function isAbout(href: string): boolean {
 
 export function isActive(pathname: string, href: string): boolean {
   return canonicalPath(pathname) === href
+}
+
+export function pageLabel(href: string): string {
+  return pages.find((p) => p.href === href)?.label ?? ''
 }

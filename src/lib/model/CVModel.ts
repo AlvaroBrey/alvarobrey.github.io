@@ -22,12 +22,24 @@ export enum CVOrg {
   USC = 'usc'
 }
 
+export type Skill =
+  | 'app_analytics'
+  | 'app_architecture'
+  | 'frontend'
+  | 'infrastructure'
+  | 'mobile'
+  | 'openSource'
+  | 'research'
+  | 'scripting'
+
 export interface CVTimelineItem {
   key: string
+  title: string
+  shortDescription?: string
   org: Optional<CVOrg>
   startDate: Optional<Date>
   endDate: Optional<Date>
   type: CVItemType
-  skills?: string[]
+  skills?: Skill[]
   tech?: string[]
 }

@@ -2,11 +2,14 @@
   import { format } from 'date-fns'
   import type { Optional } from '../../types/utilityTypes'
   import type { CVTimelineItem as CVTimelineItemType } from '../../model/CVModel'
-  import { CV_DATE_FORMAT, CVItemTypeColors } from '../../model/CVUIModel'
-  import { orgUrls } from '../../data/OrgData'
+  import {
+    CV_DATE_FORMAT,
+    CVItemTypeColors,
+    cvLabels
+  } from '../../model/CVUIModel'
+  import { orgs } from '../../data/OrgData'
   import { shouldShowOrgName } from '../../utils/cvTimeline'
   import { orgLogo } from '../../utils/orgLogos'
-  import { t } from '../../i18n'
   import Card from '../ui/Card.svelte'
   import SkillsAndTech from './SkillsAndTech.svelte'
 
@@ -17,11 +20,13 @@
   let { item }: Props = $props()
 
   const color = $derived(CVItemTypeColors[item.type])
-  const description = $derived(t(`page.cv.items.${item.key}.shortDescription`))
+  const org = $derived(
+    shouldShowOrgName(item) && item.org ? orgs[item.org] : undefined
+  )
   const logo = $derived(orgLogo(item.org))
 
   function formatDate(date: Optional<Date>): string {
-    return date ? format(date, CV_DATE_FORMAT) : t('page.cv.present')
+    return date ? format(date, CV_DATE_FORMAT) : cvLabels.present
   }
 
   const dateText = $derived(
@@ -52,25 +57,22 @@
     <div class="flex justify-between gap-4">
       <div class="flex-1">
         <h3 class="text-xl font-medium text-primary">
-          {t(`page.cv.items.${item.key}.title`)}
+          {item.title}
         </h3>
         <p class="text-sm text-muted">
-          {#if item.org && shouldShowOrgName(item)}
-            {@const orgName = t(`page.cv.orgs.${item.org}`)}
-            {#if orgUrls[item.org]}
-              <a href={orgUrls[item.org]} target="_blank" rel="noopener">
-                {orgName}
-              </a>
+          {#if org}
+            {#if org.url}
+              <a href={org.url} target="_blank" rel="noopener">{org.name}</a>
             {:else}
-              {orgName}
+              {org.name}
             {/if}
             <span class="mx-1">|</span>
           {/if}
           <span>{dateText}</span>
         </p>
-        {#if description}
-          <!-- eslint-disable-next-line svelte/no-at-html-tags -- locale content, not user input -->
-          <p class="mt-2 text-sm text-body">{@html description}</p>
+        {#if item.shortDescription}
+          <!-- eslint-disable-next-line svelte/no-at-html-tags -- authored content, not user input -->
+          <p class="mt-2 text-sm text-body">{@html item.shortDescription}</p>
         {/if}
         {#if item.skills || item.tech}
           <div class="mt-2">

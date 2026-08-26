@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { pageLabel } from '$lib/utils/pages'
   import { mdiFilePdfBox } from '@mdi/js'
   import BasicPage from '$lib/components/BasicPage.svelte'
   import CVItemsFilter from '$lib/components/cv/CVItemsFilter.svelte'
@@ -8,7 +9,6 @@
   import Icon from '$lib/components/ui/Icon.svelte'
   import { CVTimelineItems } from '$lib/data/CVData'
   import { CV_PDF_FILENAME } from '$lib/generated/cvPdf'
-  import { t } from '$lib/i18n'
   import type { CVItemType } from '$lib/model/CVModel'
   import { visibleCVItemTypes } from '$lib/model/CVUIModel'
   import type { Optional } from '$lib/types/utilityTypes'
@@ -28,15 +28,17 @@
       ? visibleItems
       : visibleItems.filter((item) => item.type === filter)
   )
+
+  const title = pageLabel('/cv')
 </script>
 
-<SeoHead title={t('nav.cv')} />
+<SeoHead {title} />
 
 <BasicPage>
   {#snippet titleContent()}
     <div class="mb-6 flex flex-wrap items-center justify-between gap-4">
       <!-- eslint-disable-next-line svelte/no-at-html-tags -- locale content, not user input -->
-      <h1 class="text-4xl text-primary">{@html t('page.cv.title')}</h1>
+      <h1 class="text-4xl text-primary">{title}</h1>
       <Button href={pdfHref} target="_blank">
         <Icon path={mdiFilePdfBox} size={20} />
         PDF version

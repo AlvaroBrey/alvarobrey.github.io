@@ -1,6 +1,5 @@
 <script lang="ts">
   import { page } from '$app/state'
-  import { t } from '../../i18n'
   import { isAbout, isActive, pages } from '../../utils/pages'
 
   const navPages = pages.filter((p) => !isAbout(p.href))
@@ -17,7 +16,7 @@
         ? 'border-primary text-primary'
         : 'border-transparent text-muted hover:text-body'}"
     >
-      {t(`nav.${p.translationKey}`)}
+      {p.label}
     </a>
   {/each}
 </nav>

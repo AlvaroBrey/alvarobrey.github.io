@@ -1,9 +1,6 @@
 <script lang="ts">
+  import { m } from '$lib/paraglide/messages'
   import NotFound from '$lib/components/NotFound.svelte'
-  import { t } from '$lib/i18n'
 </script>
 
-<NotFound
-  title={t('error.404.title')}
-  description={t('error.404.description')}
-/>
+<NotFound title={m.error_404_title()} description={m.error_404_description()} />
