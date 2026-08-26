@@ -1,7 +1,6 @@
 import type { Optional } from '../types/utilityTypes'
 
 export enum CVItemType {
-  COURSE = 'course',
   EDUCATION = 'education',
   WORK = 'work',
   HOBBY = 'hobby'
@@ -10,14 +9,10 @@ export enum CVItemType {
 export enum CVOrg {
   CABIFY = 'cabify',
   CITIUS = 'citius',
-  EPFL = 'epfl',
-  EVERIS = 'everis',
   IMAGAMES = 'imagames',
   LINEAGEOS = 'lineageos',
   NEXTCLOUD = 'nextcloud',
-  PARRABLE = 'parrable',
   REVENUECAT = 'revenuecat',
-  STANFORD = 'stanford',
   UIMP = 'uimp',
   USC = 'usc'
 }

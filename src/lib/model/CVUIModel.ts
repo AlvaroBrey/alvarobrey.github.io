@@ -1,14 +1,12 @@
 import { CVItemType } from './CVModel'
 
 export const CVItemTypeColors: Record<CVItemType, string> = {
-  [CVItemType.COURSE]: '#66bb6a',
   [CVItemType.EDUCATION]: '#ab47bc',
   [CVItemType.WORK]: '#e57373',
   [CVItemType.HOBBY]: '#64b5f6'
 }
 
 export const CVItemTypeLabels: Record<CVItemType, string> = {
-  [CVItemType.COURSE]: 'Courses',
   [CVItemType.EDUCATION]: 'Education',
   [CVItemType.WORK]: 'Work',
   [CVItemType.HOBBY]: 'Hobby'
@@ -24,7 +22,3 @@ export const cvLabels = {
 }
 
 export const CV_DATE_FORMAT = 'yyyy/MM'
-
-export const visibleCVItemTypes: CVItemType[] = Object.values(
-  CVItemType
-).filter((type) => type !== CVItemType.COURSE)
