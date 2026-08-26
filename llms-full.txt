@@ -1,0 +1,207 @@
+# Hi! I'm Álvaro Brey.
+
+I am a **senior Android engineer** from Santiago de Compostela, Spain. I am mainly an Android developer, but I have experience and training in other areas and technologies such as DevOps, web frontend and scripting.
+
+I am passionate about **automation** and **clean code**. As a consequence, I am very interested in strongly automated development processes (CI/CD), containerization and other ways to improve code quality and developer experience.
+
+---
+
+# About me
+
+I am **Álvaro** [[**al** - βa - ɾo](https://youtu.be/uq-gYOrU8bA)]. I am a software engineer from Santiago de Compostela, Spain. I enjoy trying new technologies and as a consequence I have a somewhat generalist background. However, most of my experience is in Android development.
+
+As a developer, I am guided by the DRY principle and strongly dislike duplication of both code and work. Partly due to this, I am proactive about **automating** tasks and processes whenever I can. This is something I apply in my daily work by authoring scripts, containers, CI and tooling config, etc. Several of my published [repos](https://github.com/alvarobrey) also focus on automation or developer experience.
+
+I am also an advocate for **open-source** software. A significant part of my career has been spent working on open-source projects, and I also [publish most of my personal projects](https://github.com/alvarobrey) (like [this page!](https://github.com/alvarobrey/alvarobrey.github.io)) for whoever might find them useful, and contribute to third-party repos.
+
+When I'm not coding, you can probably find me playing [disc golf](https://en.wikipedia.org/wiki/Disc_golf) or video games, messing around with a 3d printer, playing with my dog, or trying to automate physical things with [Home Assistant](https://www.home-assistant.io/).
+
+## What I do
+
+- Android
+- Kotlin, Compose
+- Shell, Python
+- Docker
+- Git
+- Linux
+- VueJS, Typescript
+- Ansible
+
+## What I like
+
+- Automation
+- Clean and readable code
+- Open source software
+- Functional programming
+- Reproducible builds, containers
+- Spontaneous pair programming
+
+---
+
+# My CV
+
+[Download as PDF](https://alvarobrey.com/files/cv_alvarobrey.c04a1a17.pdf)
+
+## Work
+
+### Senior SDK Engineer
+
+[RevenueCat](https://www.revenuecat.com) | 2026/06 - Present
+
+Senior SDK Engineer at RevenueCat, where we help developers make more money. Multiplatform with focus on Android.
+
+### Senior Android Engineer
+
+[Cabify](https://cabify.com) | 2023/03 - 2026/06
+
+Senior Android Engineer at Cabify, multi-mobility platform for people and parcels. Work on the main Rider public app, with millions of active users. Includes new feature development, maintenance and release management. Frequent contributor to process improvements, CI, and code sharing. Early adopter of AI tools, contributing rules, skills and setting up integrations.
+
+**Key skills**
+
+- Mobile development
+- App architecture
+- Scripting
+- App analytics
+
+**Key technologies**
+
+- Android + Kotlin + Compose
+- Bash
+- Gitlab CI
+- Elixir
+
+### Android Engineer
+
+[Nextcloud](https://nextcloud.com) | 2021/09 - 2023/03
+
+Android engineer at Nextcloud, a self-hosted, open-source file storage, sharing and productivity platform. Work on the main Nextcloud app for file management and sync on Android; additional work on the Nextcloud Talk chat and videocall app. Co-lead efforts to align app architecture and share code and config between different apps, with the intent to deduplicate efforts and facilitate cross-team work.
+
+**Key skills**
+
+- Mobile development
+- Open source development
+- App architecture
+
+**Key technologies**
+
+- Android + Kotlin + Java
+- Bash + Python
+- Github Actions
+
+### DevOps / Android Engineer
+
+Imagames Gamification Services | 2018/12 - 2021/03
+
+Infrastructure and deployment management, monitoring and automation.
+Responsible for proposing and carrying out several extensive upgrades to development processes and infrastructure management, including containerization, automation and CI.
+Android development for client apps, developing new features and maintaining several existing apps, and improving development experience and build times.
+VueJS Frontend for admin dashboards and public applications.
+
+**Key skills**
+
+- Infrastructure management
+- Mobile development
+- Front end development
+- Scripting
+
+**Key technologies**
+
+- Docker + Ansible + Python
+- Android + Kotlin + Java
+- VueJs + Typescript
+
+### Android Developer
+
+[CiTIUS - University of Santiago de Compostela](https://citius.gal) | 2016/10 - 2018/04
+
+Android development, and occasional development on related projects. Research in medication adherence and mHealth. Main project: [Calendula](https://github.com/citiususc/calendula), an open-source medication management app.
+
+**Key skills**
+
+- Mobile development
+- Scripting
+- Research
+- Open source development
+
+**Key technologies**
+
+- Android + Kotlin
+- Python, NodeJS
+
+## Education
+
+### Masters in Artificial Intelligence Research
+
+Menéndez Pelayo International University | 2017/09 - 2019/07
+
+Education in machine learning, artificial intelligence, statistics and data analysis, and introduction to scientific research.
+
+### Degree in Computer Science
+
+University of Santiago de Compostela | 2012/09 - 2016/09
+
+Advanced education related to computer science, including but not limited to: software programming, architecture and design, systems engineering and systems administration.
+
+## Personal projects
+
+### Android ROM developer
+
+2015/06 - 2017/08
+
+Development of CyanogenMOD (later LineageOS) ROMs for Android devices. Open-source development including regular releases. Work in applications, kernels and system configuration.
+
+**Key skills**
+
+- Open source development
+- Mobile development
+- Scripting
+
+**Key technologies**
+
+- Android
+- Java, C
+- Bash, Python
+
+---
+
+# Contact
+
+The best way to reach me is email; I read everything, though I don't always answer quickly. LinkedIn works too, especially for anything work-related. If you're here about code, GitHub is where nearly all of my public work lives.
+
+- LinkedIn: [linkedin.com/in/alvarobrey](https://linkedin.com/in/alvarobrey)
+- GitHub: [github.com/alvarobrey](https://github.com/alvarobrey)
+- Email: [alvaro@alvarobrey.com](mailto:alvaro@alvarobrey.com)
+
+---
+
+# About this page
+
+This page was developed using [SvelteKit](https://svelte.dev/docs/kit) as a static build framework, TypeScript as the main language and [Tailwind CSS](https://tailwindcss.com/) for styling.
+
+You can check out the source code [at GitHub](https://github.com/alvarobrey/alvarobrey.github.io), where it is published under the GNU GPLv3 License. The page is automatically built as a full static site with [GitHub Actions](https://github.com/alvarobrey/alvarobrey.github.io/actions) and hosted in GitHub Pages.
+
+---
+
+# Privacy
+
+alvarobrey.com is a personal site. It has no accounts, no forms, no advertising and no tracking cookies. This page describes the little data that is collected when you visit.
+
+## What your browser stores
+
+One value, under the key `alvarobrey.com.darkTheme`, remembering whether you picked the light or the dark theme. It stays in your browser, is never sent anywhere, and clearing your site data removes it.
+
+## Analytics
+
+The site loads [Cloudflare Web Analytics](https://www.cloudflare.com/web-analytics/), which counts page views without cookies and without fingerprinting visitors. It records the page URL, the referrer, and coarse details such as browser and country. It does not build a profile of you, and I cannot identify you from it.
+
+## Hosting
+
+The site is a set of static files served by [GitHub Pages](https://pages.github.com/) through [Cloudflare](https://www.cloudflare.com/). Both keep short-lived server logs, including IP addresses, for operations and abuse prevention, under their own privacy policies.
+
+## Links away from here
+
+Pages here link out to GitHub, LinkedIn and elsewhere. Once you follow one of those links, that site's own privacy policy applies instead of this one.
+
+## Questions
+
+Nothing collected here is sold or shared with anyone. If you have a question about any of it, [get in touch](https://alvarobrey.com/contact).

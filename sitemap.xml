@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://alvarobrey.com/</loc></url>
+  <url><loc>https://alvarobrey.com/index.md</loc></url>
   <url><loc>https://alvarobrey.com/me</loc></url>
+  <url><loc>https://alvarobrey.com/me.md</loc></url>
   <url><loc>https://alvarobrey.com/cv</loc></url>
+  <url><loc>https://alvarobrey.com/cv.md</loc></url>
   <url><loc>https://alvarobrey.com/contact</loc></url>
+  <url><loc>https://alvarobrey.com/contact.md</loc></url>
   <url><loc>https://alvarobrey.com/about</loc></url>
+  <url><loc>https://alvarobrey.com/about.md</loc></url>
+  <url><loc>https://alvarobrey.com/privacy</loc></url>
+  <url><loc>https://alvarobrey.com/privacy.md</loc></url>
 </urlset>

@@ -1,0 +1,20 @@
+# Álvaro Brey
+
+> Álvaro Brey is a senior Android engineer from Santiago de Compostela, Spain, with experience in DevOps, web frontend and scripting.
+
+Personal site and CV of Álvaro Brey. Every page below is also served as Markdown at the same path with a `.md` suffix.
+
+## Pages
+
+- [Home](https://alvarobrey.com/index.md): Álvaro Brey is a senior Android engineer from Santiago de Compostela, Spain, with experience in DevOps, web frontend and scripting.
+- [About me](https://alvarobrey.com/me.md): Álvaro Brey is an Android-focused software engineer who cares about automation, developer experience and open-source software.
+- [My CV](https://alvarobrey.com/cv.md): The career of Álvaro Brey, senior Android engineer: work history, education and open-source projects, with a downloadable PDF CV.
+- [Contact](https://alvarobrey.com/contact.md): Get in touch with Álvaro Brey, senior Android engineer, by email, LinkedIn or GitHub.
+- [About this page](https://alvarobrey.com/about.md): How alvarobrey.com is built: a static SvelteKit site in TypeScript and Tailwind CSS, open source on GitHub and deployed to GitHub Pages.
+- [Privacy](https://alvarobrey.com/privacy.md): What alvarobrey.com stores and collects: a theme preference in your browser, cookieless analytics, and nothing else.
+
+## Files
+
+- [Curriculum vitae (PDF)](https://alvarobrey.com/files/cv_alvarobrey.c04a1a17.pdf)
+- [Full site as Markdown](https://alvarobrey.com/llms-full.txt)
+
