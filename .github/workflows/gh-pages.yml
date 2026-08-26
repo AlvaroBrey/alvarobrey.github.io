@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+concurrency:
+  group: gh-pages-deploy
+  cancel-in-progress: false
+
 jobs:
   deploy:
     runs-on: ubuntu-latest
@@ -19,6 +23,15 @@ jobs:
         with:
           node-version: '24.x'
           cache: pnpm
+
+      - name: Cache Puppeteer's Chromium
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: ~/.cache/puppeteer
+          # Falls back to any earlier Chromium so a routine dependency bump
+          # (which changes the lockfile hash) doesn't force a fresh download.
+          key: puppeteer-${{ hashFiles('pnpm-lock.yaml') }}
+          restore-keys: puppeteer-
 
       - run: pnpm install --frozen-lockfile
       - run: pnpm build
