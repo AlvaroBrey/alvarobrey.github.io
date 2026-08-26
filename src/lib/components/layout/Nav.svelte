@@ -1,11 +1,10 @@
 <script lang="ts">
   import { page } from '$app/state'
-  import { isAbout, isActive, pages } from '../../utils/pages'
-
-  const navPages = pages.filter((p) => !isAbout(p.href))
+  import { m } from '$lib/paraglide/messages'
+  import { isActive, navPages } from '../../utils/pages'
 </script>
 
-<nav class="flex items-center gap-6">
+<nav class="flex items-center gap-6" aria-label={m.aria_main_nav()}>
   {#each navPages as p (p.href)}
     <a
       href={p.href}

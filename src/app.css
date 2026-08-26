@@ -24,7 +24,8 @@
 @layer base {
   /* Tailwind's preflight resets anchors to inherit, which leaves prose links
      indistinguishable from body text. */
-  main a {
+  main a,
+  footer a {
     color: var(--color-primary);
     text-decoration: underline;
   }

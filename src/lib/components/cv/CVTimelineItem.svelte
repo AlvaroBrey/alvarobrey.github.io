@@ -24,6 +24,10 @@
     shouldShowOrgName(item) && item.org ? orgs[item.org] : undefined
   )
   const logo = $derived(orgLogo(item.org))
+  // Only the alt text where the org name isn't already rendered beside it.
+  const logoAlt = $derived(
+    item.org && !shouldShowOrgName(item) ? orgs[item.org].name : ''
+  )
 
   function formatDate(date: Optional<Date>): string {
     return date ? format(date, CV_DATE_FORMAT) : cvLabels.present
@@ -41,7 +45,7 @@
     <!-- Below sm the logo rides in the dot rather than beside the card. -->
     <enhanced:img
       src={logo}
-      alt=""
+      alt={logoAlt}
       class="absolute top-0 left-4 h-10 w-10 -translate-x-1/2 rounded-full bg-white object-contain p-1 sm:hidden"
       style="box-shadow: 0 0 0 2px {color}"
     />
@@ -82,7 +86,7 @@
       {#if logo}
         <enhanced:img
           src={logo}
-          alt=""
+          alt={logoAlt}
           class="hidden shrink-0 object-contain sm:block sm:h-20 sm:w-20 lg:h-36 lg:w-36"
         />
       {/if}
