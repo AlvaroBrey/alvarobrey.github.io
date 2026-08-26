@@ -1,9 +1,12 @@
 <script lang="ts">
-  import { m } from '../../paraglide/messages'
   import { format } from 'date-fns'
   import type { Optional } from '../../types/utilityTypes'
   import type { CVTimelineItem as CVTimelineItemType } from '../../model/CVModel'
-  import { CV_DATE_FORMAT, CVItemTypeColors } from '../../model/CVUIModel'
+  import {
+    CV_DATE_FORMAT,
+    CVItemTypeColors,
+    cvLabels
+  } from '../../model/CVUIModel'
   import { orgs } from '../../data/OrgData'
   import { shouldShowOrgName } from '../../utils/cvTimeline'
   import { orgLogo } from '../../utils/orgLogos'
@@ -17,11 +20,13 @@
   let { item }: Props = $props()
 
   const color = $derived(CVItemTypeColors[item.type])
-  const org = $derived(item.org ? orgs[item.org] : undefined)
+  const org = $derived(
+    shouldShowOrgName(item) && item.org ? orgs[item.org] : undefined
+  )
   const logo = $derived(orgLogo(item.org))
 
   function formatDate(date: Optional<Date>): string {
-    return date ? format(date, CV_DATE_FORMAT) : m.page_cv_present()
+    return date ? format(date, CV_DATE_FORMAT) : cvLabels.present
   }
 
   const dateText = $derived(
@@ -55,7 +60,7 @@
           {item.title}
         </h3>
         <p class="text-sm text-muted">
-          {#if org && shouldShowOrgName(item)}
+          {#if org}
             {#if org.url}
               <a href={org.url} target="_blank" rel="noopener">{org.name}</a>
             {:else}

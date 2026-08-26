@@ -11,12 +11,14 @@
   const lookingForContact = m.page_me_looking_for_contact({
     link: `<a href="/contact" class="underline">${m.page_me_contact_page()}</a>`
   })
+
+  const title = pageLabel('/me')
 </script>
 
-<SeoHead title={pageLabel('/me')} />
+<SeoHead {title} />
 
 <!-- eslint-disable svelte/no-at-html-tags -- locale content, not user input -->
-<BasicPage title={m.page_me_title()}>
+<BasicPage {title}>
   <Card class="mt-4">
     <div class="space-y-4 p-6 text-body">
       <p>{@html m.page_me_intro()}</p>
@@ -56,7 +58,6 @@
     </div>
   </Card>
   <InfoBar class="mt-4">
-    <!-- eslint-disable-next-line svelte/no-at-html-tags -- authored content -->
     <span>{@html lookingForContact}</span>
   </InfoBar>
 </BasicPage>

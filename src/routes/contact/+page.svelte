@@ -1,24 +1,26 @@
 <script lang="ts">
-  import { m } from '$lib/paraglide/messages'
   import { pageLabel } from '$lib/utils/pages'
   import { mdiEmail, mdiGithub, mdiLinkedin } from '@mdi/js'
   import BasicPage from '$lib/components/BasicPage.svelte'
   import SeoHead from '$lib/components/SeoHead.svelte'
   import ContactItem from '$lib/components/contact/ContactItem.svelte'
   import { contactLinks } from '$lib/data/ContactData'
+  import type { ContactKey } from '$lib/data/ContactData'
 
-  const icons: Record<string, string> = {
+  const icons: Record<ContactKey, string> = {
     linkedIn: mdiLinkedin,
     gitHub: mdiGithub,
     mail: mdiEmail
   }
 
   const items = contactLinks.map((it) => ({ ...it, icon: icons[it.key] }))
+
+  const title = pageLabel('/contact')
 </script>
 
-<SeoHead title={pageLabel('/contact')} />
+<SeoHead {title} />
 
-<BasicPage title={m.page_contact_title()}>
+<BasicPage {title}>
   <div
     class="mt-6 flex flex-col items-center gap-8 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-20"
   >

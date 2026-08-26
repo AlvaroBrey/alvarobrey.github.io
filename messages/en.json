@@ -5,15 +5,8 @@
   "error_404_description": "404 not found",
   "error_other_title": "Error",
   "error_other_description": "An unexpected error has ocurred",
-  "global_filter_all": "All",
-  "page_about_title": "About this page",
   "page_about_paragraph1": "This page was developed using <a href=\"https://svelte.dev/docs/kit\">SvelteKit</a> as a static build framework, TypeScript as the main language and <a href=\"https://tailwindcss.com/\">Tailwind CSS</a> for styling.",
   "page_about_paragraph2": "You can check out the source code <a href=\"https://github.com/alvarobrey/alvarobrey.github.io\">at GitHub</a>, where it is published under the GNU GPLv3 License. The page is automatically built as a full static site with <a href=\"https://github.com/alvarobrey/alvarobrey.github.io/actions\">GitHub Actions</a> and hosted in GitHub Pages.",
-  "page_contact_title": "Contact",
-  "page_cv_present": "Present",
-  "page_cv_skills_title": "Key skills",
-  "page_cv_tech_title": "Key technologies",
-  "page_cv_title": "My CV",
   "page_index_greeting": "Hi! I'm Álvaro Brey.",
   "page_index_interests": "I am passionate about <b>automation</b> and <b>clean code</b>. As a consequence, I am very interested in strongly automated development processes (CI/CD), containerization and other ways to improve code quality and developer experience.",
   "page_index_introduction": "I am a <b>senior Android engineer</b> from Santiago de Compostela, Spain. I am mainly an Android developer, but I have experience and training in other areas and technologies such as DevOps, web frontend and scripting.",
@@ -29,7 +22,6 @@
   "page_me_automation": "As a developer, I am guided by the DRY principle and strongly dislike duplication of both code and work. Partly due to this, I am proactive about <b>automating</b> tasks and processes whenever I can. This is something I apply in my daily work by authoring scripts, containers, CI and tooling config, etc. Several of my published <a href=\"https://github.com/alvarobrey\">repos</a> also focus on automation or developer experience.",
   "page_me_opensource": "I am also an advocate for <b>open-source</b> software. A significant part of my career has been spent working on open-source projects, and I also <a href=\"https://github.com/alvarobrey\">publish most of my personal projects</a> (like <a href=\"https://github.com/alvarobrey/alvarobrey.github.io\">this page!</a>) for whoever might find them useful, and contribute to third-party repos.",
   "page_me_personal": "When I'm not coding, you can probably find me playing <a href=\"https://en.wikipedia.org/wiki/Disc_golf\">disc golf</a> or video games, messing around with a 3d printer, playing with my dog, or trying to automate physical things with <a href=\"https://www.home-assistant.io/\">Home Assistant</a>.",
-  "page_me_title": "About me",
   "page_me_what_ido": "What I do",
   "page_me_what_ilike": "What I like"
 }

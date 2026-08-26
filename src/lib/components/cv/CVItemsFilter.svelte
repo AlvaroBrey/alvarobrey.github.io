@@ -1,10 +1,10 @@
 <script lang="ts">
-  import { m } from '../../paraglide/messages'
   import { mdiCheck } from '@mdi/js'
   import type { CVItemType } from '../../model/CVModel'
   import {
     CVItemTypeColors,
     CVItemTypeLabels,
+    cvLabels,
     visibleCVItemTypes
   } from '../../model/CVUIModel'
   import type { Optional } from '../../types/utilityTypes'
@@ -38,7 +38,7 @@
       : 'border-muted/40 text-body'}"
   >
     {#if value === undefined}<Icon path={mdiCheck} size={16} />{/if}
-    {m.global_filter_all()}
+    {cvLabels.filterAll}
   </button>
   {#each visibleCVItemTypes as type (type)}
     <button

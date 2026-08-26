@@ -13,6 +13,7 @@ import { fileURLToPath } from 'url'
 import { format } from 'date-fns'
 import { launch } from 'puppeteer'
 import { CVItemType } from '../src/lib/model/CVModel'
+import { cvLabels } from '../src/lib/model/CVUIModel'
 import type { CVTimelineItem } from '../src/lib/model/CVModel'
 import type { Optional } from '../src/lib/types/utilityTypes'
 import {
@@ -59,12 +60,13 @@ function sectionHtml(title: string, body: string, extraClass = ''): string {
 }
 
 function formatDateRange(item: CVTimelineItem): string {
-  const present = 'Present'
   if (!item.startDate) {
     return item.endDate ? format(item.endDate, DISPLAY_DATE_FORMAT) : ''
   }
   const start = format(item.startDate, DISPLAY_DATE_FORMAT)
-  const end = item.endDate ? format(item.endDate, DISPLAY_DATE_FORMAT) : present
+  const end = item.endDate
+    ? format(item.endDate, DISPLAY_DATE_FORMAT)
+    : cvLabels.present
   return `${start} – ${end}`
 }
 
@@ -82,13 +84,12 @@ function escapeAttr(value: string): string {
 function renderTech(item: CVTimelineItem): string {
   if (!item.tech?.length) return ''
   const techs = item.tech.flatMap((entry) => entry.split(/\s*\+\s*/))
-  return `<p class="tech"><span class="tech-label">Key technologies:</span> ${techs.join(
+  return `<p class="tech"><span class="tech-label">${cvLabels.tech}:</span> ${techs.join(
     ', '
   )}</p>`
 }
 
 function renderItem(item: CVTimelineItem): string {
-  const title = item.title
   let org = ''
   if (shouldShowOrgName(item) && item.org) {
     const { name, url } = orgs[item.org]
@@ -113,7 +114,7 @@ function renderItem(item: CVTimelineItem): string {
       <div class="entry-body">
         <div class="entry-head">
           <div>
-            <h3 class="role">${title}</h3>
+            <h3 class="role">${item.title}</h3>
             ${subtitle ? `<p class="org">${subtitle}</p>` : ''}
           </div>
           <p class="dates">${formatDateRange(item)}</p>

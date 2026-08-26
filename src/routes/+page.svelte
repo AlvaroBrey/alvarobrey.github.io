@@ -15,7 +15,7 @@
 <BasicPage>
   {#snippet titleContent()}
     <h1 class="my-12 text-center text-6xl text-primary">
-      {@html m.page_index_greeting()}
+      {m.page_index_greeting()}
     </h1>
   {/snippet}
   <Card>

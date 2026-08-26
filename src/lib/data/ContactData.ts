@@ -1,5 +1,7 @@
+export type ContactKey = 'linkedIn' | 'gitHub' | 'mail'
+
 export interface ContactLink {
-  key: string
+  key: ContactKey
   label: string
   link: string
 }

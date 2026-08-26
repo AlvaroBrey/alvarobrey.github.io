@@ -1,5 +1,4 @@
 <script lang="ts">
-  import { m } from '$lib/paraglide/messages'
   import { pageLabel } from '$lib/utils/pages'
   import { mdiFilePdfBox } from '@mdi/js'
   import BasicPage from '$lib/components/BasicPage.svelte'
@@ -29,15 +28,17 @@
       ? visibleItems
       : visibleItems.filter((item) => item.type === filter)
   )
+
+  const title = pageLabel('/cv')
 </script>
 
-<SeoHead title={pageLabel('/cv')} />
+<SeoHead {title} />
 
 <BasicPage>
   {#snippet titleContent()}
     <div class="mb-6 flex flex-wrap items-center justify-between gap-4">
       <!-- eslint-disable-next-line svelte/no-at-html-tags -- locale content, not user input -->
-      <h1 class="text-4xl text-primary">{@html m.page_cv_title()}</h1>
+      <h1 class="text-4xl text-primary">{title}</h1>
       <Button href={pdfHref} target="_blank">
         <Icon path={mdiFilePdfBox} size={20} />
         PDF version
