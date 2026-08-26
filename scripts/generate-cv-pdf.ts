@@ -24,9 +24,7 @@ import { CVTimelineItems } from '../src/lib/data/CVData'
 import { contactLinks } from '../src/lib/data/ContactData'
 import {
   cvPdfAbout,
-  cvPdfEducationSuffix,
   cvPdfLanguages,
-  cvPdfLocations,
   cvPdfProfile,
   cvPdfSkills
 } from '../src/lib/data/CvPdfData'
@@ -95,11 +93,7 @@ function renderItem(item: CVTimelineItem): string {
     const { name, url } = orgs[item.org]
     org = url ? `<a href="${escapeAttr(url)}">${name}</a>` : name
   }
-  const location = cvPdfLocations[item.key]
-  const paragraphs = [
-    item.shortDescription,
-    cvPdfEducationSuffix[item.key]
-  ].filter(Boolean)
+  const paragraphs = [item.shortDescription, item.note].filter(Boolean)
   const desc = paragraphs.length
     ? `<div class="desc">${paragraphs.map((p) => `<p>${p}</p>`).join('')}</div>`
     : ''
@@ -107,7 +101,7 @@ function renderItem(item: CVTimelineItem): string {
   const logoHtml = logo
     ? `<img class="logo" src="${logo}" alt="${escapeAttr(org)} logo" />`
     : '<div class="logo logo-placeholder"></div>'
-  const subtitle = [org, location].filter(Boolean).join(' · ')
+  const subtitle = [org, item.location].filter(Boolean).join(' · ')
   return `
     <article class="entry">
       ${logoHtml}

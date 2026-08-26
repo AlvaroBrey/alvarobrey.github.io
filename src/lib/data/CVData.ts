@@ -19,6 +19,7 @@ export const educationCVItems: CVTimelineItem[] = withType(
   [
     {
       key: 'ITDegree',
+      note: 'End of Degree Project defense on September 2016, with title “Java Implementation of QRS clustering algorithm”. Adaptation of an existing signal processing algorithm for its deployment on Android devices.',
       title: 'Degree in Computer Science',
       shortDescription:
         'Advanced education related to computer science, including but not limited to: software programming, architecture and design, systems engineering and systems administration.',
@@ -28,6 +29,7 @@ export const educationCVItems: CVTimelineItem[] = withType(
     },
     {
       key: 'AIMasters',
+      note: 'Degree imparted by the Spanish Association for Artificial Intelligence (AEPIA) and managed by the Menéndez Pelayo International University (UIMP).',
       title: 'Masters in Artificial Intelligence Research',
       shortDescription:
         'Education in machine learning, artificial intelligence, statistics and data analysis, and introduction to scientific research.',
@@ -54,6 +56,7 @@ export const workCVItems: CVTimelineItem[] = withType(
     },
     {
       key: 'imagames',
+      location: 'Santiago de Compostela',
       title: 'DevOps / Android Engineer',
       shortDescription:
         'Infrastructure and deployment management, monitoring and automation.\nResponsible for proposing and carrying out several extensive upgrades to development processes and infrastructure management, including containerization, automation and CI.<br>Android development for client apps, developing new features and maintaining several existing apps, and improving development experience and build times.<br>VueJS Frontend for admin dashboards and public applications.',
@@ -69,6 +72,7 @@ export const workCVItems: CVTimelineItem[] = withType(
     },
     {
       key: 'nextcloud',
+      location: 'Remote',
       title: 'Android Engineer',
       shortDescription:
         'Android engineer at Nextcloud, a self-hosted, open-source file storage, sharing and productivity platform. Work on the main Nextcloud app for file management and sync on Android; additional work on the Nextcloud Talk chat and videocall app. Co-lead efforts to align app architecture and share code and config between different apps, with the intent to deduplicate efforts and facilitate cross-team work.',
@@ -80,6 +84,7 @@ export const workCVItems: CVTimelineItem[] = withType(
     },
     {
       key: 'cabify',
+      location: 'Remote',
       title: 'Senior Android Engineer',
       shortDescription:
         'Senior Android Engineer at Cabify, multi-mobility platform for people and parcels. Work on the main Rider public app, with millions of active users. Includes new feature development, maintenance and release management. Frequent contributor to process improvements, CI, and code sharing. Early adopter of AI tools, contributing rules, skills and setting up integrations.',
@@ -91,6 +96,7 @@ export const workCVItems: CVTimelineItem[] = withType(
     },
     {
       key: 'revenuecat',
+      location: 'Remote',
       title: 'Senior SDK Engineer',
       shortDescription:
         'Senior SDK Engineer at RevenueCat, where we help developers make more money. Multiplatform with focus on Android.',
@@ -130,6 +136,7 @@ export const hobbyItems: CVTimelineItem[] = withType(
   [
     {
       key: 'androidRoms',
+      location: 'Personal project',
       title: 'Android ROM developer',
       shortDescription:
         'Development of CyanogenMOD (later LineageOS) ROMs for Android devices. Open-source development including regular releases. Work in applications, kernels and system configuration.',
