@@ -1,11 +1,10 @@
 <script lang="ts">
   import { mdiCheck } from '@mdi/js'
-  import type { CVItemType } from '../../model/CVModel'
+  import { CVItemType } from '../../model/CVModel'
   import {
     CVItemTypeColors,
     CVItemTypeLabels,
-    cvLabels,
-    visibleCVItemTypes
+    cvLabels
   } from '../../model/CVUIModel'
   import type { Optional } from '../../types/utilityTypes'
   import Icon from '../ui/Icon.svelte'
@@ -38,7 +37,7 @@
     {#if value === undefined}<Icon path={mdiCheck} size={16} />{/if}
     {cvLabels.filterAll}
   </button>
-  {#each visibleCVItemTypes as type (type)}
+  {#each Object.values(CVItemType) as type (type)}
     <button
       type="button"
       onclick={() => (value = type)}

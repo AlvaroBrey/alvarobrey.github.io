@@ -106,30 +106,6 @@ export const workCVItems: CVTimelineItem[] = withType(
   CVItemType.WORK
 )
 
-export const courseCVItems: CVTimelineItem[] = withType(
-  [
-    {
-      key: 'machineLearning',
-      title: 'Machine Learning',
-      shortDescription:
-        'Theory and assignments on neural networks, SVMs and other fundamental Machine Learning algorithms and related skills.',
-      org: CVOrg.STANFORD,
-      startDate: undefined,
-      endDate: parseDate('2017/04')
-    },
-    {
-      key: 'scalaFP',
-      title: 'Functional Programming in Scala',
-      shortDescription:
-        'Introductory course to Scala and higher level functional programming concepts.',
-      org: CVOrg.EPFL,
-      startDate: undefined,
-      endDate: parseDate('2019/06')
-    }
-  ],
-  CVItemType.COURSE
-)
-
 export const hobbyItems: CVTimelineItem[] = withType(
   [
     {
@@ -151,6 +127,5 @@ export const hobbyItems: CVTimelineItem[] = withType(
 export const CVTimelineItems: CVTimelineItem[] = [
   ...educationCVItems,
   ...workCVItems,
-  ...courseCVItems,
   ...hobbyItems
 ]
