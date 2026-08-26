@@ -10,6 +10,18 @@ export function canonicalUrl(pathname: string): string {
   return SITE_URL + canonicalPath(pathname)
 }
 
+export function markdownPath(href: string): string {
+  return href === '/' ? '/index.md' : `${href}.md`
+}
+
+export function markdownUrl(href: string): string {
+  return SITE_URL + markdownPath(href)
+}
+
 export function displayUrl(link: string): string {
   return link.replace(/^mailto:/, '').replace(/^https?:\/\//, '')
+}
+
+export function absoluteUrl(link: string): string {
+  return link.startsWith('/') ? SITE_URL + link : link
 }

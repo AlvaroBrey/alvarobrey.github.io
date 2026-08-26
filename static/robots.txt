@@ -1,4 +1,24 @@
 User-Agent: *
-Disallow:
+Content-Signal: search=yes, ai-input=yes, ai-train=yes
 Allow: /
+Disallow:
+
+User-Agent: AmazonBot
+User-Agent: Applebot
+User-Agent: Applebot-Extended
+User-Agent: Bytespider
+User-Agent: CCBot
+User-Agent: ChatGPT-User
+User-Agent: ClaudeBot
+User-Agent: Claude-SearchBot
+User-Agent: Claude-User
+User-Agent: DuckAssistBot
+User-Agent: Google-Extended
+User-Agent: GPTBot
+User-Agent: Meta-ExternalAgent
+User-Agent: OAI-SearchBot
+User-Agent: PerplexityBot
+User-Agent: Perplexity-User
+Allow: /
+
 Sitemap: https://alvarobrey.com/sitemap.xml
