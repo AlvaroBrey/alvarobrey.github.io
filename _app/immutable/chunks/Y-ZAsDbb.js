@@ -1,0 +1,1 @@
+import{n as e}from"./Pf_WCknc.js";var t=Object.freeze([{translationKey:`home`,href:`/`},{translationKey:`me`,href:`/me`},{translationKey:`cv`,href:`/cv`},{translationKey:`contact`,href:`/contact`},{translationKey:`about`,href:`/about`}]);function n(e){return e===`/`}function r(e){return e===`/about`}function i(t,n){return e(t)===n}export{t as i,i as n,n as r,r as t};

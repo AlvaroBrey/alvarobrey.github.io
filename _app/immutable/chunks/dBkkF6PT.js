@@ -1,0 +1,1 @@
+import{$ as e,N as t,R as n,S as r,b as i,i as a,l as o,m as s}from"./qqGaDJPT.js";import"./xihTtKlq.js";var c=r(`<div><!></div>`);function l(r,l){let u=a(l,`class`,3,``);var d=c(),f=n(d);s(f,()=>l.children),e(d),t(()=>o(d,1,`rounded bg-surface shadow ${u()??``}`)),i(r,d)}export{l as t};
