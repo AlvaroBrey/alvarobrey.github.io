@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { pageLabel } from '$lib/utils/pages'
   import { mdiFilePdfBox } from '@mdi/js'
   import BasicPage from '$lib/components/BasicPage.svelte'
   import CVItemsFilter from '$lib/components/cv/CVItemsFilter.svelte'
@@ -30,7 +31,7 @@
   )
 </script>
 
-<SeoHead title={t('nav.cv')} />
+<SeoHead title={pageLabel('/cv')} />
 
 <BasicPage>
   {#snippet titleContent()}

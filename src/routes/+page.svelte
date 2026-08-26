@@ -4,12 +4,12 @@
   import Button from '$lib/components/ui/Button.svelte'
   import Card from '$lib/components/ui/Card.svelte'
   import { t } from '$lib/i18n'
-  import { isAbout, isHome, pages } from '$lib/utils/pages'
+  import { isAbout, isHome, pages, pageLabel } from '$lib/utils/pages'
 
   const filteredPages = pages.filter((p) => !isHome(p.href) && !isAbout(p.href))
 </script>
 
-<SeoHead title={t('nav.home')} />
+<SeoHead title={pageLabel('/')} />
 
 <!-- eslint-disable svelte/no-at-html-tags -- locale content, not user input -->
 <BasicPage>
@@ -28,7 +28,7 @@
         class="mt-12 flex flex-col items-center justify-center gap-2 sm:flex-row"
       >
         {#each filteredPages as p (p.href)}
-          <Button href={p.href}>{t(`nav.${p.translationKey}`)}</Button>
+          <Button href={p.href}>{p.label}</Button>
         {/each}
       </div>
     </div>

@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { pageLabel } from '$lib/utils/pages'
   import BasicPage from '$lib/components/BasicPage.svelte'
   import InfoBar from '$lib/components/InfoBar.svelte'
   import SeoHead from '$lib/components/SeoHead.svelte'
@@ -10,7 +11,7 @@
   )
 </script>
 
-<SeoHead title={t('nav.me')} />
+<SeoHead title={pageLabel('/me')} />
 
 <!-- eslint-disable svelte/no-at-html-tags -- locale content, not user input -->
 <BasicPage title={t('page.me.title')}>

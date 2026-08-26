@@ -1,8 +1,8 @@
 <script lang="ts">
+  import { pageLabel } from '../utils/pages'
   import BasicPage from './BasicPage.svelte'
   import SeoHead from './SeoHead.svelte'
   import Button from './ui/Button.svelte'
-  import { t } from '../i18n'
 
   interface Props {
     title: string
@@ -17,6 +17,6 @@
 <BasicPage {title}>
   <p class="mb-8 text-lg text-muted">{description}</p>
   <div class="flex items-center justify-center">
-    <Button href="/">{t('nav.home')}</Button>
+    <Button href="/">{pageLabel('/')}</Button>
   </div>
 </BasicPage>

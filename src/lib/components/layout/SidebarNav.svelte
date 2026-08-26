@@ -1,7 +1,6 @@
 <script lang="ts">
   import { fly } from 'svelte/transition'
   import { page } from '$app/state'
-  import { t } from '../../i18n'
   import { isActive, pages } from '../../utils/pages'
 
   interface Props {
@@ -55,7 +54,7 @@
               ? 'bg-muted/15 font-medium'
               : ''}"
           >
-            {t(`nav.${p.translationKey}`)}
+            {p.label}
           </a>
         </li>
       {/each}

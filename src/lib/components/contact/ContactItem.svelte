@@ -1,15 +1,14 @@
 <script lang="ts">
-  import { t } from '../../i18n'
   import { displayUrl } from '../../utils/urls'
   import Icon from '../ui/Icon.svelte'
 
   interface Props {
     icon: string
-    translationKey: string
+    label: string
     link: string
   }
 
-  let { icon, translationKey, link }: Props = $props()
+  let { icon, label, link }: Props = $props()
 
   const tooltip = $derived(displayUrl(link))
 </script>
@@ -22,7 +21,7 @@
       class="text-body transition-colors group-hover:text-primary"
     />
     <p class="text-lg transition-colors group-hover:text-body">
-      {t(`page.contact.item.${translationKey}`)}
+      {label}
     </p>
   </a>
   <span

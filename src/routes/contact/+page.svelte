@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { pageLabel } from '$lib/utils/pages'
   import { mdiEmail, mdiGithub, mdiLinkedin } from '@mdi/js'
   import BasicPage from '$lib/components/BasicPage.svelte'
   import SeoHead from '$lib/components/SeoHead.svelte'
@@ -15,18 +16,14 @@
   const items = contactLinks.map((it) => ({ ...it, icon: icons[it.key] }))
 </script>
 
-<SeoHead title={t('nav.contact')} />
+<SeoHead title={pageLabel('/contact')} />
 
 <BasicPage title={t('page.contact.title')}>
   <div
     class="mt-6 flex flex-col items-center gap-8 sm:flex-row sm:flex-wrap sm:justify-center sm:gap-x-20"
   >
     {#each items as item (item.key)}
-      <ContactItem
-        icon={item.icon}
-        translationKey={item.key}
-        link={item.link}
-      />
+      <ContactItem icon={item.icon} label={item.label} link={item.link} />
     {/each}
   </div>
 </BasicPage>

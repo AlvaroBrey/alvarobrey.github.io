@@ -30,8 +30,7 @@ import {
   cvPdfSkills
 } from '../src/lib/data/CvPdfData'
 import type { LabeledValue } from '../src/lib/data/CvPdfData'
-import { orgUrls } from '../src/lib/data/OrgData'
-import { t } from '../src/lib/i18n/index'
+import { orgs } from '../src/lib/data/OrgData'
 import { displayUrl } from '../src/lib/utils/urls'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
@@ -42,6 +41,10 @@ const GENERATED_MODULE = join(ROOT, 'src', 'lib', 'generated', 'cvPdf.ts')
 const FILENAME_PREFIX = 'cv_alvarobrey.'
 
 const DISPLAY_DATE_FORMAT = 'MMM yyyy'
+
+// The PDF has always been English-only -- its section headings are literals
+// below -- so it carries its own chrome rather than depending on the app's
+// i18n layer. Everything else it renders now comes from the data itself.
 
 type Section = { title: string; type: CVItemType }
 const SECTIONS: Section[] = [
@@ -56,7 +59,7 @@ function sectionHtml(title: string, body: string, extraClass = ''): string {
 }
 
 function formatDateRange(item: CVTimelineItem): string {
-  const present = t('page.cv.present')
+  const present = 'Present'
   if (!item.startDate) {
     return item.endDate ? format(item.endDate, DISPLAY_DATE_FORMAT) : ''
   }
@@ -79,22 +82,21 @@ function escapeAttr(value: string): string {
 function renderTech(item: CVTimelineItem): string {
   if (!item.tech?.length) return ''
   const techs = item.tech.flatMap((entry) => entry.split(/\s*\+\s*/))
-  return `<p class="tech"><span class="tech-label">${t(
-    'page.cv.techTitle'
-  )}:</span> ${techs.join(', ')}</p>`
+  return `<p class="tech"><span class="tech-label">Key technologies:</span> ${techs.join(
+    ', '
+  )}</p>`
 }
 
 function renderItem(item: CVTimelineItem): string {
-  const title = t(`page.cv.items.${item.key}.title`)
+  const title = item.title
   let org = ''
   if (shouldShowOrgName(item) && item.org) {
-    const orgLabel = t(`page.cv.orgs.${item.org}`)
-    const orgUrl = orgUrls[item.org]
-    org = orgUrl ? `<a href="${escapeAttr(orgUrl)}">${orgLabel}</a>` : orgLabel
+    const { name, url } = orgs[item.org]
+    org = url ? `<a href="${escapeAttr(url)}">${name}</a>` : name
   }
   const location = cvPdfLocations[item.key]
   const paragraphs = [
-    t(`page.cv.items.${item.key}.shortDescription`),
+    item.shortDescription,
     cvPdfEducationSuffix[item.key]
   ].filter(Boolean)
   const desc = paragraphs.length
@@ -154,8 +156,8 @@ function contactRow(label: string, link: string, value: string): string {
 }
 
 function contactHtml(): string {
-  const rows = contactLinks.map(({ key, link }) =>
-    contactRow(t(`page.contact.item.${key}`), link, displayUrl(link))
+  const rows = contactLinks.map(({ label, link }) =>
+    contactRow(label, link, displayUrl(link))
   )
   const site = cvPdfProfile.website
   rows.push(contactRow('Website', site, displayUrl(site)))

@@ -7,6 +7,13 @@ export const CVItemTypeColors: Record<CVItemType, string> = {
   [CVItemType.HOBBY]: '#64b5f6'
 }
 
+export const CVItemTypeLabels: Record<CVItemType, string> = {
+  [CVItemType.COURSE]: 'Courses',
+  [CVItemType.EDUCATION]: 'Education',
+  [CVItemType.WORK]: 'Work',
+  [CVItemType.HOBBY]: 'Hobby'
+}
+
 export const CV_DATE_FORMAT = 'yyyy/MM'
 
 // COURSE items are omitted from the site (and from the PDF's sections), so both
