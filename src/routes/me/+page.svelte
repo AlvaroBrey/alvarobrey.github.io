@@ -1,4 +1,5 @@
 <script lang="ts">
+  import { whatIDo } from '$lib/data/MeData'
   import { m } from '$lib/paraglide/messages'
   import { pageLabel } from '$lib/utils/pages'
   import BasicPage from '$lib/components/BasicPage.svelte'
@@ -29,14 +30,9 @@
             {m.page_me_what_ido()}
           </p>
           <ul class="list-disc pl-5">
-            <li>Android</li>
-            <li>Kotlin, Compose</li>
-            <li>Shell, Python</li>
-            <li>Docker</li>
-            <li>Git</li>
-            <li>Linux</li>
-            <li>VueJS, Typescript</li>
-            <li>Ansible</li>
+            {#each whatIDo as item (item)}
+              <li>{item}</li>
+            {/each}
           </ul>
         </div>
         <div>
