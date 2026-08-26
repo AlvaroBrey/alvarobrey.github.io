@@ -1,12 +1,6 @@
-# Package Managers
-package-lock.json
 pnpm-lock.yaml
-yarn.lock
-bun.lock
-bun.lockb
-
-# Miscellaneous
 /static/
+
 # paraglide-js generates everything in project.inlang except settings.json,
 # and adds new artefacts between releases -- mirror its own .gitignore rather
 # than naming files that will change.
