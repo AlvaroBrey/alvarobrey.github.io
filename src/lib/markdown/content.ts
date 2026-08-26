@@ -98,6 +98,7 @@ const bodies: Record<string, () => string> = {
   '/contact': () =>
     [
       `# ${pageLabel('/contact')}`,
+      htmlToMarkdown(m.page_contact_intro()),
       bullets(
         contactLinks.map(
           (link) => `${link.label}: [${displayUrl(link.link)}](${link.link})`
@@ -109,6 +110,22 @@ const bodies: Record<string, () => string> = {
     [
       `# ${pageLabel('/about')}`,
       paragraphs(m.page_about_paragraph1(), m.page_about_paragraph2())
+    ].join('\n\n'),
+
+  '/privacy': () =>
+    [
+      `# ${pageLabel('/privacy')}`,
+      htmlToMarkdown(m.page_privacy_intro()),
+      `## ${m.page_privacy_storage_title()}`,
+      htmlToMarkdown(m.page_privacy_storage()),
+      `## ${m.page_privacy_analytics_title()}`,
+      htmlToMarkdown(m.page_privacy_analytics()),
+      `## ${m.page_privacy_hosting_title()}`,
+      htmlToMarkdown(m.page_privacy_hosting()),
+      `## ${m.page_privacy_links_title()}`,
+      htmlToMarkdown(m.page_privacy_links()),
+      `## ${m.page_privacy_questions_title()}`,
+      htmlToMarkdown(m.page_privacy_questions())
     ].join('\n\n')
 }
 

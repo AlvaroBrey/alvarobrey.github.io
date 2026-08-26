@@ -1,6 +1,7 @@
 <script lang="ts">
   import { mdiMenu } from '@mdi/js'
   import { page } from '$app/state'
+  import { m } from '$lib/paraglide/messages'
   import { isHome } from '../../utils/pages'
   import Icon from '../ui/Icon.svelte'
   import DarkModeToggle from './DarkModeToggle.svelte'
@@ -22,7 +23,7 @@
     <button
       type="button"
       class="absolute left-4 md:hidden"
-      aria-label="Open menu"
+      aria-label={m.aria_open_menu()}
       onclick={onToggleSidebar}
     >
       <Icon path={mdiMenu} size={28} />

@@ -1,6 +1,7 @@
 <script lang="ts">
   import { fly } from 'svelte/transition'
   import { page } from '$app/state'
+  import { m } from '$lib/paraglide/messages'
   import { isActive, pages } from '../../utils/pages'
 
   interface Props {
@@ -31,10 +32,11 @@
   <button
     type="button"
     class="fixed inset-0 z-40 bg-black/50"
-    aria-label="Close menu"
+    aria-label={m.aria_close_menu()}
     onclick={close}
   ></button>
   <nav
+    aria-label={m.aria_sidebar_nav()}
     transition:fly={{ x: -280, duration: 200 }}
     class="fixed inset-y-0 left-0 z-50 w-72 bg-surface shadow-lg"
   >
