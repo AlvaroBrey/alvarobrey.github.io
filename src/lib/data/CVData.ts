@@ -97,7 +97,7 @@ const workCVItems: CVTimelineItem[] = withType(
       location: 'Remote',
       title: 'Senior SDK Engineer',
       shortDescription:
-        'Senior SDK Engineer at RevenueCat, where we help developers make more money. Multiplatform with focus on Android.',
+        'Senior SDK Engineer at RevenueCat, where we help developers make more money. Work across the RevenueCat SDK family (Android, iOS, web, and the Flutter, React Native, KMP, Unity and Capacitor hybrids), with Android as the primary focus. Includes new feature development, public API design with strong backwards-compatibility guarantees, and performance work. Coordinate cross-platform contracts with and land behaviour changes consistently across every SDK. Contributor to CI, release automation and internal tooling shared across all SDK repositories.',
       org: CVOrg.REVENUECAT,
       startDate: parseDate('2026/06'),
       endDate: undefined
