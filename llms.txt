@@ -15,6 +15,6 @@ Personal site and CV of Álvaro Brey. Every page below is also served as Markdow
 
 ## Files
 
-- [Curriculum vitae (PDF)](https://alvarobrey.com/files/cv_alvarobrey.c04a1a17.pdf)
+- [Curriculum vitae (PDF)](https://alvarobrey.com/files/cv_alvarobrey.5aeae7fb.pdf)
 - [Full site as Markdown](https://alvarobrey.com/llms-full.txt)
 

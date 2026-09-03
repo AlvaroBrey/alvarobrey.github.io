@@ -1,6 +1,6 @@
 # My CV
 
-[Download as PDF](https://alvarobrey.com/files/cv_alvarobrey.c04a1a17.pdf)
+[Download as PDF](https://alvarobrey.com/files/cv_alvarobrey.5aeae7fb.pdf)
 
 ## Work
 
@@ -8,7 +8,7 @@
 
 [RevenueCat](https://www.revenuecat.com) | 2026/06 - Present
 
-Senior SDK Engineer at RevenueCat, where we help developers make more money. Multiplatform with focus on Android.
+Senior SDK Engineer at RevenueCat, where we help developers make more money. Work across the RevenueCat SDK family (Android, iOS, web, and the Flutter, React Native, KMP, Unity and Capacitor hybrids), with Android as the primary focus. Includes new feature development, public API design with strong backwards-compatibility guarantees, and performance work. Coordinate cross-platform contracts with and land behaviour changes consistently across every SDK. Contributor to CI, release automation and internal tooling shared across all SDK repositories.
 
 ### Senior Android Engineer
 
